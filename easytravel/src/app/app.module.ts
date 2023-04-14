@@ -12,12 +12,16 @@ import { HotelsCreaeditaComponent } from './component/hotels/hotels-creaedita/ho
 import {MatInputModule  } from '@angular/material/input';
 
 
+import { UsuarioComponent } from './component/usuario/usuario.component';
+import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component'
 @NgModule({
   declarations: [
     AppComponent,
     HotelsComponent,
     HotelsListarComponent,
-    HotelsCreaeditaComponent
+    HotelsCreaeditaComponent,
+    UsuarioComponent,
+    UsuarioListarComponent
   ],
   imports: [
     BrowserModule,
