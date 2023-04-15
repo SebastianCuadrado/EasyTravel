@@ -8,15 +8,16 @@
 </head>
 <body>
   <div class="container">
+    <br>
     <div style="text-align: center;">
       <h1 >Lista de Hoteles</h1>
     </div>
+    <div style="text-align: right;">
+    <button  mat-raised-button color="warn" routerLink="/hotels/new" >Agregar</button>
+  </div>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-      <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
 
-      <!-- Position Column -->
       <ng-container matColumnDef="codigo">
         <th mat-header-cell *matHeaderCellDef> No. </th>
         <td mat-cell *matCellDef="let element"> {{element.idHotel}} </td>
@@ -47,8 +48,9 @@
 
       <ng-container matColumnDef="estrellas">
         <th mat-header-cell *matHeaderCellDef> Estrellas </th>
-        <td mat-cell *matCellDef="let element"> {{element.estrellas}}
+        <td mat-cell *matCellDef="let element">
 
+          <ngb-rating [max]=5 [rate]=element.estrellas [readonly]="true"></ngb-rating>
 
         </td>
       </ng-container>

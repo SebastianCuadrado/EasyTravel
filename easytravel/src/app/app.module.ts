@@ -13,7 +13,8 @@ import {MatInputModule  } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 
 import { UsuarioComponent } from './component/usuario/usuario.component';
-import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component'
+import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +34,7 @@ import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuar
     FormsModule,
     MatInputModule,
     MatButtonModule,
+    NgbModule,
 
   ],
   providers: [],

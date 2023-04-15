@@ -7,44 +7,51 @@
   <title>Document</title>
 </head>
 <body>
-  <div>
+  <div class="container">
+  <div >
+    <br>
+    <div style="text-align: center;">
+      <h1>Registro de hoteles</h1>
+    </div>
     <form [formGroup]="form" (submit)="aceptar()">
       <mat-form-field class="example-full-width">
         <mat-label>Codigo</mat-label>
         <input matInput placeholder="N°" formControlName="idHotel">
       </mat-form-field>
+      <br>
 
       <mat-form-field class="example-full-width">
         <mat-label>Nombre</mat-label>
         <input matInput placeholder="Ex. Casa Andina" formControlName="nombre">
       </mat-form-field>
-
+<br>
       <mat-form-field class="example-full-width">
         <mat-label>Precio por noche</mat-label>
         <input matInput placeholder="s/80" formControlName="precio_noche">
       </mat-form-field>
+      <br>
       <mat-form-field class="example-full-width">
         <mat-label>Ciudad</mat-label>
         <input matInput placeholder="Rio de Janeiro" formControlName="ciudad">
       </mat-form-field>
-
+<br>
       <mat-form-field class="example-full-width">
         <mat-label>Valoración</mat-label>
         <input matInput placeholder="4.5" formControlName="valoracion_promedio">
       </mat-form-field>
-
+<br>
       <mat-form-field class="example-full-width">
         <mat-label>Estrellas</mat-label>
         <input matInput placeholder="5" formControlName="estrellas">
       </mat-form-field>
-
+<br>
       <button mat-raised-button color="primary" >Aceptar</button>
       <button mat-raised-button color="warn" routerLink="/hotels" >Cancelar</button>
-
+      <p>{{mensaje}}</p>
 
     </form>
 
-
+  </div>
   </div>
 </body>
 </html>

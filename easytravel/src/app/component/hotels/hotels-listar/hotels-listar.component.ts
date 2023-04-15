@@ -20,5 +20,7 @@ export class HotelsListarComponent implements OnInit {
       this.hS.list().subscribe(data=>{
         this.dataSource=new MatTableDataSource(data);
       })
+
+      this.hS.getList().subscribe(data=>{this.dataSource=new MatTableDataSource(data)})
   }
 }
