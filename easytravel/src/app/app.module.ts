@@ -10,7 +10,7 @@ import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HotelsCreaeditaComponent } from './component/hotels/hotels-creaedita/hotels-creaedita.component';
 import {MatInputModule  } from '@angular/material/input';
-
+import { MatButtonModule } from '@angular/material/button';
 
 import { UsuarioComponent } from './component/usuario/usuario.component';
 import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component'
@@ -32,6 +32,7 @@ import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuar
     BrowserAnimationsModule,
     FormsModule,
     MatInputModule,
+    MatButtonModule,
 
   ],
   providers: [],

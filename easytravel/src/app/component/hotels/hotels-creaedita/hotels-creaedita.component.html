@@ -11,15 +11,35 @@
     <form [formGroup]="form" (submit)="aceptar()">
       <mat-form-field class="example-full-width">
         <mat-label>Codigo</mat-label>
-        <input matInput placeholder="N°" value="idHotel">
+        <input matInput placeholder="N°" formControlName="idHotel">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
         <mat-label>Nombre</mat-label>
-        <input matInput placeholder="Ex. Casa Andina" value="nombre">
+        <input matInput placeholder="Ex. Casa Andina" formControlName="nombre">
       </mat-form-field>
 
+      <mat-form-field class="example-full-width">
+        <mat-label>Precio por noche</mat-label>
+        <input matInput placeholder="s/80" formControlName="precio_noche">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Ciudad</mat-label>
+        <input matInput placeholder="Rio de Janeiro" formControlName="ciudad">
+      </mat-form-field>
 
+      <mat-form-field class="example-full-width">
+        <mat-label>Valoración</mat-label>
+        <input matInput placeholder="4.5" formControlName="valoracion_promedio">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Estrellas</mat-label>
+        <input matInput placeholder="5" formControlName="estrellas">
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" >Aceptar</button>
+      <button mat-raised-button color="warn" routerLink="/hotels" >Cancelar</button>
 
 
     </form>
