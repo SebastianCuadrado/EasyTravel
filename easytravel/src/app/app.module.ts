@@ -11,10 +11,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HotelsCreaeditaComponent } from './component/hotels/hotels-creaedita/hotels-creaedita.component';
 import {MatInputModule  } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-
 import { UsuarioComponent } from './component/usuario/usuario.component';
 import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { PlacesListarComponent } from './component/places/places-listar/places-listar.component';
+import { PlacesComponent } from './component/places/places.component';
+import { PlacesCreaeditaComponent } from './component/places/places-creaedita/places-creaedita.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
     HotelsListarComponent,
     HotelsCreaeditaComponent,
     UsuarioComponent,
-    UsuarioListarComponent
+    UsuarioListarComponent,
+    PlacesComponent,
+    PlacesListarComponent,
+    PlacesCreaeditaComponent
   ],
   imports: [
     BrowserModule,
