@@ -11,13 +11,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HotelsCreaeditaComponent } from './component/hotels/hotels-creaedita/hotels-creaedita.component';
 import {MatInputModule  } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-
+import { EmpresaTransporteComponent } from './component/empresa-transporte/empresa-transporte.component';
+import { EmpresaTransporteListarComponent } from './component/Empresa_Transporte/empresa-transporte-listar/empresa-transporte-listar.component';
 import { UsuarioComponent } from './component/usuario/usuario.component';
 import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita/usuario-creaedita.component'
 import {MatDatepickerModule} from '@angular/material/datepicker'
 import {MatNativeDateModule} from '@angular/material/core'
+
+
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import {MatNativeDateModule} from '@angular/material/core'
     UsuarioComponent,
     UsuarioListarComponent,
     UsuarioCreaeditaComponent
+    EmpresaTransporteComponent,
+    EmpresaTransporteListarComponent,
   ],
   imports: [
     BrowserModule,
