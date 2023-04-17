@@ -4,6 +4,7 @@ import { Hotels } from './model/hotels';
 import { HotelsComponent } from './component/hotels/hotels.component';
 import { HotelsCreaeditaComponent } from './component/hotels/hotels-creaedita/hotels-creaedita.component';
 import { UsuarioComponent } from './component/usuario/usuario.component';
+import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita/usuario-creaedita.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
   {
     path: 'usuario',
     component: UsuarioComponent,
+    children: [{ path: 'new', component: UsuarioCreaeditaComponent }],
   }
 ];
 

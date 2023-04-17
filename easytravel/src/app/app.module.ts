@@ -14,7 +14,11 @@ import { MatButtonModule } from '@angular/material/button';
 
 import { UsuarioComponent } from './component/usuario/usuario.component';
 import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita/usuario-creaedita.component'
+import {MatDatepickerModule} from '@angular/material/datepicker'
+import {MatNativeDateModule} from '@angular/material/core'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +26,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
     HotelsListarComponent,
     HotelsCreaeditaComponent,
     UsuarioComponent,
-    UsuarioListarComponent
+    UsuarioListarComponent,
+    UsuarioCreaeditaComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
     MatInputModule,
     MatButtonModule,
     NgbModule,
-
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
