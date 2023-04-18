@@ -5,6 +5,10 @@ import { HotelsComponent } from './component/hotels/hotels.component';
 import { HotelsCreaeditaComponent } from './component/hotels/hotels-creaedita/hotels-creaedita.component';
 import { UsuarioComponent } from './component/usuario/usuario.component';
 import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita/usuario-creaedita.component';
+import { PlacesComponent } from './component/places/places.component';
+import { placements } from '@popperjs/core';
+import { EmpresaTransporteComponent } from './component/empresa-transporte/empresa-transporte.component';
+import { Place } from './model/places';
 
 const routes: Routes = [
   {
@@ -17,6 +21,14 @@ const routes: Routes = [
     path: 'usuario',
     component: UsuarioComponent,
     children: [{ path: 'new', component: UsuarioCreaeditaComponent }],
+  },
+  {
+    path: 'places',
+    component: PlacesComponent,
+  },
+  {
+    path: 'empresa-transporte',
+    component: EmpresaTransporteComponent,
   }
 ];
 

@@ -7,6 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./places.component.css']
 })
 export class PlacesComponent implements OnInit{
-  constructor(public route:ActivatedRoute){ }
+
   ngOnInit(): void {}
+  constructor(public route:ActivatedRoute) {}
 }

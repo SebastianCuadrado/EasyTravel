@@ -18,7 +18,13 @@ import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuar
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita/usuario-creaedita.component'
 import {MatDatepickerModule} from '@angular/material/datepicker'
-import {MatNativeDateModule} from '@angular/material/core'
+import {MatNativeDateModule} from '@angular/material/core';
+import { MenuComponent } from './menu/menu.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list'
 
 
 
@@ -30,9 +36,10 @@ import {MatNativeDateModule} from '@angular/material/core'
     HotelsCreaeditaComponent,
     UsuarioComponent,
     UsuarioListarComponent,
-    UsuarioCreaeditaComponent
+    UsuarioCreaeditaComponent,
     EmpresaTransporteComponent,
     EmpresaTransporteListarComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,12 @@ import {MatNativeDateModule} from '@angular/material/core'
     MatButtonModule,
     NgbModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
