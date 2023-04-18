@@ -17,12 +17,12 @@ import { PlacesListarComponent } from './component/places/places-listar/places-l
 import { PlacesComponent } from './component/places/places.component';
 import { PlacesCreaeditaComponent } from './component/places/places-creaedita/places-creaedita.component';
 import { EmpresaTransporteComponent } from './component/empresa-transporte/empresa-transporte.component';
-import { EmpresaTransporteListarComponent } from './component/Empresa_Transporte/empresa-transporte-listar/empresa-transporte-listar.component';
+import { EmpresaTransporteListarComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-listar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita/usuario-creaedita.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
-import { EmpresatransporteCreaeditaComponent } from './component/empresatransporte-creaedita/empresatransporte-creaedita.component';
+import { EmpresatransporteCreaeditaComponent } from './component/empresa-transporte/empresatransporte-creaedita/empresatransporte-creaedita.component';
 
 
 
