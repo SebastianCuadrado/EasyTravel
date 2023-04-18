@@ -7,7 +7,16 @@
   <title>Document</title>
 </head>
 <body>
-  <div>
+  <div class="container">
+
+    <div style="text-align: center;">
+      <h1>Lista de Usuarios</h1>
+    </div>
+
+    <div style="text-align: right;">
+      <button mat-raised-button color="warn" routerLink="/usuario/new">Agregar</button>
+    </div>
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <!-- Implicit Column -->
       <ng-container matColumnDef="id">
@@ -36,7 +45,7 @@
       <!-- Last Column -->
       <ng-container matColumnDef="fechaNacimiento">
         <th mat-header-cell *matHeaderCellDef> fechaNacimiento </th>
-        <td mat-cell *matCellDef="let element"> {{element.fechaNacimiento}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.fechaNacimiento|date:'dd/MM/yyyy'}} </td>
       </ng-container>
 
       <!-- Even Column -->

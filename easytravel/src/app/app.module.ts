@@ -17,6 +17,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { PlacesListarComponent } from './component/places/places-listar/places-listar.component';
 import { PlacesComponent } from './component/places/places.component';
 import { PlacesCreaeditaComponent } from './component/places/places-creaedita/places-creaedita.component';
+import { EmpresaTransporteComponent } from './component/empresa-transporte/empresa-transporte.component';
+import { EmpresaTransporteListarComponent } from './component/Empresa_Transporte/empresa-transporte-listar/empresa-transporte-listar.component';
+import { UsuarioComponent } from './component/usuario/usuario.component';
+import { UsuarioListarComponent } from './component/usuario/usuario-listar/usuario-listar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita/usuario-creaedita.component'
+import {MatDatepickerModule} from '@angular/material/datepicker'
+import {MatNativeDateModule} from '@angular/material/core'
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +39,9 @@ import { PlacesCreaeditaComponent } from './component/places/places-creaedita/pl
     PlacesComponent,
     PlacesListarComponent,
     PlacesCreaeditaComponent
+    UsuarioCreaeditaComponent
+    EmpresaTransporteComponent,
+    EmpresaTransporteListarComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +54,8 @@ import { PlacesCreaeditaComponent } from './component/places/places-creaedita/pl
     MatInputModule,
     MatButtonModule,
     NgbModule,
-
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
