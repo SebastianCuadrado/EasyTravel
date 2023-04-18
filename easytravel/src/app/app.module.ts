@@ -22,6 +22,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UsuarioCreaeditaComponent } from './component/usuario/usuario-creaedita/usuario-creaedita.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { EmpresatransporteCreaeditaComponent } from './component/empresatransporte-creaedita/empresatransporte-creaedita.component';
 
 
 
@@ -38,7 +39,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     PlacesCreaeditaComponent,
     UsuarioCreaeditaComponent,
     EmpresaTransporteComponent,
-    EmpresaTransporteListarComponent
+    EmpresaTransporteListarComponent,
+    EmpresatransporteCreaeditaComponent
   ],
   imports: [
     BrowserModule,
