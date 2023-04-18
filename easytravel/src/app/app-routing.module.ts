@@ -12,6 +12,7 @@ import { EmpresaTransporteComponent } from './component/empresa-transporte/empre
 import { Place } from './model/places';
 
 import { EmpresatransporteCreaeditaComponent } from './component/empresa-transporte/empresatransporte-creaedita/empresatransporte-creaedita.component';
+import { PlacesCreaeditaComponent } from './component/places/places-creaedita/places-creaedita.component';
 
 
 const routes: Routes = [
@@ -29,10 +30,12 @@ const routes: Routes = [
   {
     path: 'places',
     component: PlacesComponent,
+    children: [{ path: 'new', component: PlacesCreaeditaComponent}]
   },
   {
     path: 'empresa-transporte',
     component: EmpresaTransporteComponent,
+    children: [{path: 'new', component: EmpresatransporteCreaeditaComponent}]
   }
 
 
