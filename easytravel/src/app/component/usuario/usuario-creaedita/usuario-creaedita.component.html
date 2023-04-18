@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <br>
+    <div style="text-align: center;">
+      <h1>Registro de Usuarios</h1>
+
+      <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Codigo</mat-label>
+          <input matInput placeholder="Codigo" formControlName="idUsuario">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Nombre Usuario" formControlName="nombre">
+        </mat-form-field>
+  <br>
+        <mat-form-field class="example-full-width">
+          <mat-label>Apellidos</mat-label>
+          <input matInput placeholder="Apellidos Usuario" formControlName="apellidos">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="algo@example.com" formControlName="email">
+        </mat-form-field>
+  <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Fecha de nacimiento</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="fechaNacimiento" [max]="maxFecha">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+
+  </mat-form-field>
+  <br>
+        <mat-form-field class="example-full-width">
+          <mat-label>Numero Celular</mat-label>
+          <input matInput placeholder="Numero celular" formControlName="celular">
+        </mat-form-field>
+  <br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Ubicacion</mat-label>
+    <input matInput placeholder="ubicacion" formControlName="ubicacion">
+  </mat-form-field>
+<br>
+
+        <button mat-raised-button color="primary" >Aceptar</button>
+        <button mat-raised-button color="warn" routerLink="/usuario">Cancelar</button>
+        <p>{{mensaje}}</p>
+
+      </form>
+
+    </div>
+  </div>
+</body>
+</html>
