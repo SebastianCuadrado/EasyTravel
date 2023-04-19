@@ -185,7 +185,30 @@ var data= {
           direccion:"Av. Brasil 1150, Magdalena del Mar",
           contacto:"Telefono +1-2023322691 o 514-700-0451. Pagina web: Busbud.com",
       },
-  ],
+
+    ],
+    Comentarios_Hotel: [
+      {
+        idComentarioHotel:1,
+        valoracion: "8",
+        comentario: "Mi estancia en este hotel fue excelente. Las habitaciones eran cómodas y limpias, el personal era muy amable y servicial, y la ubicación del hotel era muy conveniente para mi viaje",
+      },
+      {
+        idComentarioHotel:2,
+        valoracion: "9",
+        comentario: "El hotel está ubicado en una buena zona, cerca de restaurantes y tiendas. Sin duda, recomendaría este hotel a cualquier persona que busque una estadía agradable y cómoda.",
+      },
+      {
+        idComentarioHotel:3,
+        valoracion: "9",
+        comentario: "Ubicación perfecta, habitaciones privadas y compartidas con camas súper cómodas y aire acondicionado. En definitiva regresaría a hospedarme aquí.",
+      },
+      {
+        idComentarioHotel:4,
+        valoracion: "8",
+        comentario: "Excelente servicio, todos los trabajadores son muy amables y dispuesto a hacer que tu estadía sea la mejor.",
+	    }
+    ],
 
     }
     return data
