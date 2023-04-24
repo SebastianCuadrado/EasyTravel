@@ -17,5 +17,8 @@ export class ComentariosHotelListarComponent implements OnInit {
     this.chS.list().subscribe(data=>{
       this.dataSource = new MatTableDataSource(data);
     })
+    this.chS.getList().subscribe(data=>{
+      this.dataSource = new MatTableDataSource(data);
+    })
   }
 }
