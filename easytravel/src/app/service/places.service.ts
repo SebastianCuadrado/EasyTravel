@@ -17,8 +17,8 @@ export class PlacesService {
   list() {
     return this.http.get<Place[]>(this.url);
   }
-  insert(place: Place) {
-    return this.http.post(this.url, place);
+  insert(places: Place) {
+    return this.http.post(this.url, places);
   }
   setList(ListaNueva: Place[]) {
     this.listaCambio.next(ListaNueva);

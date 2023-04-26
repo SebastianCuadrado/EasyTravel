@@ -16,7 +16,6 @@ export class PlacesCreaeditaComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      id: new FormControl(),
       namePlace: new FormControl(),
       descriptionPlace: new FormControl(),
       country: new FormControl(),
@@ -27,7 +26,6 @@ export class PlacesCreaeditaComponent implements OnInit {
 
 
   aceptar(): void {
-    this.places.id=this.form.value['idHotel'];
     this.places.namePlace=this.form.value['Nombre'];
     this.places.descriptionPlace=this.form.value['Descripción'];
     this.places.country=this.form.value['País'];

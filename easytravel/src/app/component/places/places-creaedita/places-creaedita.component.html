@@ -13,11 +13,6 @@
       <h1>Registro de Destino</h1>
     </div>
     <form [formGroup]="form" (submit)="aceptar()">
-      <mat-form-field class="example-full-width">
-        <mat-label>Codigo</mat-label>
-        <input matInput placeholder="N°" formControlName="id">
-      </mat-form-field>
-<br>
         <mat-form-field class="example-full-width">
         <mat-label>Nombre</mat-label>
         <input matInput placeholder="Destino" formControlName="nombre">
@@ -33,7 +28,7 @@
         <input matInput placeholder="Netherland" formControlName="País">
       </mat-form-field>
 <br>
-      <button mat-raised-button color="primary" >Aceptar</button>
+      <button mat-raised-button color="primary" routerLink="/places" >Aceptar</button>
       <button mat-raised-button color="warn" routerLink="/places" >Cancelar</button>
       <p>{{mensaje}}</p>
 
