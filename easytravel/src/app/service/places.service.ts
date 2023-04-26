@@ -17,8 +17,8 @@ export class PlacesService {
   list() {
     return this.http.get<Place[]>(this.url);
   }
-  insert(place: Place) {
-    return this.http.post(this.url, place);
+  insert(places: Place) {
+    return this.http.post(this.url, places);
   }
   setList(ListaNueva: Place[]) {
     this.listaCambio.next(ListaNueva);
@@ -30,7 +30,7 @@ export class PlacesService {
     return this.http.get<Place>(`${this.url}/${id}`);
   }
   update(plc: Place) {
-    return this.http.put(this.url + "/" + plc.idPlace, plc);
+    return this.http.put(this.url + "/" + plc.id, plc);
   }
 
   delete(id: number) {
