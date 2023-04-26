@@ -13,17 +13,17 @@ export class PlacesListarComponent implements OnInit {
   dataSource: MatTableDataSource<Place> = new MatTableDataSource();
   idMayor: number = 0;
   displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País', 'accionEliminar']
-  constructor(private as: PlacesService, private dialog: MatDialog) {}
+  constructor(private pS: PlacesService, private dialog: MatDialog) {}
   ngOnInit(): void {
-    this.as.list().subscribe(data => {
+    this.pS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
 
-    this.as.getList().subscribe(data => {
+    this.pS.getList().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
 
-    this.as.getConfirmDelete().subscribe(data => {
+    this.pS.getConfirmDelete().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
   }
@@ -32,9 +32,9 @@ export class PlacesListarComponent implements OnInit {
     this.dialog.open(PlacesDialogoComponent);
   }
   eliminar(id: number) {
-    this.as.delete(id).subscribe(() => {
-      this.as.list().subscribe(data => {
-        this.as.setList(data);
+    this.pS.delete(id).subscribe(() => {
+      this.pS.list().subscribe(data => {
+        this.pS.setList(data);
       });
     });
   }
