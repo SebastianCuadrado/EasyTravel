@@ -31,6 +31,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { ComentariosHotelComponent } from './component/comentarios-hotel/comentarios-hotel.component';
 import { ComentariosHotelListarComponent } from './component/comentarios-hotel/comentarios-hotel-listar/comentarios-hotel-listar.component';
+import { UsuarioDialogoComponent } from './component/usuario/usuario-dialogo/usuario-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog'
 
 
 
@@ -55,7 +57,9 @@ import { ComentariosHotelListarComponent } from './component/comentarios-hotel/c
     EmpresaTransporteListarComponent,
     EmpresatransporteCreaeditaComponent,
     ComentariosHotelComponent,
-    ComentariosHotelListarComponent
+    ComentariosHotelListarComponent,
+    UsuarioDialogoComponent,
+    UsuarioDialogoComponent
 
   ],
   imports: [
@@ -75,7 +79,8 @@ import { ComentariosHotelListarComponent } from './component/comentarios-hotel/c
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule
 
 
   ],
