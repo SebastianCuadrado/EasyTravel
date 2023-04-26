@@ -12,18 +12,18 @@ import { MatDialog } from '@angular/material/dialog';
 export class PlacesListarComponent implements OnInit {
   dataSource: MatTableDataSource<Place> = new MatTableDataSource();
   idMayor: number = 0;
-  displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País'];
+  displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País', 'accionEliminar']
   constructor(private as: PlacesService, private dialog: MatDialog) {}
   ngOnInit(): void {
-    this.as.list().subscribe((data) => {
+    this.as.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
 
-    this.as.getList().subscribe((data) => {
+    this.as.getList().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
     });
 
-    this.as.getConfirmDelete().subscribe((data) => {
+    this.as.getConfirmDelete().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     });
   }
@@ -33,7 +33,7 @@ export class PlacesListarComponent implements OnInit {
   }
   eliminar(id: number) {
     this.as.delete(id).subscribe(() => {
-      this.as.list().subscribe((data) => {
+      this.as.list().subscribe(data => {
         this.as.setList(data);
       });
     });
