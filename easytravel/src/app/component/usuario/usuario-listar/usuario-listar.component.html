@@ -17,11 +17,15 @@
       <button mat-raised-button color="warn" routerLink="/usuario/new">Agregar</button>
     </div>
 
+    <mat-form-field>
+      <input matInput (keyup)=filter($event) placeholder="buscar"/>
+    </mat-form-field>
+
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <!-- Implicit Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> id </th>
-        <td mat-cell *matCellDef="let element"> {{element.idUsuario}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
       </ng-container>
 
       <!-- Index Column -->
@@ -63,7 +67,7 @@
       <ng-container matColumnDef="accionEliminar">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let element">
-          <button mat-raised-button color="accent" (click)="confirm(element.idUsuario)"><span class="material-icons">delete</span></button>
+          <button mat-raised-button color="accent" (click)="confirm(element.id)"><span class="material-icons">delete</span></button>
         </td>
       </ng-container>
 

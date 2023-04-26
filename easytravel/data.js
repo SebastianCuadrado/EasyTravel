@@ -55,7 +55,7 @@ var data= {
 
     usuarios: [
       {
-        idUsuario: 1,
+        id: 1,
         nombre: "Luis",
         apellidos: "Pérez Reyes",
         email:"lperez@gmail.com",
@@ -64,7 +64,7 @@ var data= {
         ubicacion: "Lima, Peru",
       },
       {
-        idUsuario: 2,
+        id: 2,
         nombre: "Ana",
         apellidos: "Díaz Reyes",
         email:"adiaz@gmail.com",
@@ -73,7 +73,7 @@ var data= {
         ubicacion: "Lima, Peru",
       },
       {
-        idUsuario: 3,
+        id: 3,
         nombre: "Gerardo",
         apellidos: "Santillán Reyes",
         email:"gsreyes@gmail.com",
@@ -82,7 +82,7 @@ var data= {
         ubicacion: "Lima, Peru",
       },
       {
-        idUsuario: 4,
+        id: 4,
         nombre: "Juana",
         apellidos: "Pérez Reyes",
         email:"jperez@gmail.com",

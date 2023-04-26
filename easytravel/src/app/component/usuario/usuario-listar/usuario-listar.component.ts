@@ -45,4 +45,8 @@ export class UsuarioListarComponent implements OnInit {
     })
   }
 
+  filter(e: any) {
+    this.dataSource.filter = e.target.value.trim();
+  }
+
 }

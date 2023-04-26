@@ -1,5 +1,5 @@
 export class Usuario{
-  idUsuario:number=0
+  id:number=0
   nombre:string=""
   apellidos:string=""
   email:string=""
