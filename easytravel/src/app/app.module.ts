@@ -34,6 +34,8 @@ import { ComentariosHotelListarComponent } from './component/comentarios-hotel/c
 import { UsuarioDialogoComponent } from './component/usuario/usuario-dialogo/usuario-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog'
 
+import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
+
 
 
 
@@ -59,7 +61,7 @@ import { MatDialogModule } from '@angular/material/dialog'
     ComentariosHotelComponent,
     ComentariosHotelListarComponent,
     UsuarioDialogoComponent,
-    UsuarioDialogoComponent
+    ComentariosHotelCreaeditaComponent
 
   ],
   imports: [
