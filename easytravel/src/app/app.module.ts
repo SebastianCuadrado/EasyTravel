@@ -33,7 +33,7 @@ import { ComentariosHotelComponent } from './component/comentarios-hotel/comenta
 import { ComentariosHotelListarComponent } from './component/comentarios-hotel/comentarios-hotel-listar/comentarios-hotel-listar.component';
 import { UsuarioDialogoComponent } from './component/usuario/usuario-dialogo/usuario-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog'
-
+import { PlacesDialogoComponent } from './component/places/places-listar/places-dialogo/places-dialogo.component';
 import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
 
 
@@ -54,6 +54,7 @@ import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hote
     PlacesComponent,
     PlacesListarComponent,
     PlacesCreaeditaComponent,
+    PlacesDialogoComponent,
     UsuarioCreaeditaComponent,
     EmpresaTransporteComponent,
     EmpresaTransporteListarComponent,

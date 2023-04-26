@@ -12,7 +12,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class PlacesListarComponent implements OnInit {
   dataSource: MatTableDataSource<Place> = new MatTableDataSource();
   idMayor: number = 0;
-  displayedColumns: string[] = ['Codigo', 'Nombre', 'Descripcion', 'País'];
+  displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País'];
   constructor(private as: PlacesService, private dialog: MatDialog) {}
   ngOnInit(): void {
     this.as.list().subscribe((data) => {

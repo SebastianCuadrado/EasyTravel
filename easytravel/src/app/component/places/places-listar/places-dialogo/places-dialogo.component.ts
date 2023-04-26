@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { PlacesService } from 'src/app/service/places.service';
 import { MatDialogRef } from '@angular/material/dialog';
 
@@ -7,7 +7,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   templateUrl: './places-dialogo.component.html',
   styleUrls: ['./places-dialogo.component.css']
 })
-export class PlacesDialogoComponent implements OnInit {
+export class PlacesDialogoComponent {
   constructor(private as: PlacesService,
     private dialogRef: MatDialogRef<PlacesDialogoComponent>) { }
   ngOnInit(): void {}

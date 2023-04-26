@@ -30,7 +30,7 @@ export class PlacesService {
     return this.http.get<Place>(`${this.url}/${id}`);
   }
   update(plc: Place) {
-    return this.http.put(this.url + "/" + plc.idPlace, plc);
+    return this.http.put(this.url + "/" + plc.id, plc);
   }
 
   delete(id: number) {
