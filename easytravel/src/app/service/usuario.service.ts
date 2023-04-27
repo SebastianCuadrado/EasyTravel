@@ -44,4 +44,8 @@ export class UsuarioService {
     this.confirmarEliminacion.next(estado);
   }
 
+  update(u: Usuario){
+    return this.http.put(this.url+'/'+u.id,u);
+  }
+
 }

@@ -13,7 +13,7 @@ import { UsuarioDialogoComponent } from '../usuario-dialogo/usuario-dialogo.comp
 export class UsuarioListarComponent implements OnInit {
   dataSource:MatTableDataSource<Usuario> = new MatTableDataSource();
   idMayor: number = 0
-  displayedColumns:string[] = ['id', 'nombre', 'apellidos', 'email', 'fechaNacimiento', 'celular', 'ubicacion', 'accionEliminar']
+  displayedColumns:string[] = ['id', 'nombre', 'apellidos', 'email', 'fechaNacimiento', 'celular', 'ubicacion', 'accionActualizar' ,'accionEliminar']
   constructor(private uS:UsuarioService, private dialog: MatDialog){
 
   }

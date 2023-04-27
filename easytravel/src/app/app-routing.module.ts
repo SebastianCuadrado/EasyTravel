@@ -30,7 +30,8 @@ const routes: Routes = [
   {
     path: 'usuario',
     component: UsuarioComponent,
-    children: [{ path: 'new', component: UsuarioCreaeditaComponent }],
+    children: [{ path: 'new', component: UsuarioCreaeditaComponent },
+    {path: 'edicion/:id', component: UsuarioCreaeditaComponent }],
   },
   {
     path: 'places',
