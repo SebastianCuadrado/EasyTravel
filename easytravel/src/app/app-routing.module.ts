@@ -19,7 +19,10 @@ const routes: Routes = [
   {
     path: 'hotels',
     component: HotelsComponent,
-    children: [{ path: 'new', component: HotelsCreaeditaComponent }],
+    children: [
+    { path: 'new', component: HotelsCreaeditaComponent },
+    {path:'edicion/:id',component: HotelsCreaeditaComponent}
+  ],
 
   },
   {

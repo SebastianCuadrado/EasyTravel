@@ -29,6 +29,16 @@ import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
+<<<<<<< Updated upstream
+=======
+import { ComentariosHotelComponent } from './component/comentarios-hotel/comentarios-hotel.component';
+import { ComentariosHotelListarComponent } from './component/comentarios-hotel/comentarios-hotel-listar/comentarios-hotel-listar.component';
+import { UsuarioDialogoComponent } from './component/usuario/usuario-dialogo/usuario-dialogo.component';
+import { MatDialogModule } from '@angular/material/dialog'
+import { PlacesDialogoComponent } from './component/places/places-listar/places-dialogo/places-dialogo.component';
+import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
+import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-dialogo/hotels-dialogo.component';
+>>>>>>> Stashed changes
 
 
 
@@ -51,7 +61,16 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     UsuarioCreaeditaComponent,
     EmpresaTransporteComponent,
     EmpresaTransporteListarComponent,
+<<<<<<< Updated upstream
     EmpresatransporteCreaeditaComponent
+=======
+    EmpresatransporteCreaeditaComponent,
+    ComentariosHotelComponent,
+    ComentariosHotelListarComponent,
+    UsuarioDialogoComponent,
+    ComentariosHotelCreaeditaComponent,
+    HotelsDialogoComponent
+>>>>>>> Stashed changes
 
   ],
   imports: [
