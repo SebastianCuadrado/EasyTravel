@@ -36,6 +36,9 @@ import { MatDialogModule } from '@angular/material/dialog'
 import { PlacesDialogoComponent } from './component/places/places-listar/places-dialogo/places-dialogo.component';
 import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
 
+import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-dialogo/hotels-dialogo.component';
+
+
 
 
 
@@ -58,11 +61,16 @@ import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hote
     UsuarioCreaeditaComponent,
     EmpresaTransporteComponent,
     EmpresaTransporteListarComponent,
+
+
     EmpresatransporteCreaeditaComponent,
     ComentariosHotelComponent,
     ComentariosHotelListarComponent,
     UsuarioDialogoComponent,
-    ComentariosHotelCreaeditaComponent
+
+    ComentariosHotelCreaeditaComponent,
+    HotelsDialogoComponent
+
 
   ],
   imports: [

@@ -10,6 +10,7 @@ const base_url=environment.base
 })
 export class HotelsService {
   private url=`${base_url}/hotels`
+  private confirmarEliminacion = new Subject<Boolean>()
   private listaCambio=new Subject<Hotels[]>();
     constructor(private http:HttpClient) { }
   list()
@@ -26,6 +27,24 @@ this.listaCambio.next(ListaNueva)
 getList(){
 return this.listaCambio.asObservable();
 
+}
+listId(id: number) {
+  return this.http.get<Hotels>(`${this.url}/${id}`);
+}
+update(h:Hotels){
+  return this.http.put(this.url+"/"+h.id,h);
+
+
+}
+delete(id: number) {
+return this.http.delete(`${this.url}/${id}`)
+}
+
+getConfirmDelete(){
+return this.confirmarEliminacion.asObservable();
+}
+setConfirmDelete(estado:Boolean){
+this.confirmarEliminacion.next(estado);
 }
 
 

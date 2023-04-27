@@ -2,7 +2,7 @@ module.exports=function(){
 var data= {
     hotels:[
         {
-            idHotel:1,
+            id:1,
             nombre:"Selina Posada Miraflores",
             precio_noche:"116",
             ciudad:"Lima",
@@ -10,7 +10,7 @@ var data= {
             estrellas:2,
         },
         {
-            idHotel:2,
+            id:2,
             nombre:"Hotel Andean Dreams",
             precio_noche:"61",
             ciudad:"Cuzco",
@@ -18,7 +18,7 @@ var data= {
             estrellas:2,
         },
         {
-            idHotel:3,
+            id:3,
             nombre:"El Dorado",
             precio_noche:"176",
             ciudad:"Iquitos",
@@ -26,7 +26,7 @@ var data= {
             estrellas:3,
         },
         {
-            idHotel:4,
+            id:4,
             nombre:"Qala & Resort",
             precio_noche:"324",
             ciudad:"Chincha",
@@ -34,7 +34,7 @@ var data= {
             estrellas:3,
         },
         {
-            idHotel:5,
+            id:5,
             nombre:"Hotel Paracas, a Luxury Collection Resort",
             precio_noche:"809",
             ciudad:"Paracas",
@@ -42,7 +42,7 @@ var data= {
             estrellas:5,
         },
         {
-            idHotel:6,
+            id:6,
             nombre:"Qallwa Casma",
             precio_noche:"166",
             ciudad:"Casma",
