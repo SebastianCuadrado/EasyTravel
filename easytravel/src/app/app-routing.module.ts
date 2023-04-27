@@ -13,6 +13,8 @@ import { Place } from './model/places';
 
 import { EmpresatransporteCreaeditaComponent } from './component/empresa-transporte/empresatransporte-creaedita/empresatransporte-creaedita.component';
 import { PlacesCreaeditaComponent } from './component/places/places-creaedita/places-creaedita.component';
+import { ComentariosHotelComponent } from './component/comentarios-hotel/comentarios-hotel.component';
+import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
 
 
 const routes: Routes = [
@@ -39,8 +41,12 @@ const routes: Routes = [
     path: 'empresa-transporte',
     component: EmpresaTransporteComponent,
     children: [{path: 'new', component: EmpresatransporteCreaeditaComponent}]
+  },
+  {
+    path: 'comentarios-hotel',
+    component: ComentariosHotelComponent,
+    children: [{path:'new',component: ComentariosHotelCreaeditaComponent}]
   }
-
 
 ];
 

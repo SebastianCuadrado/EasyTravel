@@ -1,16 +1,45 @@
 import { Component, OnInit } from '@angular/core';
 import { Place } from 'src/app/model/places';
 import { PlacesService } from 'src/app/service/places.service';
-import {MatTableDataSource} from '@angular/material/table';
-
+import { MatTableDataSource } from '@angular/material/table';
+import { PlacesDialogoComponent } from './places-dialogo/places-dialogo.component';
+import { MatDialog } from '@angular/material/dialog';
 @Component({
   selector: 'app-places-listar',
   templateUrl: './places-listar.component.html',
-  styleUrls: ['./places-listar.component.css']
+  styleUrls: ['./places-listar.component.css'],
 })
-export class PlacesListarComponent implements OnInit{
-  dataSource:MatTableDataSource<Place>=new MatTableDataSource();
-  displayedColumns:string[]=['Codigo','Nombre','Descripcion','País']
-  constructor(private as:PlacesService){}
-  ngOnInit(): void { this.as.list().subscribe(data=>{this.dataSource=new MatTableDataSource(data)})}
+export class PlacesListarComponent implements OnInit {
+  lista: Place[] = []
+  dataSource: MatTableDataSource<Place> = new MatTableDataSource();
+  idMayor: number = 0;
+  displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País', 'accionEliminar']
+  constructor(private pS: PlacesService, private dialog: MatDialog) {}
+  ngOnInit(): void {
+    this.pS.list().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
+
+    this.pS.getList().subscribe(data => {
+      this.dataSource = new MatTableDataSource(data);
+    });
+
+    this.pS.getConfirmDelete().subscribe(data => {
+      data == true ? this.eliminar(this.idMayor) : false;
+    });
+  }
+  confirm(id: number) {
+    this.idMayor = id;
+    this.dialog.open(PlacesDialogoComponent);
+  }
+  eliminar(id: number) {
+    this.pS.delete(id).subscribe(() => {
+      this.pS.list().subscribe(data => {
+        this.pS.setList(data);
+      });
+    });
+  }
+  filter(e: any) {
+    this.dataSource.filter = e.target.value.trim();
+  }
 }

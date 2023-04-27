@@ -17,7 +17,7 @@ export class UsuarioCreaeditaComponent implements OnInit{
   maxFecha: Date = moment().add(-1, 'days').toDate();
   ngOnInit(): void {
     this.form = new FormGroup({
-      idUsuario: new FormControl(),
+      id: new FormControl(),
       nombre: new FormControl(),
       apellidos: new FormControl(),
       email: new FormControl(),
@@ -30,7 +30,7 @@ export class UsuarioCreaeditaComponent implements OnInit{
 constructor(private uS: UsuarioService, private router:Router) {}
 
 aceptar(): void {
-  this.usuarios.idUsuario=this.form.value['idUsuario'];
+  this.usuarios.id=this.form.value['id'];
   this.usuarios.nombre=this.form.value['nombre'];
   this.usuarios.apellidos=this.form.value['apellidos'];
   this.usuarios.email=this.form.value['email'];
