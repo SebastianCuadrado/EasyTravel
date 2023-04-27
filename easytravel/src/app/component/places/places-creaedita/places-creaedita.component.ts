@@ -3,7 +3,7 @@ import { FormGroup, FormGroupDirective, FormControl } from '@angular/forms';
 import { Place } from 'src/app/model/places';
 import * as moment from 'moment';
 import { PlacesService } from 'src/app/service/places.service';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import {  ActivatedRoute, Params, Router} from '@angular/router';
 @Component({
   selector: 'app-places-PlacesCreaeditaComponent',
   templateUrl: './places-creaedita.component.html',
@@ -35,12 +35,12 @@ export class PlacesCreaeditaComponent implements OnInit {
 
   aceptar(): void {
     this.places.id=this.form.value['id'];
-    this.places.namePlace=this.form.value['Nombre'];
-    this.places.descriptionPlace=this.form.value['Descripción'];
-    this.places.country=this.form.value['País'];
+    this.places.namePlace=this.form.value['namePlace'];
+    this.places.descriptionPlace=this.form.value['descriptionPlace'];
+    this.places.country=this.form.value['country'];
 
 
-    if(this.form.value['id'].length>0 &&['Nombre'].length>0  && this.form.value['Descripcion'].length>0 && this.form.value['País']>0)
+    if(this.form.value['namePlace'].length>0  && this.form.value['descriptionPlace'].length>0 && this.form.value['country'].length>0)
     {
       if (this.edicion) {
         this.pS.update(this.places).subscribe((data) => {
@@ -58,6 +58,7 @@ export class PlacesCreaeditaComponent implements OnInit {
       this.router.navigate(['places']);
     }
     else{this.mensaje="Ingresa los datos correctamente"}
+
   }
   init() {
     if (this.edicion) {
@@ -65,7 +66,7 @@ export class PlacesCreaeditaComponent implements OnInit {
         this.form = new FormGroup({
           id: new FormControl(data.id),
           namePlace: new FormControl(data.namePlace),
-          descriptonPlace: new FormControl(data.descriptionPlace),
+          descriptionPlace: new FormControl(data.descriptionPlace),
           country: new FormControl(data.country)
         })
       })

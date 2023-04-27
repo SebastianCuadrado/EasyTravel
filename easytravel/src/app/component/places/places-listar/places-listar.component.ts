@@ -13,7 +13,7 @@ export class PlacesListarComponent implements OnInit {
   lista: Place[] = []
   dataSource: MatTableDataSource<Place> = new MatTableDataSource();
   idMayor: number = 0;
-  displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País', 'accionEliminar']
+  displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País','accionEditar' ,'accionEliminar']
   constructor(private pS: PlacesService, private dialog: MatDialog) {}
   ngOnInit(): void {
     this.pS.list().subscribe(data => {
