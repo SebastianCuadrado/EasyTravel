@@ -10,13 +10,14 @@
 <body>
   <div class="container">
     <div style="text-align: center;">
-      <h1>Lista de Places</h1>
+      <h1>List of places</h1>
     </div>
-
+    <mat-form-field>
+      <input matInput (keyup)=filter($event) placeholder="buscar"/>
+    </mat-form-field>
     <div style="text-align: right;">
       <button mat-raised-button color="warn" routerLink="/places/new">Agregar</button>
     </div>
-
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef> No. </th>
