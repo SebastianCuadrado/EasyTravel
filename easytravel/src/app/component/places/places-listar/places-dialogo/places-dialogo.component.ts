@@ -8,11 +8,11 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./places-dialogo.component.css']
 })
 export class PlacesDialogoComponent {
-  constructor(private as: PlacesService,
+  constructor(private pS: PlacesService,
     private dialogRef: MatDialogRef<PlacesDialogoComponent>) { }
   ngOnInit(): void {}
     confirmar(estado: boolean){
-      this.as.setConfirmDelete(estado);
+      this.pS.setConfirmDelete(estado);
       this.dialogRef.close();
     }
 
