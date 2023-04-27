@@ -13,14 +13,19 @@
       <h1>Registro de Destino</h1>
 
     <form [formGroup]="form" (submit)="aceptar()">
+      <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput placeholder="id" formControlName="Codigo">
+      </mat-form-field>
+<br>
         <mat-form-field class="example-full-width">
-        <mat-label>Nombre</mat-label>
+        <mat-label>Destino</mat-label>
         <input matInput placeholder="Destino" formControlName="nombre">
       </mat-form-field>
 <br>
       <mat-form-field class="example-full-width">
-        <mat-label>Descripcion</mat-label>
-        <input matInput placeholder="Es un lugar ..." formControlName="Descripcion">
+        <mat-label>Descripción</mat-label>
+        <input matInput placeholder="Es un lugar ..." formControlName="Descripción">
       </mat-form-field>
 <br>
       <mat-form-field class="example-full-width">

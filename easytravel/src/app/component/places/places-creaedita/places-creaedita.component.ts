@@ -40,7 +40,7 @@ export class PlacesCreaeditaComponent implements OnInit {
     this.places.country=this.form.value['País'];
 
 
-    if(this.form.value['Nombre'].length>0  && this.form.value['Descripcion'].length>0 && this.form.value['País']>0)
+    if(this.form.value['id'].length>0 &&['Nombre'].length>0  && this.form.value['Descripcion'].length>0 && this.form.value['País']>0)
     {
       if (this.edicion) {
         this.pS.update(this.places).subscribe((data) => {

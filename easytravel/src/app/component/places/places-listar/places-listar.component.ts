@@ -10,6 +10,7 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./places-listar.component.css'],
 })
 export class PlacesListarComponent implements OnInit {
+  lista: Place[] = []
   dataSource: MatTableDataSource<Place> = new MatTableDataSource();
   idMayor: number = 0;
   displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País', 'accionEliminar']
