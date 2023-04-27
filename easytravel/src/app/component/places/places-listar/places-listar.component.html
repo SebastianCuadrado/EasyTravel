@@ -16,7 +16,7 @@
       <input matInput (keyup)=filter($event) placeholder="buscar"/>
     </mat-form-field>
     <div style="text-align: right;">
-      <button mat-raised-button color="warn" routerLink="/places/new">Agregar</button>
+      <button mat-raised-button color="primary" routerLink="/places/new">Agregar</button>
     </div>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <ng-container matColumnDef="id">
@@ -48,7 +48,7 @@
       <ng-container matColumnDef="accionEliminar">
         <th mat-header-cell *matHeaderCellDef> Acciones </th>
         <td mat-cell *matCellDef="let element">
-          <button mat-raised-button color="warn" (click)="confirm(element.id)"><span class="material-icons">delete</span></button>
+          <button mat-raised-button color="primary" (click)="confirm(element.id)"><span class="material-icons">delete</span></button>
         </td>
       </ng-container>
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
