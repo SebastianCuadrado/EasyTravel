@@ -155,9 +155,9 @@ var data= {
       }
     ],
 
-    Empresa_Transporte:[
+    empresa_transporte:[
       {
-          idEmpresa:1,
+          id:1,
           nombre:"AVIANCA AIRLINES",
           ruc:"20348858182",
           direccion:"Av. Jose Pardo 811, Miraflores. Lima - Peru",
@@ -165,21 +165,21 @@ var data= {
 
       },
       {
-          idEmpresa:2,
+          id:2,
           nombre:"LATAM AIRLINES",
           ruc:"20341841357",
           direccion:"Av. José Pardo 513, Miraflores Lima - Perú",
           contacto:"Telefono: (01) 213-8200 ; Web: www.latam.com/es_pe",
       },
       {
-          idEmpresa:3,
+          id:3,
           nombre:"REDBUS",
           ruc:"20547391501",
           direccion:"Av. Juan de Aliaga 360, Magdalena del Mar 15076",
           contacto:"Telefono 0801 - 00 - 015 . Email: CONTACTO@REDBUS.PE",
       },
       {
-          idEmpresa:4,
+          id:4,
           nombre:"BUSBUD",
           ruc:"20106076635",
           direccion:"Av. Brasil 1150, Magdalena del Mar",
@@ -187,6 +187,7 @@ var data= {
       },
 
     ],
+
     Comentarios_Hotel: [
       {
         idComentarioHotel:1,
