@@ -37,6 +37,7 @@ import { PlacesDialogoComponent } from './component/places/places-listar/places-
 import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
 
 import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-dialogo/hotels-dialogo.component';
+import { EmpresaTransporteDialogoComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-dialogo/empresa-transporte-dialogo.component';
 
 
 
@@ -69,7 +70,8 @@ import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-
     UsuarioDialogoComponent,
 
     ComentariosHotelCreaeditaComponent,
-    HotelsDialogoComponent
+    HotelsDialogoComponent,
+    EmpresaTransporteDialogoComponent
 
 
   ],
