@@ -15,6 +15,7 @@ import { EmpresatransporteCreaeditaComponent } from './component/empresa-transpo
 import { PlacesCreaeditaComponent } from './component/places/places-creaedita/places-creaedita.component';
 import { ComentariosHotelComponent } from './component/comentarios-hotel/comentarios-hotel.component';
 import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
+import { LandingComponent } from './component/landing/landing.component';
 
 
 const routes: Routes = [
@@ -46,8 +47,9 @@ const routes: Routes = [
     path: 'comentarios-hotel',
     component: ComentariosHotelComponent,
     children: [{path:'new',component: ComentariosHotelCreaeditaComponent}]
-  }
-
+  },
+{path:'landing',
+component:LandingComponent}
 ];
 
 @NgModule({
