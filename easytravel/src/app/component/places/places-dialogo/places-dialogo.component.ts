@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { PlacesService } from 'src/app/service/places.service';
 
 @Component({
   selector: 'app-places-dialogo',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./places-dialogo.component.css']
 })
 export class PlacesDialogoComponent {
-
+  constructor(private pS: PlacesService,
+    private dialogRef: MatDialogRef<PlacesDialogoComponent>) { }
+  ngOnInit(): void {}
+    confirmar(estado: boolean){
+      this.pS.setConfirmDelete(estado);
+      this.dialogRef.close();
+    }
 }
