@@ -10,7 +10,8 @@
   <div>
     <br>
     <div style="text-align: center;">
-      <h1>Registro de Usuarios</h1>
+      <i class="fa-solid fa-user"></i><br>
+      <h1>Regístrate</h1>
 
       <form [formGroup]="form" (submit)="aceptar()">
         <mat-form-field class="example-full-width">
@@ -55,9 +56,10 @@
   </mat-form-field>
 <br>
 
-        <button mat-raised-button color="primary" >Aceptar</button>
-        <button mat-raised-button color="warn" routerLink="/usuario">Cancelar</button>
+        <button mat-raised-button style="background-color: #2a9d8f;" >Aceptar</button>
+        <button mat-raised-button style="background-color: #e76f51;" routerLink="/usuario">Cancelar</button>
         <p>{{mensaje}}</p>
+
 
       </form>
 

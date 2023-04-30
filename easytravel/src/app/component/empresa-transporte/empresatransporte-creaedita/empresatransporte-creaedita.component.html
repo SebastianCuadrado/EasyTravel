@@ -10,10 +10,10 @@
   <div class="container">
   <div >
     <br>
-    <div style="text-align: center;">
+    <div style="text-align: center; padding-bottom:10px" >
       <h1>Registro de Empresas de Transporte</h1>
     </div>
-    <form [formGroup]="form" (submit)="aceptar()">
+    <form [formGroup]="form" (submit)="aceptar()" style="text-align: center; ">
       <mat-form-field class="example-full-width">
         <mat-label>Codigo</mat-label>
         <input matInput placeholder="N°" formControlName="id">
@@ -41,8 +41,8 @@
       </mat-form-field>
 <br>
 <br>
-      <button mat-raised-button color="primary" >Aceptar</button>
-      <button mat-raised-button color="warn" routerLink="/empresa-transporte" >Cancelar</button>
+<button mat-raised-button style="background-color: #2a9d8f;" >Aceptar</button>
+<button mat-raised-button style="background-color: #e76f51;" routerLink="/hotels">Cancelar</button>
       <p>{{mensaje}}</p>
 
     </form>
