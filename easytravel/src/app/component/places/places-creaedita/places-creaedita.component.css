@@ -1,3 +1,16 @@
 mat-form-field{
-  width: 95%;
+  width: 60%;
 }
+ i {
+  font-size: 700%;
+  color: #2a9d8f;
+ }
+
+ body{
+padding: 5%;
+
+ }
+
+ button{
+  margin: 10px;
+ }

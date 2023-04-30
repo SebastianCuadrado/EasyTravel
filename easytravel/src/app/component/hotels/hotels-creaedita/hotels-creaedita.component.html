@@ -7,10 +7,10 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="container">
+  <div style="text-align: center;" class="container">
   <div >
     <br>
-    <div style="text-align: center;">
+    <div style="text-align: center;" >
       <h1>Registro de hoteles</h1>
     </div>
     <form [formGroup]="form" (submit)="aceptar()">
@@ -27,7 +27,7 @@
 <br>
       <mat-form-field class="example-full-width">
         <mat-label>Precio por noche</mat-label>
-        <input matInput placeholder="s/80" formControlName="precio_noche">
+        <input matInput placeholder="Solo ingrese el monto (ej. 80)" formControlName="precio_noche">
       </mat-form-field>
       <br>
       <mat-form-field class="example-full-width">
@@ -45,8 +45,10 @@
         <input matInput placeholder="0-5" formControlName="estrellas">
       </mat-form-field>
 <br>
-      <button mat-raised-button color="primary" >Aceptar</button>
-      <button mat-raised-button color="warn" routerLink="/hotels" >Cancelar</button>
+<button mat-raised-button style="background-color: #2a9d8f;" >Aceptar</button>
+<button mat-raised-button style="background-color: #e76f51;" routerLink="/hotels">Cancelar</button>
+
+
       <p>{{mensaje}}</p>
 
     </form>

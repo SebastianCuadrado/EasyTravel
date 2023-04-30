@@ -15,28 +15,43 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="/landing/#row-destinos"
-            >Destinos</a
-          >
+          <div class="btn-group">
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Destinos
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/landing/#row-destinos">Section</a></li>
+              <li><a class="dropdown-item" href="/places">Destinos Populares</a></li>
+              <li><a class="dropdown-item" href="/places/new">Registra un destino</a></li>
+
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="/landing/#row-viajes"
-            >Empresa Transporte</a
-          >
+          <div class="btn-group">
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Viajes
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/landing/#row-viajes">Section</a></li>
+              <li><a class="dropdown-item" href="/empresa-transporte">Empresas Transporte</a></li>
+              <li><a class="dropdown-item" href="/empresa-transporte/new">Registra una empresa</a></li>
+
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="/landing/#row-hotel"
-            >Hoteles</a
-          >
+          <div class="btn-group">
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Hoteles
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/landing/#row-hotel">Section</a></li>
+              <li><a class="dropdown-item" href="/hotels">Hoteles  más populares</a></li>
+              <li><a class="dropdown-item" href="/hotels/new">Registra un hotel</a></li>
+
+            </ul>
+          </div>
         </li>
         <li class="nav-item">
           <a
@@ -48,12 +63,17 @@
         </li>
 
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            routerLink="/usuario/new"
-            >Registrarse</a
-          >
+          <div class="btn-group">
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Registrate
+            </button>
+            <ul class="dropdown-menu">
+
+              <li><a class="dropdown-item" href="/usuario/new">Registrarse</a></li>
+              <li><a class="dropdown-item" href="/usuario">Conoce a los usuarios</a></li>
+
+            </ul>
+          </div>
         </li>
       </ul>
     </div>

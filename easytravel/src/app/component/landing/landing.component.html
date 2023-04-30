@@ -1,7 +1,4 @@
-
 <header style="background-image: url('./assets/image/playa_familia.jpg')">
-
-
   <div class="container">
     <div class="texto1">
       <div class="tittle font-weight-bold">
@@ -101,6 +98,7 @@
   <div class="row py-5" id="row-hotel">
     <h1 class="font-weight-bold" style="text-align: center">Hoteles</h1>
     <div class="container">
+
       <div class="texto">
         <p>
           Te ofrecemos información detallada sobre los precios y
@@ -112,14 +110,112 @@
           deseas <br />visitar, lo que te permite ahorrar tiempo y dinero en
           <br />transporte. Ofrecemos información útil sobre la ubicación
           <br />de cada hotel, sus servicios y comodidades, asi como las
-          <br />opiniones y comentarios de otros huéspedes.
+          <br />opiniones y comentarios de otros huéspedes.<br /><br />
+          <button
+          class="btn btn-info me-md-2 font-weight-bold"
+          routerLink="/hotels"
+          type="button"
+        >
+          Conoce más hoteles
+        </button>
+
         </p>
+
+
+    </div>
+      <div class="carrusel">
+        <div
+          id="carouselExampleDark"
+          class="carousel carousel-dark slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img
+                src="./assets/image/qala.jpg"
+                class="d-block w-100"
+                alt="Qala Resort"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="font-weight-bold">Qala Resort</h5>
+                <p>
+                  Av. Los Laureles 102 Panamericana Sur Km. 193, Chincha Alta
+                  11141 Perú.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img
+                src="./assets/image/anden.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="font-weight-bold">Andrean Dreams Hotel</h5>
+                <p>N.º 152 de 156 hoteles pequeños en Cuzco</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/image/dorado.jpg"
+                class="d-block w-100"
+                alt="..."
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5 class="font-weight-bold">El Dorado</h5>
+                <p>
+                  Avenida Colombia No. 1A - 25, San Andrés, San Andrés 880001
+                  Colombia.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
       </div>
-      <img src="./assets/image/hotel_cds.jpg" alt="Figura4" />
     </div>
   </div>
 
-  <div class="row py-5" id="row-opinion">
+  <div class="row py-5" style="background-image: url('./assets/image/fondo3.png')"  id="row-opinion">
     <div class="container">
       <div class="figura"></div>
       <img
@@ -151,7 +247,7 @@
   </div>
   <div class="col">
     <h2>Social Media</h2>
-    <ul style="padding: 0%;" class="redes">
+    <ul style="padding: 0%;display:flex" class="redes">
       <i class="fa-brands fa-facebook"></i>
       <i class="fab fa-twitter"></i>
       <i class="fab fa-instagram"></i>
@@ -160,12 +256,10 @@
   <div class="col">
     <h2>Disponible en:</h2>
 
-      <img  src="./assets/image/googleplay.png" alt="descargalo en play store" />
-<br>
-      <img   src="./assets/image/appstore.png" alt="descargalo en app store" />
-
+    <img src="./assets/image/googleplay.png" alt="descargalo en play store" />
+    <br />
+    <img src="./assets/image/appstore.png" alt="descargalo en app store" />
   </div>
   <div class="col"></div>
   <div class="col"></div>
 </footer>
-

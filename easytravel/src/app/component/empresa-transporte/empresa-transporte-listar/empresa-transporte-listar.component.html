@@ -11,13 +11,14 @@
   <div class="container">
     <br>
     <div style="text-align: center;">
-      <h1 >Lista de Empresas de Transporte</h1>
+      <h1 >Empresas de Transporte</h1>
+      <i class="fa-solid fa-bus"></i>
     </div>
     <div style="text-align: right;">
-      <button  mat-raised-button color="warn" routerLink="/empresa-transporte/new" >Agregar</button>
+      <button mat-raised-button style="background-color: #264653; color:#fff"  routerLink="/empresa-transporte/new">Agregar</button>
     </div>
-    <mat-form-field>
-      <input matInput (keyup)="filtrar($event)" placeholder="Buscar" />
+    <mat-form-field >
+      <input  matInput (keyup)="filtrar($event)" placeholder="Buscar" />
     </mat-form-field>
       <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -51,28 +52,25 @@
           <td mat-cell *matCellDef="let element"> {{element.contacto}} </td>
         </ng-container>
         <ng-container matColumnDef="accion01">
-          <th mat-header-cell *matHeaderCellDef>Accciones</th>
+          <th mat-header-cell *matHeaderCellDef></th>
           <td mat-cell *matCellDef="let element">
-            <button
-              mat-raised-button
-              color="accent"
-              [routerLink]="['edicion', element.id]"
-            >
-              Actualizar
-            </button>
+            <button mat-raised-button style="background-color: #2a9d8f;" [routerLink]="['edicion', element.id]">
+              <span class="material-icons">edit</span></button>
           </td>
         </ng-container>
         <ng-container matColumnDef="accion02">
-          <th mat-header-cell *matHeaderCellDef> Acciones </th>
+          <th mat-header-cell *matHeaderCellDef> </th>
           <td mat-cell *matCellDef="let element">
-            <button mat-raised-button color="warn" (click)="confirm(element.id)"><span class="material-icons">delete</span></button>
+            <button mat-raised-button style="background-color: #f4a261;" (click)="confirm(element.id)"><span class="material-icons">delete</span></button>
           </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
+      <nav aria-label="Page navigation example">
 
+      </nav>
     </div>
 
 
