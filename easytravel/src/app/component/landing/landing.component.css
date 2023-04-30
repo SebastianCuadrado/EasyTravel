@@ -1,0 +1,220 @@
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  max-width: 1600px;
+}
+header {
+  background-size: cover;
+  height: 800px;
+  position: relative;
+}
+
+.tittle {
+  color: black;
+  font-size: 60px;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  text-align: left;
+  padding-right: 55%;
+  line-height: normal;
+}
+
+.btn-regist {
+  position: absolute;
+  color: antiquewhite;
+  background: #5497a7;
+  top: 60%;
+  left: 70%;
+  width: 15%;
+  height: 10%;
+}
+
+#row-destinos {
+  background-color: aliceblue;
+  position: relative;
+  height: 650px;
+}
+.row {
+  margin: 0;
+  height: 650px;
+  position: relative;
+  background-color: #fff;
+}
+.container {
+  position: relative;
+  height: 100%;
+}
+h1 {
+  font-size: 30px;
+}
+#row-destinos .texto {
+  font-size: large;
+  width: 46%;
+  padding: 2%;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
+#row-destinos img {
+  position: absolute;
+  left: 47%;
+  width: 49%;
+  height: 100%;
+  padding: 2%;
+  top: 0;
+}
+.btn-destino {
+  position: absolute;
+
+  background: #62a8ac;
+}
+
+#row-viajes {
+  position: relative;
+  height: 650px;
+}
+#row-viajes .texto {
+  font-size: large;
+  width: 46%;
+  padding: 2%;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  left: 50%;
+  text-align: center;
+}
+#row-viajes img {
+  padding-top: 60px;
+  width: 45%;
+  border-radius: 100px;
+  border-style: dashed;
+  left: 2%;
+  right: 30.5%;
+}
+#row-viajes .aerolineas {
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#row-viajes .aerolineas img {
+  width: 22%;
+  border-radius: 0%;
+  border-style: none;
+}
+.btn-viajes{
+  position: absolute;
+  background-color:#a1d2ce;
+  width: 46%;
+  margin: 2%;
+  padding: 2%;
+  left: 25%;
+}
+
+#row-hotel {
+  background-color: #a1d2ce;
+  position: relative;
+  height: 650px;
+}
+#row-hotel h1 {
+  background-color: #62a8ac;
+  text-align: center;
+
+  top: 5%;
+  width: 100%;
+  margin-bottom: 38px;
+}
+#row-hotel .texto p {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 130%;
+  margin-left: 5%;
+  letter-spacing: 0.015em;
+  width: 40%;
+  line-height: 120%;
+  width: 46%;
+  padding: 2%;
+  margin: 0;
+  right: 50%;
+}
+
+#row-hotel img {
+  top: 45%;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 50%;
+  width: 45%;
+  margin: 2.5;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+#row-opinion p {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 120%;
+  line-height: 150%;
+}
+
+#row-opinion img {
+  top: 35%;
+  transform: translateY(-50%);
+  position: absolute;
+  right: 50%;
+  width: 33%;
+  margin: 2.5%;
+  margin-right: 10%;
+  border: 1px solid #a1d2ce;
+}
+
+.figura {
+  width: 33%;
+  height: 55%;
+  border: 3px solid #5497a7;
+  position: absolute;
+  right: 58%;
+  top: 52%;
+  transform: translateY(-50%);
+}
+footer {
+  padding: 2%;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: baseline;
+  align-items: baseline;
+  background-color: #5497a7;
+
+
+}
+
+footer h2 {
+  font-style: bold;
+}
+footer img {
+  width: 40%;
+
+}
+footer i{
+  padding: 0%;
+  font-size: 300%;
+  margin: 5px;
+
+
+}

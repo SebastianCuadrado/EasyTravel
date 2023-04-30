@@ -9,5 +9,4 @@ import { ActivatedRoute } from '@angular/router';
 export class HotelsComponent implements OnInit{
   constructor(public route:ActivatedRoute){}
   ngOnInit():void{}
-
 }

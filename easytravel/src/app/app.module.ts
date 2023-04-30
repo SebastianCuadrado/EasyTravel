@@ -36,8 +36,18 @@ import { MatDialogModule } from '@angular/material/dialog'
 import { PlacesDialogoComponent } from './component/places/places-dialogo/places-dialogo.component';
 import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
 import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-dialogo/hotels-dialogo.component';
-import { LandingComponent } from './component/landing/landing.component';
+
+
+
+
 import { EmpresaTransporteDialogoComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-dialogo/empresa-transporte-dialogo.component';
+import { LandingComponent } from './component/landing/landing.component';
+
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -65,7 +75,10 @@ import { EmpresaTransporteDialogoComponent } from './component/empresa-transport
     UsuarioDialogoComponent,
     ComentariosHotelCreaeditaComponent,
     HotelsDialogoComponent,
+
     LandingComponent
+
+
   ],
   imports: [
     BrowserModule,
@@ -85,7 +98,8 @@ import { EmpresaTransporteDialogoComponent } from './component/empresa-transport
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+
 
 
   ],
