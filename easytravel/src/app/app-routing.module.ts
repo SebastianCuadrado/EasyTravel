@@ -31,7 +31,8 @@ const routes: Routes = [
   {
     path: 'usuario',
     component: UsuarioComponent,
-    children: [{ path: 'new', component: UsuarioCreaeditaComponent }],
+    children: [{ path: 'new', component: UsuarioCreaeditaComponent },
+    {path: 'edicion/:id', component: UsuarioCreaeditaComponent }],
   },
   {
     path: 'places',
@@ -41,7 +42,8 @@ const routes: Routes = [
   {
     path: 'empresa-transporte',
     component: EmpresaTransporteComponent,
-    children: [{path: 'new', component: EmpresatransporteCreaeditaComponent}]
+    children: [{path: 'new', component: EmpresatransporteCreaeditaComponent},
+    {path: 'edicion/:id', component: EmpresatransporteCreaeditaComponent }]
   },
   {
     path: 'comentarios-hotel',
