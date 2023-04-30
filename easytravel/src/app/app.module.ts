@@ -33,14 +33,16 @@ import { ComentariosHotelComponent } from './component/comentarios-hotel/comenta
 import { ComentariosHotelListarComponent } from './component/comentarios-hotel/comentarios-hotel-listar/comentarios-hotel-listar.component';
 import { UsuarioDialogoComponent } from './component/usuario/usuario-dialogo/usuario-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog'
-import { PlacesDialogoComponent } from './component/places/places-listar/places-dialogo/places-dialogo.component';
+import { PlacesDialogoComponent } from './component/places/places-dialogo/places-dialogo.component';
 import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
 import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-dialogo/hotels-dialogo.component';
 
 
 
+
 import { EmpresaTransporteDialogoComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-dialogo/empresa-transporte-dialogo.component';
 import { LandingComponent } from './component/landing/landing.component';
+
 
 
 
@@ -67,17 +69,14 @@ import { LandingComponent } from './component/landing/landing.component';
     EmpresaTransporteComponent,
     EmpresaTransporteListarComponent,
     EmpresatransporteCreaeditaComponent,
+    EmpresaTransporteDialogoComponent,
     ComentariosHotelComponent,
     ComentariosHotelListarComponent,
     UsuarioDialogoComponent,
     ComentariosHotelCreaeditaComponent,
     HotelsDialogoComponent,
 
-
-
-    EmpresaTransporteDialogoComponent,
-          LandingComponent
-
+    LandingComponent
 
 
   ],

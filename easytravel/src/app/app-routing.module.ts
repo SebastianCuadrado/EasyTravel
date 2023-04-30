@@ -15,8 +15,12 @@ import { EmpresatransporteCreaeditaComponent } from './component/empresa-transpo
 import { PlacesCreaeditaComponent } from './component/places/places-creaedita/places-creaedita.component';
 import { ComentariosHotelComponent } from './component/comentarios-hotel/comentarios-hotel.component';
 import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
-import { MenuComponent } from './menu/menu.component';
+
 import { LandingComponent } from './component/landing/landing.component';
+import { EmpresaTransporteDialogoComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-dialogo/empresa-transporte-dialogo.component';
+
+import { MenuComponent } from './menu/menu.component';
+
 
 const routes: Routes = [
   {
@@ -29,26 +33,34 @@ const routes: Routes = [
     path: 'hotels',
     component: HotelsComponent,
     children: [
+
       { path: 'new', component: HotelsCreaeditaComponent },
       { path: 'edicion/:id', component: HotelsCreaeditaComponent },
     ],
+
   },
   {
     path: 'usuario',
     component: UsuarioComponent,
+
     children: [
       { path: 'new', component: UsuarioCreaeditaComponent },
       { path: 'edicion/:id', component: UsuarioCreaeditaComponent },
     ],
+
   },
   {
     path: 'places',
     component: PlacesComponent,
-    children: [{ path: 'new', component: PlacesCreaeditaComponent }],
+
+    children: [{ path: 'new', component: PlacesCreaeditaComponent},
+    {path: 'edicion/:id', component: PlacesCreaeditaComponent }]
+
   },
   {
     path: 'empresa-transporte',
     component: EmpresaTransporteComponent,
+
     children: [
       { path: 'new', component: EmpresatransporteCreaeditaComponent },
       {
@@ -56,14 +68,17 @@ const routes: Routes = [
         component: EmpresatransporteCreaeditaComponent,
       },
     ],
+
   },
   {
     path: 'comentarios-hotel',
     component: ComentariosHotelComponent,
-    children: [
-      { path: 'new', component: ComentariosHotelCreaeditaComponent },
-    ],
+
+    children: [{path:'new',component: ComentariosHotelCreaeditaComponent}]
   },
+{path:'landing',
+
+ 
 ];
 
 @NgModule({
