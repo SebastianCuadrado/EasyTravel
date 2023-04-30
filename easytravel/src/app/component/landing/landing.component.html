@@ -1,4 +1,7 @@
+
 <header style="background-image: url('./assets/image/playa_familia.jpg')">
+
+
   <div class="container">
     <div class="texto1">
       <div class="tittle font-weight-bold">
@@ -80,6 +83,13 @@
             alt="logo de la aerolinea avianca"
           />
         </div>
+        <button
+          class="btn btn-viajes me-md-2 font-weight-bold"
+          routerLink="/empresa-transporte"
+          type="button"
+        >
+          Empresas afiliadas
+        </button>
       </div>
 
       <figure>
@@ -89,11 +99,9 @@
   </div>
 
   <div class="row py-5" id="row-hotel">
-    <h1 class="font-weight-bold" style="text-align: center;">Hoteles</h1>
+    <h1 class="font-weight-bold" style="text-align: center">Hoteles</h1>
     <div class="container">
       <div class="texto">
-
-
         <p>
           Te ofrecemos información detallada sobre los precios y
           <br />servicios de los hoteles. Te brindamos una selección de
@@ -106,18 +114,16 @@
           <br />de cada hotel, sus servicios y comodidades, asi como las
           <br />opiniones y comentarios de otros huéspedes.
         </p>
-
-
       </div>
-      <img src="assets/image/hotel_cds.jpg" alt="Figura4" />
+      <img src="./assets/image/hotel_cds.jpg" alt="Figura4" />
     </div>
   </div>
 
-  <div class="opinion">
-    <article id="Opiniones y Contacto">
+  <div class="row py-5" id="row-opinion">
+    <div class="container">
       <div class="figura"></div>
       <img
-        src="assets/image/image/mochilera.jpg"
+        src="./assets/image/mochilera.jpg"
         alt="persona con mochila grande feliz "
       />
       <p>
@@ -129,46 +135,37 @@
         encontrar una gran variedad de opciones de <br />alojamiento a precios
         muy razonables."
         <br />
-        <br />Fernanda Acosta
+        <br />-Fernanda Acosta
       </p>
-    </article>
+    </div>
   </div>
 </main>
 
 <footer>
-  <section class="descargas">
-    <article id="Descargas">
-      <h1>Descargas</h1>
-      <div class="so">
-        <h2>Android</h2>
-        <h2>IOS</h2>
-      </div>
-
-      <div class="play-app">
-        <img
-          src="assets/image/image/googleplay.png"
-          alt="descargalo en play store"
-        />
-        <img
-          src="assets/image/image/appstore.png"
-          alt="descargalo en app store"
-        />
-      </div>
-    </article>
-  </section>
-  <div class="descp">
-    <h3>EasyTravel</h3>
+  <div class="col">
+    <h2>EasyTravel</h2>
     <p>
       Esta aplicación permite la reservación <br />para viajes y hoteles según
       la <br />preferencia del usuario.
     </p>
   </div>
-  <div class="social">
-    <h3>Social Media</h3>
-    <ul class="redes">
+  <div class="col">
+    <h2>Social Media</h2>
+    <ul style="padding: 0%;" class="redes">
       <i class="fa-brands fa-facebook"></i>
       <i class="fab fa-twitter"></i>
       <i class="fab fa-instagram"></i>
     </ul>
   </div>
+  <div class="col">
+    <h2>Disponible en:</h2>
+
+      <img  src="./assets/image/googleplay.png" alt="descargalo en play store" />
+<br>
+      <img   src="./assets/image/appstore.png" alt="descargalo en app store" />
+
+  </div>
+  <div class="col"></div>
+  <div class="col"></div>
 </footer>
+
