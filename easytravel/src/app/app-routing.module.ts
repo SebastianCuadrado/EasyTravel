@@ -76,9 +76,9 @@ const routes: Routes = [
 
     children: [{path:'new',component: ComentariosHotelCreaeditaComponent}]
   },
-{path:'landing',
 
- 
+
+
 ];
 
 @NgModule({
