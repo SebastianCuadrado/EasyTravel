@@ -3,7 +3,7 @@ import { Place } from 'src/app/model/places';
 import { PlacesService } from 'src/app/service/places.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
-import { PlacesDialogoComponent } from './places-dialogo/places-dialogo.component';
+import { PlacesDialogoComponent } from '../places-dialogo/places-dialogo.component';
 @Component({
   selector: 'app-places-listar',
   templateUrl: './places-listar.component.html',
