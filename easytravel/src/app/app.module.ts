@@ -42,7 +42,7 @@ import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-
 
 import { EmpresaTransporteDialogoComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-dialogo/empresa-transporte-dialogo.component';
 import { LandingComponent } from './component/landing/landing.component';
-
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 
 
 
@@ -99,7 +99,7 @@ import { LandingComponent } from './component/landing/landing.component';
     MatIconModule,
     MatListModule,
     MatDialogModule,
-
+    MatPaginatorModule,
 
 
   ],

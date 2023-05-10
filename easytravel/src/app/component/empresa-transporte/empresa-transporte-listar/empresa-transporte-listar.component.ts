@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Empresa_Transporte } from 'src/app/model/Empresa_Transporte';
 import { EmpresaTransporteService } from 'src/app/service/empresa-transporte.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { EmpresaTransporteDialogoComponent } from './empresa-transporte-dialogo/empresa-transporte-dialogo.component';
 import { MatDialog } from '@angular/material/dialog'
+import {MatPaginator} from '@angular/material/paginator';
+
 @Component({
   selector: 'app-empresa-transporte-listar',
   templateUrl: './empresa-transporte-listar.component.html',
@@ -24,6 +26,8 @@ export class EmpresaTransporteListarComponent implements OnInit {
   idMayor: number = 0;
   lista: EmpresaTransporteService[] = []
 
+@ViewChild(MatPaginator)paginator!:MatPaginator
+
   constructor(
     private tS: EmpresaTransporteService,
     private dialog: MatDialog
@@ -32,6 +36,7 @@ export class EmpresaTransporteListarComponent implements OnInit {
   ngOnInit(): void {
     this.tS.list().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator=this.paginator;
     })
     this.tS.getList().subscribe(data=>{this.dataSource=new MatTableDataSource(data)})
     this.tS.getConfirmDelete().subscribe(data => {

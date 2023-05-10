@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Hotels } from 'src/app/model/hotels';
 import { HotelsService } from 'src/app/service/hotels.service';
 import { MatTableDataSource} from '@angular/material/table'
 import { MatDialog } from '@angular/material/dialog'
 import { HotelsDialogoComponent } from './hotels-dialogo/hotels-dialogo.component';
+import {MatPaginator} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-hotels-listar',
@@ -20,9 +21,16 @@ export class HotelsListarComponent implements OnInit {
   {
 
   }
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  ngAfterViewInit() {
+
+  }
   ngOnInit(): void {
       this.hS.list().subscribe(data=>{
         this.dataSource=new MatTableDataSource(data);
+        this.dataSource.paginator = this.paginator;
       })
 
       this.hS.getList().subscribe(data=>{this.dataSource=new MatTableDataSource(data)})
