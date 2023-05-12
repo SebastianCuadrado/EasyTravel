@@ -18,6 +18,13 @@
           Agregar
         </button>
       </div>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Contador:</mat-card-title>
+          <mat-card-subtitle>{{count}}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      <br>
       <mat-form-field>
         <input matInput (keyup)="filtrar($event)" placeholder="Buscar" />
       </mat-form-field>

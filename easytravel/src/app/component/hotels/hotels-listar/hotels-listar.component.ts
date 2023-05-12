@@ -16,6 +16,7 @@ export class HotelsListarComponent implements OnInit {
   lista: Hotels[] = []
   dataSource:MatTableDataSource<Hotels>= new MatTableDataSource();
   displayedColumns:string[]=['codigo','nombre','precio_noche','ciudad','valoracion_prom','estrellas','accion01','accion02']
+  count:number=0
 
   constructor(private hS:HotelsService,private dialog:MatDialog)
   {
@@ -24,16 +25,16 @@ export class HotelsListarComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-  ngAfterViewInit() {
 
-  }
   ngOnInit(): void {
       this.hS.list().subscribe(data=>{
         this.dataSource=new MatTableDataSource(data);
         this.dataSource.paginator = this.paginator;
+        this.lista=data;
+        this.count=this.lista.length;
       })
 
-      this.hS.getList().subscribe(data=>{this.dataSource=new MatTableDataSource(data)})
+      this.hS.getList().subscribe(data=>{this.dataSource=new MatTableDataSource(data);})
       this.hS.getConfirmDelete().subscribe(data => {
         data == true ? this.eliminar(this.idMayor) : false;
       })
