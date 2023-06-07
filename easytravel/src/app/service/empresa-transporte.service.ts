@@ -9,7 +9,7 @@ const base_url=environment.base
   providedIn: 'root'
 })
 export class EmpresaTransporteService {
-  private url=`${base_url}/empresa_transporte`
+  private url=`${base_url}/empresatransporte`
   private listaCambio=new Subject<Empresa_Transporte[]>();
   private confirmarEliminacion = new Subject<Boolean>()
     constructor(private http:HttpClient) { }
@@ -32,7 +32,7 @@ listId(id: number) {
   return this.http.get<Empresa_Transporte>(`${this.url}/${id}`);
 }
 update(e:Empresa_Transporte){
-  return this.http.put(this.url+"/"+e.id,e);
+  return this.http.put(this.url,e);
 
 
 }

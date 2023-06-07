@@ -34,7 +34,7 @@ export class EmpresatransporteCreaeditaComponent implements OnInit {
   constructor(private tS: EmpresaTransporteService, private router: Router,private route:ActivatedRoute) {}
 
   aceptar(): void {
-    this.empresa_transportes.id = this.form.value['id'];
+    this.empresa_transportes.idEmpresa = this.form.value['id'];
     this.empresa_transportes.nombre = this.form.value['nombre'];
     this.empresa_transportes.ruc = this.form.value['ruc'];
     this.empresa_transportes.direccion = this.form.value['direccion'];
@@ -70,12 +70,11 @@ export class EmpresatransporteCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.tS.listId(this.id).subscribe((data) => {
         this.form = new FormGroup({
-          id: new FormControl(data.id),
+          id: new FormControl(data.idEmpresa),
           nombre: new FormControl(data.nombre),
           ruc: new FormControl(data.ruc),
           direccion: new FormControl(data.direccion),
-          contacto: new FormControl(data.contacto),
-
+          contacto: new FormControl(data.contacto)
         });
       });
     }
