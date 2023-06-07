@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Place } from 'src/app/model/places';
 import { PlacesService } from 'src/app/service/places.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { PlacesDialogoComponent } from './places-dialogo/places-dialogo.component';
+import {MatPaginator} from '@angular/material/paginator';
+
 @Component({
   selector: 'app-places-listar',
   templateUrl: './places-listar.component.html',
@@ -15,9 +17,11 @@ export class PlacesListarComponent implements OnInit {
   idMayor: number = 0;
   displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País','accionEditar' ,'accionEliminar']
   constructor(private pS: PlacesService, private dialog: MatDialog) {}
+  @ViewChild(MatPaginator)paginator!:MatPaginator
   ngOnInit(): void {
     this.pS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator=this.paginator
     });
 
     this.pS.getList().subscribe(data => {

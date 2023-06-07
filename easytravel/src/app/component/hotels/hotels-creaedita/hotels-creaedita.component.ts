@@ -41,7 +41,7 @@ export class HotelsCreaeditaComponent implements OnInit {
   ) {}
 
   aceptar(): void {
-    this.hotels.id = this.form.value['id'];
+    this.hotels.idHotels = this.form.value['id'];
     this.hotels.nombre = this.form.value['nombre'];
     this.hotels.precio_noche = this.form.value['precio_noche'];
     this.hotels.ciudad = this.form.value['ciudad'];
@@ -78,7 +78,7 @@ export class HotelsCreaeditaComponent implements OnInit {
     if (this.edicion) {
       this.hS.listId(this.id).subscribe((data) => {
         this.form = new FormGroup({
-          id: new FormControl(data.id),
+          id: new FormControl(data.idHotels),
           nombre: new FormControl(data.nombre),
           precio_noche: new FormControl(data.precio_noche),
           ciudad: new FormControl(data.ciudad),

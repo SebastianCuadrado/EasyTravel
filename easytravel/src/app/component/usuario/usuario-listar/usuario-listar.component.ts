@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Usuario } from 'src/app/model/usuario';
 import { UsuarioService } from 'src/app/service/usuario.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog'
 import { UsuarioDialogoComponent } from '../usuario-dialogo/usuario-dialogo.component';
+import {MatPaginator} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-usuario-listar',
@@ -17,10 +18,11 @@ export class UsuarioListarComponent implements OnInit {
   constructor(private uS:UsuarioService, private dialog: MatDialog){
 
   }
-
+@ViewChild(MatPaginator)paginator!:MatPaginator
   ngOnInit(): void {
     this.uS.list().subscribe(data =>{
       this.dataSource=new MatTableDataSource(data);
+      this.dataSource.paginator=this.paginator;
     })
 
     this.uS.getList().subscribe(data => {

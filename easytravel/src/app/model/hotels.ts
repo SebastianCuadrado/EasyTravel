@@ -1,5 +1,5 @@
 export  class Hotels{
-id:number=0
+idHotels:number=0
 nombre:string=""
 precio_noche:string=""
 ciudad:string=""
