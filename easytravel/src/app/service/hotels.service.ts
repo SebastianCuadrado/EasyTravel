@@ -34,7 +34,7 @@ listId(id: number) {
   return this.http.get<Hotels>(`${this.url}/${id}`);
 }
 update(h:Hotels){
-  return this.http.put(this.url+"/"+h.id,h);
+  return this.http.put(this.url+"/"+h.idHotels,h);
 
 
 }

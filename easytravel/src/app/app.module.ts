@@ -29,12 +29,10 @@ import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { ComentariosHotelComponent } from './component/comentarios-hotel/comentarios-hotel.component';
-import { ComentariosHotelListarComponent } from './component/comentarios-hotel/comentarios-hotel-listar/comentarios-hotel-listar.component';
+
 import { UsuarioDialogoComponent } from './component/usuario/usuario-dialogo/usuario-dialogo.component';
 import { MatDialogModule } from '@angular/material/dialog'
 import { PlacesDialogoComponent } from './component/places/places-listar/places-dialogo/places-dialogo.component';
-import { ComentariosHotelCreaeditaComponent } from './component/comentarios-hotel/comentarios-hotel-creaedita/comentarios-hotel-creaedita.component';
 import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-dialogo/hotels-dialogo.component';
 
 
@@ -70,10 +68,9 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
     EmpresaTransporteListarComponent,
     EmpresatransporteCreaeditaComponent,
     EmpresaTransporteDialogoComponent,
-    ComentariosHotelComponent,
-    ComentariosHotelListarComponent,
+
     UsuarioDialogoComponent,
-    ComentariosHotelCreaeditaComponent,
+
     HotelsDialogoComponent,
 
     LandingComponent
