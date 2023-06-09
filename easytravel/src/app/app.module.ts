@@ -34,20 +34,11 @@ import { UsuarioDialogoComponent } from './component/usuario/usuario-dialogo/usu
 import { MatDialogModule } from '@angular/material/dialog'
 import { PlacesDialogoComponent } from './component/places/places-listar/places-dialogo/places-dialogo.component';
 import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-dialogo/hotels-dialogo.component';
-
-
-
-
 import { EmpresaTransporteDialogoComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-dialogo/empresa-transporte-dialogo.component';
 import { LandingComponent } from './component/landing/landing.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { DetallehotelComponent } from './component/detallehotel/detallehotel.component';
 import { DetallehotelCreaeditaComponent } from './component/detallehotel/detallehotel-creaedita/detallehotel-creaedita.component';
-
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -75,9 +66,11 @@ import { DetallehotelCreaeditaComponent } from './component/detallehotel/detalle
 
     HotelsDialogoComponent,
 
+
     LandingComponent,
       DetallehotelComponent,
       DetallehotelCreaeditaComponent
+
 
 
   ],
