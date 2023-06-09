@@ -41,6 +41,8 @@ import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-
 import { EmpresaTransporteDialogoComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-dialogo/empresa-transporte-dialogo.component';
 import { LandingComponent } from './component/landing/landing.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { DetallehotelComponent } from './component/detallehotel/detallehotel.component';
+import { DetallehotelCreaeditaComponent } from './component/detallehotel/detallehotel-creaedita/detallehotel-creaedita.component';
 
 
 
@@ -73,7 +75,9 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 
     HotelsDialogoComponent,
 
-    LandingComponent
+    LandingComponent,
+      DetallehotelComponent,
+      DetallehotelCreaeditaComponent
 
 
   ],
