@@ -39,6 +39,10 @@ import { LandingComponent } from './component/landing/landing.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { DetallehotelComponent } from './component/detallehotel/detallehotel.component';
 import { DetallehotelCreaeditaComponent } from './component/detallehotel/detallehotel-creaedita/detallehotel-creaedita.component';
+import { ServiciosComponent } from './component/servicios/servicios.component';
+import { ServiciosListarComponent } from './component/servicios/servicios-listar/servicios-listar.component';
+import { ServiciosCreaeditaComponent } from './component/servicios/servicios-creaedita/servicios-creaedita.component';
+import { ServiciosDialogoComponent } from './component/servicios/servicios-listar/servicios-dialogo/servicios-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +73,11 @@ import { DetallehotelCreaeditaComponent } from './component/detallehotel/detalle
 
     LandingComponent,
       DetallehotelComponent,
-      DetallehotelCreaeditaComponent
+      DetallehotelCreaeditaComponent,
+      ServiciosComponent,
+      ServiciosListarComponent,
+      ServiciosCreaeditaComponent,
+      ServiciosDialogoComponent
 
 
 
