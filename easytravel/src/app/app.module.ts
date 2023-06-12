@@ -37,7 +37,10 @@ import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-
 import { EmpresaTransporteDialogoComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-dialogo/empresa-transporte-dialogo.component';
 import { LandingComponent } from './component/landing/landing.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
-
+import { TravelComponent } from './component/travel/travel.component';
+import { TravelListarComponent } from './component/travel/travel-listar/travel-listar.component';
+import { TravelCreaeditaComponent } from './component/travel/travel-creaedita/travel-creaedita.component';
+import { MatSelectModule } from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,7 +66,10 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
     UsuarioDialogoComponent,
 
     HotelsDialogoComponent,
-    LandingComponent
+    LandingComponent,
+    TravelComponent,
+    TravelListarComponent,
+    TravelCreaeditaComponent
   ],
   imports: [
     BrowserModule,
@@ -85,7 +91,7 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
     MatListModule,
     MatDialogModule,
     MatPaginatorModule,
-
+    MatSelectModule
 
   ],
   providers: [],

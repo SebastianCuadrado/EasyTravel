@@ -1,0 +1,59 @@
+<div class="container">
+  <h1>Libros</h1>
+  <form [formGroup]="form" (submit)="aceptar()">
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" formControlName="idViaje">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Empresa de Transporte</mat-label>
+    <mat-select formControlName="empresaTransporte" [(value)]="idEmpresaSeleccionada" required>
+      <mat-option *ngFor="let a of lista" [value]="a.idEmpresa">
+        {{a.nombre}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Medio de Transporte</mat-label>
+    <input matInput required placeholder="Bus" formControlName="medioTransporte">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de Ida</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="fechaIda" [min]="minFecha">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Fecha de Vuelta</mat-label>
+    <input matInput [matDatepicker]="picker2" formControlName="fechaVuelta" [min]="minFecha">
+    <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+    <mat-datepicker #picker2></mat-datepicker>
+    </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Ruta</mat-label>
+    <input matInput required placeholder="Ruta" formControlName="ruta">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Duración</mat-label>
+    <input matInput type="number" required placeholder="10" formControlName="duracionPromedio">
+  </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+
+    <button mat-raised-button color="warn" routerLink="/travel">Cancelar</button>
+  <p>{{mensaje}}</p>
+  </form>
+</div>
