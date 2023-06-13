@@ -1,0 +1,47 @@
+<div class="container">
+  <div style=" text-align: center;">
+    <h1>Lista de Viajes</h1>
+  </div>
+  <div style="text-align: right;" class="example-button-row">
+    <button mat-raised-button color="primary" routerLink="/travel/new" >Nuevo</button>
+  </div>
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="idViaje">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.idViaje}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="empresaTransporte">
+      <th mat-header-cell *matHeaderCellDef> empresaTransporte </th>
+      <td mat-cell *matCellDef="let element"> {{element.empresaTransporte.nombre}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="fechaIda">
+      <th mat-header-cell *matHeaderCellDef> fechaIda </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaIda|date:'dd/MM/yyyy'}} </td>
+    </ng-container>
+    <ng-container matColumnDef="fechaVuelta">
+      <th mat-header-cell *matHeaderCellDef> fechaVuelta </th>
+      <td mat-cell *matCellDef="let element"> {{element.fechaVuelta|date:'dd/MM/yyyy'}} </td>
+    </ng-container>
+    <ng-container matColumnDef="medioTransporte">
+      <th mat-header-cell *matHeaderCellDef> medioTransporte </th>
+      <td mat-cell *matCellDef="let element"> {{element.medioTransporte}} </td>
+    </ng-container>
+    <ng-container matColumnDef="ruta">
+      <th mat-header-cell *matHeaderCellDef> ruta </th>
+      <td mat-cell *matCellDef="let element"> {{element.ruta}} </td>
+    </ng-container>
+    <ng-container matColumnDef="duracionPromedio">
+      <th mat-header-cell *matHeaderCellDef> duracionPromedio </th>
+      <td mat-cell *matCellDef="let element"> {{element.duracionPromedio}} h </td>
+    </ng-container>
+    <!-- Weight Column -->
+
+   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
