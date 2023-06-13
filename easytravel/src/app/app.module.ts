@@ -49,8 +49,12 @@ import { ServiciosComponent } from './component/servicios/servicios.component';
 import { ServiciosListarComponent } from './component/servicios/servicios-listar/servicios-listar.component';
 import { ServiciosCreaeditaComponent } from './component/servicios/servicios-creaedita/servicios-creaedita.component';
 import { ServiciosDialogoComponent } from './component/servicios/servicios-listar/servicios-dialogo/servicios-dialogo.component';
+
+import { MatSelectModule } from '@angular/material/select';
+
 import { DetallehotelListarComponent } from './component/detallehotel/detallehotel-listar/detallehotel-listar.component';
 import { DetallehotelDialogoComponent } from './component/detallehotel/detallehotel-listar/detallehotel-dialogo/detallehotel-dialogo.component';
+
 
 
 @NgModule({
