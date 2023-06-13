@@ -47,7 +47,7 @@ constructor(
       idServicio: new FormControl(),
       nombre: new FormControl(),
       descripcion: new FormControl(),
-      hotel: new FormControl(),
+      hotels: new FormControl(),
 
     });
 
@@ -58,12 +58,12 @@ aceptar(): void {
   this.servicio.idServicio = this.form.value['idServicio'];
   this.servicio.nombre = this.form.value['nombre'];
   this.servicio.descripcion = this.form.value['descripcion'];
-  this.servicio.hotel.nombre = this.form.value['hotels.nombre'];
+  this.servicio.hotels.nombre = this.form.value['hotels.nombre'];
 
   if (this.hotelSeleccionado>0) {
     let h = new Hotels();
     h.idHotels = this.hotelSeleccionado;
-    this.servicio.hotel=h;
+    this.servicio.hotels=h;
     this.sS.insert(this.servicio).subscribe(() => {
       this.sS.list().subscribe(data => {
             this.sS.setList(data);
@@ -82,7 +82,7 @@ init() {
         id: new FormControl(data.idServicio),
         nombre: new FormControl(data.nombre),
         descripcion: new FormControl(data.descripcion),
-        hotel : new FormControl(data.hotel.idHotels),
+        hotels : new FormControl(data.hotels.nombre),
 
       });
     });

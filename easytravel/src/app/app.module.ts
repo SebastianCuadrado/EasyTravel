@@ -43,6 +43,7 @@ import { ServiciosComponent } from './component/servicios/servicios.component';
 import { ServiciosListarComponent } from './component/servicios/servicios-listar/servicios-listar.component';
 import { ServiciosCreaeditaComponent } from './component/servicios/servicios-creaedita/servicios-creaedita.component';
 import { ServiciosDialogoComponent } from './component/servicios/servicios-listar/servicios-dialogo/servicios-dialogo.component';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -102,7 +103,7 @@ import { ServiciosDialogoComponent } from './component/servicios/servicios-lista
     MatListModule,
     MatDialogModule,
     MatPaginatorModule,
-
+    MatSelectModule
 
   ],
   providers: [],

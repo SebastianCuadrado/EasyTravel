@@ -15,7 +15,7 @@ export class ServiciosListarComponent implements OnInit{
   idMayor: number = 0
   lista: Servicios[] = []
   dataSource:MatTableDataSource<Servicios>= new MatTableDataSource();
-  displayedColumns:string[]=['codigo','nombre','descripcion','hotel',"accion01","accion02"]
+  displayedColumns:string[]=['codigo','nombre','descripcion','hotels',"accion01","accion02"]
   count:number=0
 
   constructor(private sS:ServiciosService,private dialog:MatDialog)
