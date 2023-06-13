@@ -18,8 +18,13 @@ import { LandingComponent } from './component/landing/landing.component';
 import { EmpresaTransporteDialogoComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-dialogo/empresa-transporte-dialogo.component';
 
 import { MenuComponent } from './menu/menu.component';
+
+import { TravelComponent } from './component/travel/travel.component';
+import { TravelCreaeditaComponent } from './component/travel/travel-creaedita/travel-creaedita.component';
+
 import { ServiciosComponent } from './component/servicios/servicios.component';
 import { ServiciosCreaeditaComponent } from './component/servicios/servicios-creaedita/servicios-creaedita.component';
+
 
 
 const routes: Routes = [
@@ -71,6 +76,18 @@ const routes: Routes = [
 
   },
   {
+
+    path: 'travel',
+    component: TravelComponent,
+    children: [
+      {
+        path: 'new',
+        component: TravelCreaeditaComponent
+      }
+    ]
+  },
+    {
+
     path: 'servicios',
     component: ServiciosComponent,
     children: [
@@ -80,6 +97,7 @@ const routes: Routes = [
     ],
 
   }
+
 
 
 

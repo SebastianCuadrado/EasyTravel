@@ -37,13 +37,25 @@ import { HotelsDialogoComponent } from './component/hotels/hotels-listar/hotels-
 import { EmpresaTransporteDialogoComponent } from './component/empresa-transporte/empresa-transporte-listar/empresa-transporte-dialogo/empresa-transporte-dialogo.component';
 import { LandingComponent } from './component/landing/landing.component';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+
+import { TravelComponent } from './component/travel/travel.component';
+import { TravelListarComponent } from './component/travel/travel-listar/travel-listar.component';
+import { TravelCreaeditaComponent } from './component/travel/travel-creaedita/travel-creaedita.component';
+import { MatSelectModule } from '@angular/material/select';
+
 import { DetallehotelComponent } from './component/detallehotel/detallehotel.component';
 import { DetallehotelCreaeditaComponent } from './component/detallehotel/detallehotel-creaedita/detallehotel-creaedita.component';
 import { ServiciosComponent } from './component/servicios/servicios.component';
 import { ServiciosListarComponent } from './component/servicios/servicios-listar/servicios-listar.component';
 import { ServiciosCreaeditaComponent } from './component/servicios/servicios-creaedita/servicios-creaedita.component';
 import { ServiciosDialogoComponent } from './component/servicios/servicios-listar/servicios-dialogo/servicios-dialogo.component';
+
 import { MatSelectModule } from '@angular/material/select';
+
+import { DetallehotelListarComponent } from './component/detallehotel/detallehotel-listar/detallehotel-listar.component';
+import { DetallehotelDialogoComponent } from './component/detallehotel/detallehotel-listar/detallehotel-dialogo/detallehotel-dialogo.component';
+
+
 
 @NgModule({
   declarations: [
@@ -71,6 +83,11 @@ import { MatSelectModule } from '@angular/material/select';
 
     HotelsDialogoComponent,
 
+    TravelComponent,
+    TravelListarComponent,
+    TravelCreaeditaComponent
+
+
 
     LandingComponent,
       DetallehotelComponent,
@@ -78,7 +95,10 @@ import { MatSelectModule } from '@angular/material/select';
       ServiciosComponent,
       ServiciosListarComponent,
       ServiciosCreaeditaComponent,
-      ServiciosDialogoComponent
+      ServiciosDialogoComponent,
+      DetallehotelListarComponent,
+      DetallehotelDialogoComponent
+
 
 
 

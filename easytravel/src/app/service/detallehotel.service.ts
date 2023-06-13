@@ -13,7 +13,23 @@ export class DetallehotelService {
   private listaCambio=new Subject<DetalleHotel[]>();
 
   constructor(private http:HttpClient) { }
-  insert(detallehotel:DetalleHotel){return this.http.post(this.url,detallehotel)}
+  list()
+  {return this.http.get<DetalleHotel[]>(this.url)}
+
+insert(hotels:DetalleHotel){
+  return this.http.post(this.url,hotels)
+}
+
+setList(ListaNueva:DetalleHotel[]){
+this.listaCambio.next(ListaNueva)
+}
+
+getList(){
+return this.listaCambio.asObservable();
+
+}
+
+
   update(dh:DetalleHotel){
     return this.http.put(this.url+"/"+dh.idDetalle,dh);
 
