@@ -41,7 +41,7 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { TravelComponent } from './component/travel/travel.component';
 import { TravelListarComponent } from './component/travel/travel-listar/travel-listar.component';
 import { TravelCreaeditaComponent } from './component/travel/travel-creaedita/travel-creaedita.component';
-import { MatSelectModule } from '@angular/material/select';
+
 
 import { DetallehotelComponent } from './component/detallehotel/detallehotel.component';
 import { DetallehotelCreaeditaComponent } from './component/detallehotel/detallehotel-creaedita/detallehotel-creaedita.component';
@@ -85,7 +85,7 @@ import { DetallehotelDialogoComponent } from './component/detallehotel/detalleho
 
     TravelComponent,
     TravelListarComponent,
-    TravelCreaeditaComponent
+    TravelCreaeditaComponent,
 
 
 
