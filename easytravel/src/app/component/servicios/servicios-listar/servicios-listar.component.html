@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <br />
+      <div style="text-align: center">
+        <h1>Servicios</h1>
+        <i class="fa-solid fa-hotel"></i>
+      </div>
+      <div style="text-align: right">
+        <button mat-raised-button style="background-color: #264653; color:#fff" routerLink="/servicios/new">
+          Agregar
+        </button>
+      </div>
+
+      <br>
+      <mat-form-field>
+        <input matInput (keyup)="filtrar($event)" placeholder="Buscar" />
+      </mat-form-field>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="codigo">
+          <th mat-header-cell *matHeaderCellDef>No.</th>
+          <td mat-cell *matCellDef="let element">{{ element.idServicio }}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="nombre">
+          <th mat-header-cell *matHeaderCellDef>Nombre</th>
+          <td mat-cell *matCellDef="let element">{{ element.nombre }}</td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="descripcion">
+          <th mat-header-cell *matHeaderCellDef>Descripcion</th>
+          <td mat-cell *matCellDef="let element">{{ element.descripcion }}</td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="hotel">
+          <th mat-header-cell *matHeaderCellDef>Hotel</th>
+          <td mat-cell *matCellDef="let element">{{ element.hotel.nombre }}</td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="accion01">
+          <th mat-header-cell *matHeaderCellDef></th>
+          <td mat-cell *matCellDef="let element">
+            <button
+              mat-raised-button
+              style="background-color: #2a9d8f;"
+              [routerLink]="['edicion', element.id]"
+            >
+            <span class="material-icons">edit</span>
+            </button>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="accion02">
+          <th mat-header-cell *matHeaderCellDef> </th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button style="background-color: #f4a261;" (click)="confirm(element.id)"><span class="material-icons">delete</span></button>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+
+      </table>
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+      aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+
+  </body>
+</html>
