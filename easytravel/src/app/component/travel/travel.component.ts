@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './travel.component.html',
   styleUrls: ['./travel.component.css']
 })
-export class TravelComponent {
+export class TravelComponent implements OnInit {
   constructor(public route: ActivatedRoute) {}
   ngOnInit(): void {
 

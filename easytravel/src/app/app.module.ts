@@ -60,6 +60,9 @@ import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita
 import { ReservaComponent } from './component/reserva/reserva.component';
 import { ReservaListarComponent } from './component/reserva/reserva-listar/reserva-listar.component';
 import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
+import { ActividadComponent } from './component/actividad/actividad.component';
+import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
+import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
 
 
 
@@ -109,7 +112,10 @@ import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita
       PaqueteCreaeditaComponent,
       ReservaComponent,
       ReservaListarComponent,
-      ReservaCreaeditaComponent
+      ReservaCreaeditaComponent,
+      ActividadComponent,
+      ActividadListarComponent,
+      ActividadCreaeditaComponent
 
 
 

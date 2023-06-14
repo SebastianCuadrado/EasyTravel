@@ -1,0 +1,49 @@
+<div class="container">
+  <h1>Libros</h1>
+  <form [formGroup]="form" (submit)="aceptar()">
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Id</mat-label>
+    <input matInput placeholder="Id" formControlName="idActividad">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Nombre</mat-label>
+    <input matInput required placeholder="Canotaje" formControlName="nombre">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Categoria</mat-label>
+    <input matInput required placeholder="Acuática" formControlName="categoria">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Descripcion</mat-label>
+    <input matInput required placeholder="Canotaje para cuatro personas" formControlName="descripcion">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field class="example-full-width">
+    <mat-label>Duracion</mat-label>
+    <input matInput type="number" required placeholder="2" formControlName="duracion">
+  </mat-form-field>
+
+  <br>
+  <mat-form-field appearance="fill">
+    <mat-label>Paquete</mat-label>
+    <mat-select formControlName="paquete" [(value)]="idPaqueteSeleccionado" required>
+      <mat-option *ngFor="let a of lista" [value]="a.idPaquete">
+        {{a.precio}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+    <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+
+    <button mat-raised-button color="warn" routerLink="/travel">Cancelar</button>
+  <p>{{mensaje}}</p>
+  </form>
+</div>
