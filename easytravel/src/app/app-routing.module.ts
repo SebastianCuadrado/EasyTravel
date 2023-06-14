@@ -24,6 +24,10 @@ import { TravelCreaeditaComponent } from './component/travel/travel-creaedita/tr
 
 import { ServiciosComponent } from './component/servicios/servicios.component';
 import { ServiciosCreaeditaComponent } from './component/servicios/servicios-creaedita/servicios-creaedita.component';
+import { PaqueteComponent } from './component/paquete/paquete.component';
+import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita/paquete-creaedita.component';
+import { ReservaComponent } from './component/reserva/reserva.component';
+import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
 
 
 
@@ -94,6 +98,31 @@ const routes: Routes = [
 
       { path: 'new', component: ServiciosCreaeditaComponent },
       { path: 'edicion/:id', component: ServiciosCreaeditaComponent },
+    ],
+
+  },
+  {
+
+    path: 'paquetes',
+    component: PaqueteComponent,
+    children: [
+      {
+        path: 'new',
+        component: PaqueteCreaeditaComponent
+      }
+
+    ],
+
+  },
+  {
+
+    path: 'reservas',
+    component: ReservaComponent,
+    children: [
+      {
+        path: 'new',
+        component: ReservaCreaeditaComponent
+      }
     ],
 
   }
