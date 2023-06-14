@@ -51,6 +51,12 @@ import { ServiciosCreaeditaComponent } from './component/servicios/servicios-cre
 import { ServiciosDialogoComponent } from './component/servicios/servicios-listar/servicios-dialogo/servicios-dialogo.component';
 import { DetallehotelListarComponent } from './component/detallehotel/detallehotel-listar/detallehotel-listar.component';
 import { DetallehotelDialogoComponent } from './component/detallehotel/detallehotel-listar/detallehotel-dialogo/detallehotel-dialogo.component';
+import { PaqueteComponent } from './component/paquete/paquete.component';
+import { PaqueteListarComponent } from './component/paquete/paquete-listar/paquete-listar.component';
+import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita/paquete-creaedita.component';
+import { ReservaComponent } from './component/reserva/reserva.component';
+import { ReservaListarComponent } from './component/reserva/reserva-listar/reserva-listar.component';
+import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
 
 
 @NgModule({
@@ -81,7 +87,7 @@ import { DetallehotelDialogoComponent } from './component/detallehotel/detalleho
 
     TravelComponent,
     TravelListarComponent,
-    TravelCreaeditaComponent
+    TravelCreaeditaComponent,
 
 
 
@@ -93,7 +99,13 @@ import { DetallehotelDialogoComponent } from './component/detallehotel/detalleho
       ServiciosCreaeditaComponent,
       ServiciosDialogoComponent,
       DetallehotelListarComponent,
-      DetallehotelDialogoComponent
+      DetallehotelDialogoComponent,
+      PaqueteComponent,
+      PaqueteListarComponent,
+      PaqueteCreaeditaComponent,
+      ReservaComponent,
+      ReservaListarComponent,
+      ReservaCreaeditaComponent
 
 
 

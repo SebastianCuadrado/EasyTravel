@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="text-align: center;" class="container">
+    <div>
+      <br>
+      <div style="text-align: center;">
+        <h1>Registro de reservas</h1>
+      </div>
+      <form [formGroup]="form">
+        <mat-form-field class="example-full-width">
+          <mat-label>idReserva</mat-label>
+          <input matInput placeholder="N°" formControlName="idReserva">
+        </mat-form-field>
+        <br>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Paquete</mat-label>
+          <mat-select formControlName="paquete" [value]="idPaqueteSel" required>
+            <mat-option *ngFor="let a of lista_paquete" [value]="a.idPaquete">
+              {{a.idPaquete}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Fecha de Reserva</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="fechaReserva" [max]="maxFecha">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Usuario</mat-label>
+          <mat-select formControlName="usuario" [value]="idUsuarioSel" required>
+            <mat-option *ngFor="let a of lista_usuario" [value]="a.id">
+              {{a.nombre}} {{a.apellidos}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button style="background-color: #2a9d8f;" (click)="aceptar()">Aceptar</button>
+        <button mat-raised-button style="background-color: #e76f51;" routerLink="/reservas">Cancelar</button>
+
+
+        <p>{{mensaje}}</p>
+
+      </form>
+
+    </div>
+  </div>
+</body>
+
+</html>
