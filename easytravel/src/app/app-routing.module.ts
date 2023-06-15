@@ -30,6 +30,8 @@ import { ReservaComponent } from './component/reserva/reserva.component';
 import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
 import { InteresesComponent } from './component/intereses/intereses.component';
 import { InteresesCreaEditaComponent } from './component/intereses/intereses-crea-edita/intereses-crea-edita.component';
+import { NotificacionComponent } from './component/notificacion/notificacion.component';
+import { NotificacionCreaEditaComponent } from './component/notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
 
 
 
@@ -140,10 +142,20 @@ const routes: Routes = [
         path: 'edicion/:id', component:InteresesCreaEditaComponent
       }
     ]
+  },
+  {
+    path: 'notificacion',
+    component: NotificacionComponent,
+    children: [
+      {
+        path: 'new',
+        component: NotificacionCreaEditaComponent
+      },
+      {
+        path: 'edicion/:id', component:NotificacionCreaEditaComponent
+      }
+    ]
   }
-
-
-
 
 ];
 

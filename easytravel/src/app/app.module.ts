@@ -64,6 +64,10 @@ import { InteresesComponent } from './component/intereses/intereses.component';
 import { InteresesCreaEditaComponent } from './component/intereses/intereses-crea-edita/intereses-crea-edita.component';
 import { InteresesListarComponent } from './component/intereses/intereses-listar/intereses-listar.component';
 import { InteresesDialogoComponent } from './component/intereses/intereses-listar/intereses-dialogo/intereses-dialogo.component';
+import { NotificacionComponent } from './component/notificacion/notificacion.component';
+import { NotificacionListarComponent } from './component/notificacion/notificacion-listar/notificacion-listar.component';
+import { NotificacionDialogoComponent } from './component/notificacion/notificacion-listar/notificacion-dialogo/notificacion-dialogo.component';
+import { NotificacionCreaEditaComponent } from './component/notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
 
 
 
@@ -118,6 +122,10 @@ import { InteresesDialogoComponent } from './component/intereses/intereses-lista
       InteresesCreaEditaComponent,
       InteresesListarComponent,
       InteresesDialogoComponent,
+      NotificacionComponent,
+      NotificacionListarComponent,
+      NotificacionDialogoComponent,
+      NotificacionCreaEditaComponent,
       
 
 

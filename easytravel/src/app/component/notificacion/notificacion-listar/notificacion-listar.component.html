@@ -16,25 +16,31 @@
     </div>
 
     <div style="text-align: right;">
-      <button mat-raised-button style="background-color: #264653; color:#fff" routerLink="/intereses/new">Agregar</button>
+      <button mat-raised-button style="background-color: #264653; color:#fff" routerLink="/notificacion/new">Agregar</button>
     </div>
 
 
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-      <ng-container matColumnDef="idInteres">
+      <ng-container matColumnDef="idNotificacion">
         <th mat-header-cell *matHeaderCellDef> No. </th>
-        <td mat-cell *matCellDef="let element"> {{element.idInteres}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.idNotificacion}} </td>
       </ng-container>
+
+      <ng-container matColumnDef="intereses">
+        <th mat-header-cell *matHeaderCellDef> id de intereses </th>
+        <td mat-cell *matCellDef="let element"> {{element.intereses}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="paquete">
+        <th mat-header-cell *matHeaderCellDef> id de paquete </th>
+        <td mat-cell *matCellDef="let element"> {{element.paquete}} </td>
+      </ng-container>
+
 
       <!-- Name Column -->
-      <ng-container matColumnDef="nombre">
-        <th mat-header-cell *matHeaderCellDef> Nombre </th>
-        <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="usuario">
-        <th mat-header-cell *matHeaderCellDef> id de Usuario </th>
-        <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+      <ng-container matColumnDef="mensaje">
+        <th mat-header-cell *matHeaderCellDef> mensaje </th>
+        <td mat-cell *matCellDef="let element"> {{element.mensaje}} </td>
       </ng-container>
 
       <ng-container matColumnDef="accion01">
@@ -43,7 +49,7 @@
           <button
             mat-raised-button
             style="background-color: #2a9d8f;"
-            [routerLink]="['edicion', element.idInteres]"
+            [routerLink]="['edicion', element.idNotificacion]"
           >
           <span class="material-icons">edit</span>
           </button>
@@ -52,7 +58,7 @@
       <ng-container matColumnDef="accion02">
         <th mat-header-cell *matHeaderCellDef> </th>
         <td mat-cell *matCellDef="let element">
-          <button mat-raised-button style="background-color: #f4a261;" (click)="confirm(element.idInteres)"><span class="material-icons">delete</span></button>
+          <button mat-raised-button style="background-color: #f4a261;" (click)="confirm(element.idNotificacion)"><span class="material-icons">delete</span></button>
         </td>
       </ng-container>
 
@@ -64,3 +70,4 @@
     </mat-paginator>
   </div>
 </body>
+
