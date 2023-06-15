@@ -54,6 +54,7 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { DetallehotelListarComponent } from './component/detallehotel/detallehotel-listar/detallehotel-listar.component';
 import { DetallehotelDialogoComponent } from './component/detallehotel/detallehotel-listar/detallehotel-dialogo/detallehotel-dialogo.component';
+
 import { PaqueteComponent } from './component/paquete/paquete.component';
 import { PaqueteListarComponent } from './component/paquete/paquete-listar/paquete-listar.component';
 import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita/paquete-creaedita.component';
@@ -72,6 +73,11 @@ import { NotificacionCreaEditaComponent } from './component/notificacion/notific
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
+
+
+import { ComentarioshotelComponent } from './component/comentarioshotel/comentarioshotel.component';
+import { ComentarioshotelCreaeditaComponent } from './component/comentarioshotel/comentarioshotel-creaedita/comentarioshotel-creaedita.component';
+
 
 
 
@@ -116,6 +122,9 @@ import { ActividadCreaeditaComponent } from './component/actividad/actividad-cre
       ServiciosCreaeditaComponent,
       ServiciosDialogoComponent,
       DetallehotelListarComponent,
+
+      DetallehotelDialogoComponent
+
       DetallehotelDialogoComponent,
       PaqueteComponent,
       PaqueteListarComponent,
@@ -136,7 +145,14 @@ import { ActividadCreaeditaComponent } from './component/actividad/actividad-cre
 
       ActividadComponent,
       ActividadListarComponent,
+
+      ActividadCreaeditaComponent,
+
+      ComentarioshotelComponent,
+      ComentarioshotelCreaeditaComponent,
+
       ActividadCreaeditaComponent
+
 
 
 

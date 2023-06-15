@@ -24,6 +24,7 @@ import { TravelCreaeditaComponent } from './component/travel/travel-creaedita/tr
 
 import { ServiciosComponent } from './component/servicios/servicios.component';
 import { ServiciosCreaeditaComponent } from './component/servicios/servicios-creaedita/servicios-creaedita.component';
+
 import { PaqueteComponent } from './component/paquete/paquete.component';
 import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita/paquete-creaedita.component';
 import { ReservaComponent } from './component/reserva/reserva.component';
@@ -35,6 +36,9 @@ import { NotificacionCreaEditaComponent } from './component/notificacion/notific
 
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
+
+import { ComentarioshotelCreaeditaComponent } from './component/comentarioshotel/comentarioshotel-creaedita/comentarioshotel-creaedita.component';
+
 
 
 
@@ -51,7 +55,8 @@ const routes: Routes = [
     children: [
 
       { path: 'new', component: HotelsCreaeditaComponent },
-      { path: 'edicion/:id', component: HotelsCreaeditaComponent },
+      { path: 'edicion/:idHotels', component: HotelsCreaeditaComponent },
+      {path:'comentario/:idHotels',component:ComentarioshotelCreaeditaComponent}
     ],
 
   },
