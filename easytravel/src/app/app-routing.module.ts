@@ -31,6 +31,9 @@ import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita
 import { InteresesComponent } from './component/intereses/intereses.component';
 import { InteresesCreaEditaComponent } from './component/intereses/intereses-crea-edita/intereses-crea-edita.component';
 
+import { ActividadComponent } from './component/actividad/actividad.component';
+import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
+
 
 
 const routes: Routes = [
@@ -92,7 +95,7 @@ const routes: Routes = [
       }
     ]
   },
-    {
+  {
 
     path: 'servicios',
     component: ServiciosComponent,
@@ -129,6 +132,7 @@ const routes: Routes = [
 
   },
   {
+
     path: 'intereses',
     component: InteresesComponent,
     children: [
@@ -139,12 +143,19 @@ const routes: Routes = [
       {
         path: 'edicion/:id', component:InteresesCreaEditaComponent
       }
+      ],
+  },
+
+        {
+    path: 'actividades',
+    component: ActividadComponent,
+    children: [
+      {
+        path: 'new',
+        component: ActividadCreaeditaComponent
+      }
     ]
   }
-
-
-
-
 ];
 
 @NgModule({

@@ -64,6 +64,10 @@ import { InteresesComponent } from './component/intereses/intereses.component';
 import { InteresesCreaEditaComponent } from './component/intereses/intereses-crea-edita/intereses-crea-edita.component';
 import { InteresesListarComponent } from './component/intereses/intereses-listar/intereses-listar.component';
 import { InteresesDialogoComponent } from './component/intereses/intereses-listar/intereses-dialogo/intereses-dialogo.component';
+import { ActividadComponent } from './component/actividad/actividad.component';
+import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
+import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
+
 
 
 
@@ -114,11 +118,16 @@ import { InteresesDialogoComponent } from './component/intereses/intereses-lista
       ReservaComponent,
       ReservaListarComponent,
       ReservaCreaeditaComponent,
+
       InteresesComponent,
       InteresesCreaEditaComponent,
       InteresesListarComponent,
       InteresesDialogoComponent,
       
+
+      ActividadComponent,
+      ActividadListarComponent,
+      ActividadCreaeditaComponent
 
 
 
