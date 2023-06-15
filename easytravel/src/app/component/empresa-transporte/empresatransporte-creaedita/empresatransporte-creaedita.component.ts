@@ -28,6 +28,7 @@ export class EmpresatransporteCreaeditaComponent implements OnInit {
       ruc: new FormControl(),
       direccion: new FormControl(),
       contacto: new FormControl(),
+      logo: new FormControl()
     });
   }
 
@@ -39,12 +40,14 @@ export class EmpresatransporteCreaeditaComponent implements OnInit {
     this.empresa_transportes.ruc = this.form.value['ruc'];
     this.empresa_transportes.direccion = this.form.value['direccion'];
     this.empresa_transportes.contacto = this.form.value['contacto'];
+    this.empresa_transportes.logo = this.form.value['logo'];
 
     if (
       this.form.value['nombre'].length > 0 &&
       this.form.value['direccion'].length > 0 &&
       this.form.value['ruc'].length > 0 &&
-      this.form.value['contacto'].length > 0
+      this.form.value['contacto'].length > 0 &&
+      this.form.value['logo'].length > 0
     ) {
       if(this.edicion){
         this.tS.update(this.empresa_transportes).subscribe(()=>{
@@ -74,7 +77,8 @@ export class EmpresatransporteCreaeditaComponent implements OnInit {
           nombre: new FormControl(data.nombre),
           ruc: new FormControl(data.ruc),
           direccion: new FormControl(data.direccion),
-          contacto: new FormControl(data.contacto)
+          contacto: new FormControl(data.contacto),
+          logo: new FormControl(data.logo)
         });
       });
     }

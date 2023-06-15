@@ -63,8 +63,8 @@ import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
-
-
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -141,8 +141,9 @@ import { ActividadCreaeditaComponent } from './component/actividad/actividad-cre
     MatListModule,
     MatDialogModule,
     MatPaginatorModule,
-    MatSelectModule
-
+    MatSelectModule,
+    MatCardModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent],schemas:[CUSTOM_ELEMENTS_SCHEMA]

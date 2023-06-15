@@ -2,10 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Empresa_Transporte } from 'src/app/model/Empresa_Transporte';
 import { EmpresaTransporteService } from 'src/app/service/empresa-transporte.service';
-import { MatTableDataSource } from '@angular/material/table';
 import { EmpresaTransporteDialogoComponent } from './empresa-transporte-dialogo/empresa-transporte-dialogo.component';
 import { MatDialog } from '@angular/material/dialog'
-import {MatPaginator} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-empresa-transporte-listar',
@@ -13,20 +11,9 @@ import {MatPaginator} from '@angular/material/paginator';
   styleUrls: ['./empresa-transporte-listar.component.css'],
 })
 export class EmpresaTransporteListarComponent implements OnInit {
-  dataSource: MatTableDataSource<Empresa_Transporte> = new MatTableDataSource();
-  displayedColumns: string[] = [
-    'codigo',
-    'nombre',
-    'ruc',
-    'direccion',
-    'contacto',
-    'accion01',
-    'accion02',
-  ];
+  dataList: Empresa_Transporte[] = [];
   idMayor: number = 0;
   lista: EmpresaTransporteService[] = []
-
-@ViewChild(MatPaginator)paginator!:MatPaginator
 
   constructor(
     private tS: EmpresaTransporteService,
@@ -35,19 +22,15 @@ export class EmpresaTransporteListarComponent implements OnInit {
 
   ngOnInit(): void {
     this.tS.list().subscribe((data) => {
-      this.dataSource = new MatTableDataSource(data);
-      this.dataSource.paginator=this.paginator;
+      this.dataList = data;
     })
-    this.tS.getList().subscribe(data=>{this.dataSource=new MatTableDataSource(data)})
+    this.tS.getList().subscribe(data => {
+      this.dataList = data;
+    })
     this.tS.getConfirmDelete().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
     })
-
-
-
-
   }
-
 
   confirm(id: number) {
     this.idMayor = id;
@@ -62,6 +45,6 @@ export class EmpresaTransporteListarComponent implements OnInit {
   }
   filtrar(z:any){
 
-    this.dataSource.filter=z.target.value.trim();
+    this.dataList.filter=z.target.value.trim();
     }
 }
