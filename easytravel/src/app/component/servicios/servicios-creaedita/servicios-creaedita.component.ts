@@ -63,16 +63,29 @@ aceptar(): void {
   if (this.hotelSeleccionado>0) {
     let h = new Hotels();
     h.idHotels = this.hotelSeleccionado;
-    this.servicio.hotels=h;
-    this.sS.insert(this.servicio).subscribe(() => {
-      this.sS.list().subscribe(data => {
-            this.sS.setList(data);
-          })
+    console.log(h.idHotels);
+
+    this.servicio.hotels=h;//--------
+    console.log(this.servicio.hotels.idHotels)
+    {
+      if(this.edicion){
+        this.sS.update(this.servicio).subscribe(()=>{
+          this.sS.list().subscribe((data) => {
+            this.sS.setList(data);})
+
         })
+
+
+      } else {
+        this.sS.insert(this.servicio).subscribe((data) => {
+        this.sS.list().subscribe((data) => {
+          this.sS.setList(data);
+        });
+      });}
 
     this.router.navigate(['servicios']);
 
-}
+}}
 }
 
 init() {
@@ -82,7 +95,7 @@ init() {
         id: new FormControl(data.idServicio),
         nombre: new FormControl(data.nombre),
         descripcion: new FormControl(data.descripcion),
-        hotels : new FormControl(data.hotels.nombre),
+        hotels : new FormControl(data.hotels),
 
       });
     });

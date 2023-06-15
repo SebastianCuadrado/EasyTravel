@@ -24,8 +24,7 @@ import { TravelCreaeditaComponent } from './component/travel/travel-creaedita/tr
 
 import { ServiciosComponent } from './component/servicios/servicios.component';
 import { ServiciosCreaeditaComponent } from './component/servicios/servicios-creaedita/servicios-creaedita.component';
-<<<<<<< Updated upstream
-=======
+
 import { PaqueteComponent } from './component/paquete/paquete.component';
 import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita/paquete-creaedita.component';
 import { ReservaComponent } from './component/reserva/reserva.component';
@@ -37,8 +36,9 @@ import { NotificacionCreaEditaComponent } from './component/notificacion/notific
 
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
+
 import { ComentarioshotelCreaeditaComponent } from './component/comentarioshotel/comentarioshotel-creaedita/comentarioshotel-creaedita.component';
->>>>>>> Stashed changes
+
 
 
 
@@ -102,7 +102,7 @@ const routes: Routes = [
       }
     ]
   },
-    {
+  {
 
     path: 'servicios',
     component: ServiciosComponent,
@@ -112,10 +112,70 @@ const routes: Routes = [
       { path: 'edicion/:id', component: ServiciosCreaeditaComponent },
     ],
 
+  },
+  {
+
+    path: 'paquetes',
+    component: PaqueteComponent,
+    children: [
+      {
+        path: 'new',
+        component: PaqueteCreaeditaComponent
+      }
+
+    ],
+
+  },
+  {
+
+    path: 'reservas',
+    component: ReservaComponent,
+    children: [
+      {
+        path: 'new',
+        component: ReservaCreaeditaComponent
+      }
+    ],
+
+  },
+  {
+
+    path: 'intereses',
+    component: InteresesComponent,
+    children: [
+      {
+        path: 'new',
+        component: InteresesCreaEditaComponent
+      },
+      {
+        path: 'edicion/:id', component:InteresesCreaEditaComponent
+      }
+      ],
+  },
+
+        {
+    path: 'actividades',
+    component: ActividadComponent,
+    children: [
+      {
+        path: 'new',
+        component: ActividadCreaeditaComponent
+      }
+    ]
+  },
+  {
+    path: 'notificacion',
+    component: NotificacionComponent,
+    children: [
+      {
+        path: 'new',
+        component: NotificacionCreaEditaComponent
+      },
+      {
+        path: 'edicion/:id', component:NotificacionCreaEditaComponent
+      }
+    ]
   }
-
-
-
 
 ];
 

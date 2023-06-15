@@ -41,7 +41,7 @@ import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { TravelComponent } from './component/travel/travel.component';
 import { TravelListarComponent } from './component/travel/travel-listar/travel-listar.component';
 import { TravelCreaeditaComponent } from './component/travel/travel-creaedita/travel-creaedita.component';
-import { MatSelectModule } from '@angular/material/select';
+
 
 import { DetallehotelComponent } from './component/detallehotel/detallehotel.component';
 import { DetallehotelCreaeditaComponent } from './component/detallehotel/detallehotel-creaedita/detallehotel-creaedita.component';
@@ -54,8 +54,7 @@ import { MatSelectModule } from '@angular/material/select';
 
 import { DetallehotelListarComponent } from './component/detallehotel/detallehotel-listar/detallehotel-listar.component';
 import { DetallehotelDialogoComponent } from './component/detallehotel/detallehotel-listar/detallehotel-dialogo/detallehotel-dialogo.component';
-<<<<<<< Updated upstream
-=======
+
 import { PaqueteComponent } from './component/paquete/paquete.component';
 import { PaqueteListarComponent } from './component/paquete/paquete-listar/paquete-listar.component';
 import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita/paquete-creaedita.component';
@@ -75,10 +74,11 @@ import { ActividadComponent } from './component/actividad/actividad.component';
 import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
 import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
 
+
 import { ComentarioshotelComponent } from './component/comentarioshotel/comentarioshotel.component';
 import { ComentarioshotelCreaeditaComponent } from './component/comentarioshotel/comentarioshotel-creaedita/comentarioshotel-creaedita.component';
 
->>>>>>> Stashed changes
+
 
 
 
@@ -110,7 +110,7 @@ import { ComentarioshotelCreaeditaComponent } from './component/comentarioshotel
 
     TravelComponent,
     TravelListarComponent,
-    TravelCreaeditaComponent
+    TravelCreaeditaComponent,
 
 
 
@@ -122,9 +122,9 @@ import { ComentarioshotelCreaeditaComponent } from './component/comentarioshotel
       ServiciosCreaeditaComponent,
       ServiciosDialogoComponent,
       DetallehotelListarComponent,
-<<<<<<< Updated upstream
+
       DetallehotelDialogoComponent
-=======
+
       DetallehotelDialogoComponent,
       PaqueteComponent,
       PaqueteListarComponent,
@@ -145,11 +145,14 @@ import { ComentarioshotelCreaeditaComponent } from './component/comentarioshotel
 
       ActividadComponent,
       ActividadListarComponent,
+
       ActividadCreaeditaComponent,
 
       ComentarioshotelComponent,
       ComentarioshotelCreaeditaComponent,
->>>>>>> Stashed changes
+
+      ActividadCreaeditaComponent
+
 
 
 
