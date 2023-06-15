@@ -28,6 +28,11 @@ import { PaqueteComponent } from './component/paquete/paquete.component';
 import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita/paquete-creaedita.component';
 import { ReservaComponent } from './component/reserva/reserva.component';
 import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
+import { InteresesComponent } from './component/intereses/intereses.component';
+import { InteresesCreaEditaComponent } from './component/intereses/intereses-crea-edita/intereses-crea-edita.component';
+import { NotificacionComponent } from './component/notificacion/notificacion.component';
+import { NotificacionCreaEditaComponent } from './component/notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
+
 import { ActividadComponent } from './component/actividad/actividad.component';
 import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
 
@@ -129,6 +134,21 @@ const routes: Routes = [
 
   },
   {
+
+    path: 'intereses',
+    component: InteresesComponent,
+    children: [
+      {
+        path: 'new',
+        component: InteresesCreaEditaComponent
+      },
+      {
+        path: 'edicion/:id', component:InteresesCreaEditaComponent
+      }
+      ],
+  },
+
+        {
     path: 'actividades',
     component: ActividadComponent,
     children: [
@@ -137,7 +157,21 @@ const routes: Routes = [
         component: ActividadCreaeditaComponent
       }
     ]
+  },
+  {
+    path: 'notificacion',
+    component: NotificacionComponent,
+    children: [
+      {
+        path: 'new',
+        component: NotificacionCreaEditaComponent
+      },
+      {
+        path: 'edicion/:id', component:NotificacionCreaEditaComponent
+      }
+    ]
   }
+
 ];
 
 @NgModule({
