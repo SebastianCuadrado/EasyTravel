@@ -60,6 +60,10 @@ import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita
 import { ReservaComponent } from './component/reserva/reserva.component';
 import { ReservaListarComponent } from './component/reserva/reserva-listar/reserva-listar.component';
 import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
+import { InteresesComponent } from './component/intereses/intereses.component';
+import { InteresesCreaEditaComponent } from './component/intereses/intereses-crea-edita/intereses-crea-edita.component';
+import { InteresesListarComponent } from './component/intereses/intereses-listar/intereses-listar.component';
+import { InteresesDialogoComponent } from './component/intereses/intereses-listar/intereses-dialogo/intereses-dialogo.component';
 
 
 
@@ -109,7 +113,12 @@ import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita
       PaqueteCreaeditaComponent,
       ReservaComponent,
       ReservaListarComponent,
-      ReservaCreaeditaComponent
+      ReservaCreaeditaComponent,
+      InteresesComponent,
+      InteresesCreaEditaComponent,
+      InteresesListarComponent,
+      InteresesDialogoComponent,
+      
 
 
 

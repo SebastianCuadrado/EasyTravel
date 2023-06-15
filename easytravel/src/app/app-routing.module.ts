@@ -28,6 +28,8 @@ import { PaqueteComponent } from './component/paquete/paquete.component';
 import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita/paquete-creaedita.component';
 import { ReservaComponent } from './component/reserva/reserva.component';
 import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
+import { InteresesComponent } from './component/intereses/intereses.component';
+import { InteresesCreaEditaComponent } from './component/intereses/intereses-crea-edita/intereses-crea-edita.component';
 
 
 
@@ -125,6 +127,19 @@ const routes: Routes = [
       }
     ],
 
+  },
+  {
+    path: 'intereses',
+    component: InteresesComponent,
+    children: [
+      {
+        path: 'new',
+        component: InteresesCreaEditaComponent
+      },
+      {
+        path: 'edicion/:id', component:InteresesCreaEditaComponent
+      }
+    ]
   }
 
 
