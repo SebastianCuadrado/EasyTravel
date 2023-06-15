@@ -28,6 +28,8 @@ import { PaqueteComponent } from './component/paquete/paquete.component';
 import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita/paquete-creaedita.component';
 import { ReservaComponent } from './component/reserva/reserva.component';
 import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
+import { ActividadComponent } from './component/actividad/actividad.component';
+import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
 
 
 
@@ -90,7 +92,7 @@ const routes: Routes = [
       }
     ]
   },
-    {
+  {
 
     path: 'servicios',
     component: ServiciosComponent,
@@ -125,11 +127,17 @@ const routes: Routes = [
       }
     ],
 
+  },
+  {
+    path: 'actividades',
+    component: ActividadComponent,
+    children: [
+      {
+        path: 'new',
+        component: ActividadCreaeditaComponent
+      }
+    ]
   }
-
-
-
-
 ];
 
 @NgModule({

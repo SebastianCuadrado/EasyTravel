@@ -58,7 +58,7 @@ export class PaqueteCreaeditaComponent implements OnInit {
     this.paquete.viaje = this.form.value['viaje'];
     this.paquete.detalle = this.form.value['detalle'];
     this.paquete.ahorro = this.form.value['ahorro'];
-
+    console.log(this.idPlaceSel, this.idTravelSel, this.idDetalleSel);
     if (this.idPlaceSel > 0 && this.idTravelSel > 0 && this.idDetalleSel > 0) {
       let p = new Place();
       p.id = this.idPlaceSel;
