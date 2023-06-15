@@ -1,0 +1,47 @@
+<div class="container">
+  <h1>Comentario</h1>
+  <form [formGroup]="form" (submit)="aceptar()">
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="Id" formControlName="idComentariosHotel">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Usuario</mat-label>
+      <mat-select formControlName="usuario" [(value)]="idUsuarioSeleccionado" required>
+        <mat-option *ngFor="let u of listaUsuarios" [value]="u.id">
+          {{ u.nombre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Hotel</mat-label>
+      <mat-select formControlName="hotels" [(value)]="idHotel" required [disabled]="true">
+        <mat-option *ngFor="let h of listaHoteles" [value]="h.idHotels">
+          {{ h.nombre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Valoración</mat-label>
+      <input matInput type="number" required placeholder="5" formControlName="valoracion">
+    </mat-form-field>
+
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>Comentario</mat-label>
+      <textarea matInput required placeholder="Ingrese su comentario" formControlName="comentario"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Aceptar</button>
+    <button mat-raised-button color="warn" routerLink="/hotels">Cancelar</button>
+    <p>{{ mensaje }}</p>
+  </form>
+</div>
+

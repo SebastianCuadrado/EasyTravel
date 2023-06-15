@@ -24,6 +24,21 @@ import { TravelCreaeditaComponent } from './component/travel/travel-creaedita/tr
 
 import { ServiciosComponent } from './component/servicios/servicios.component';
 import { ServiciosCreaeditaComponent } from './component/servicios/servicios-creaedita/servicios-creaedita.component';
+<<<<<<< Updated upstream
+=======
+import { PaqueteComponent } from './component/paquete/paquete.component';
+import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita/paquete-creaedita.component';
+import { ReservaComponent } from './component/reserva/reserva.component';
+import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
+import { InteresesComponent } from './component/intereses/intereses.component';
+import { InteresesCreaEditaComponent } from './component/intereses/intereses-crea-edita/intereses-crea-edita.component';
+import { NotificacionComponent } from './component/notificacion/notificacion.component';
+import { NotificacionCreaEditaComponent } from './component/notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
+
+import { ActividadComponent } from './component/actividad/actividad.component';
+import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
+import { ComentarioshotelCreaeditaComponent } from './component/comentarioshotel/comentarioshotel-creaedita/comentarioshotel-creaedita.component';
+>>>>>>> Stashed changes
 
 
 
@@ -40,7 +55,8 @@ const routes: Routes = [
     children: [
 
       { path: 'new', component: HotelsCreaeditaComponent },
-      { path: 'edicion/:id', component: HotelsCreaeditaComponent },
+      { path: 'edicion/:idHotels', component: HotelsCreaeditaComponent },
+      {path:'comentario/:idHotels',component:ComentarioshotelCreaeditaComponent}
     ],
 
   },
