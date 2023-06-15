@@ -29,7 +29,7 @@
         <br>
         <mat-form-field appearance="fill">
           <mat-label>Destino Turístico</mat-label>
-          <mat-select formControlName="place" [value]="idPlaceSel" required>
+          <mat-select formControlName="place" [(value)]="idPlaceSel" required>
             <mat-option *ngFor="let a of lista_place" [value]="a.id">
               {{a.namePlace}}
             </mat-option>
@@ -38,7 +38,7 @@
         <br>
         <mat-form-field appearance="fill">
           <mat-label>Viaje</mat-label>
-          <mat-select formControlName="viaje" [value]="idTravelSel" required>
+          <mat-select formControlName="viaje" [(value)]="idTravelSel" required>
             <mat-option *ngFor="let a of lista_travel" [value]="a.idViaje">
               {{a.idViaje}}
             </mat-option>
@@ -47,7 +47,7 @@
         <br>
         <mat-form-field appearance="fill">
           <mat-label>Detalle</mat-label>
-          <mat-select formControlName="detalle" [value]="idDetalleSel" required>
+          <mat-select formControlName="detalle" [(value)]="idDetalleSel" required>
             <mat-option *ngFor="let a of lista_detalle" [value]="a.idDetalle">
               {{a.idDetalle}}
             </mat-option>

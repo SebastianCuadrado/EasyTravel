@@ -69,6 +69,11 @@ import { NotificacionListarComponent } from './component/notificacion/notificaci
 import { NotificacionDialogoComponent } from './component/notificacion/notificacion-listar/notificacion-dialogo/notificacion-dialogo.component';
 import { NotificacionCreaEditaComponent } from './component/notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
 
+import { ActividadComponent } from './component/actividad/actividad.component';
+import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
+import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
+
+
 
 
 @NgModule({
@@ -118,6 +123,7 @@ import { NotificacionCreaEditaComponent } from './component/notificacion/notific
       ReservaComponent,
       ReservaListarComponent,
       ReservaCreaeditaComponent,
+
       InteresesComponent,
       InteresesCreaEditaComponent,
       InteresesListarComponent,
@@ -126,7 +132,11 @@ import { NotificacionCreaEditaComponent } from './component/notificacion/notific
       NotificacionListarComponent,
       NotificacionDialogoComponent,
       NotificacionCreaEditaComponent,
-      
+
+
+      ActividadComponent,
+      ActividadListarComponent,
+      ActividadCreaeditaComponent
 
 
 

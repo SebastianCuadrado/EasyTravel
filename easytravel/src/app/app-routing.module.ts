@@ -33,6 +33,9 @@ import { InteresesCreaEditaComponent } from './component/intereses/intereses-cre
 import { NotificacionComponent } from './component/notificacion/notificacion.component';
 import { NotificacionCreaEditaComponent } from './component/notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
 
+import { ActividadComponent } from './component/actividad/actividad.component';
+import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
+
 
 
 const routes: Routes = [
@@ -94,7 +97,7 @@ const routes: Routes = [
       }
     ]
   },
-    {
+  {
 
     path: 'servicios',
     component: ServiciosComponent,
@@ -131,6 +134,7 @@ const routes: Routes = [
 
   },
   {
+
     path: 'intereses',
     component: InteresesComponent,
     children: [
@@ -140,6 +144,17 @@ const routes: Routes = [
       },
       {
         path: 'edicion/:id', component:InteresesCreaEditaComponent
+      }
+      ],
+  },
+
+        {
+    path: 'actividades',
+    component: ActividadComponent,
+    children: [
+      {
+        path: 'new',
+        component: ActividadCreaeditaComponent
       }
     ]
   },
