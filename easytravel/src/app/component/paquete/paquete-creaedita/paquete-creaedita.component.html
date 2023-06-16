@@ -46,10 +46,10 @@
         </mat-form-field>
         <br>
         <mat-form-field appearance="fill">
-          <mat-label>Detalle</mat-label>
-          <mat-select formControlName="detalle" [(value)]="idDetalleSel" required>
-            <mat-option *ngFor="let a of lista_detalle" [value]="a.idDetalle">
-              {{a.idDetalle}}
+          <mat-label>Hotel</mat-label>
+          <mat-select formControlName="hotel" [(value)]="idHotelSel" required>
+            <mat-option *ngFor="let a of lista_hotel" [value]="a.idHotels">
+              {{a.nombre}}
             </mat-option>
           </mat-select>
         </mat-form-field>
@@ -59,8 +59,32 @@
           <input matInput placeholder="150.10" formControlName="ahorro">
         </mat-form-field>
         <br>
+        <mat-form-field class="example-full-width">
+          <mat-label>Tipo de Habitación</mat-label>
+          <input matInput placeholder="presidencial" formControlName="tipoHabitacion">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+          <mat-label>No. de Noches</mat-label>
+          <input matInput placeholder="2" formControlName="cantidadNoches">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Checkin</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="checkin" [max]="maxFecha">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Checkout</mat-label>
+          <input matInput [matDatepicker]="picker2" formControlName="checkout" [max]="maxFecha">
+          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+        <br>
         <button mat-raised-button style="background-color: #2a9d8f;" (click)="aceptar()">Aceptar</button>
-        <button mat-raised-button style="background-color: #e76f51;" routerLink="/servicios">Cancelar</button>
+        <button mat-raised-button style="background-color: #e76f51;" routerLink="/paquetes">Cancelar</button>
 
 
         <p>{{mensaje}}</p>
