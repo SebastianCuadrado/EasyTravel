@@ -66,13 +66,12 @@ import { PaqueteCreaeditaComponent } from './component/paquete/paquete-creaedita
 
 
 
-import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
+
 
 import { ComentarioshotelCreaeditaComponent } from './component/comentarioshotel/comentarioshotel-creaedita/comentarioshotel-creaedita.component';
 import { ReservaComponent } from './component/reserva/reserva.component';
 import { ComentarioshotelComponent } from './component/comentarioshotel/comentarioshotel.component';
-import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
-import { ActividadComponent } from './component/actividad/actividad.component';
+
 import { NotificacionCreaEditaComponent } from './component/notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
 import { NotificacionComponent } from './component/notificacion/notificacion.component';
 import { NotificacionListarComponent } from './component/notificacion/notificacion-listar/notificacion-listar.component';
@@ -191,7 +190,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSelectModule,
 
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
 
     MatFormFieldModule
 
