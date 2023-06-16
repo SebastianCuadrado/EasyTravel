@@ -19,6 +19,10 @@ export class HotelsService {
 insert(hotels:Hotels){
   return this.http.post(this.url,hotels)
 }
+getHotels(id: number) {
+  return this.http.get<Hotels>(`${this.url}/${id}`);
+}
+
 
 setList(ListaNueva:Hotels[]){
 this.listaCambio.next(ListaNueva)

@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment';
 import { Servicios } from '../model/servicios';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 
  const base_url=environment.base
 @Injectable({
@@ -50,7 +51,10 @@ return this.confirmarEliminacion.asObservable();
 setConfirmDelete(estado:Boolean){
 this.confirmarEliminacion.next(estado);
 }
-
+findByHotelId(hotelId: number): Observable<Servicios[]> {
+  const url = `${this.url}/hotels/${hotelId}`;
+  return this.http.get<Servicios[]>(url);
+}
 
 
 

@@ -20,7 +20,8 @@ export class ComentarioshotelCreaeditaComponent implements OnInit {
   listaUsuarios: Usuario[] = [];
   idUsuarioSeleccionado: number = 0;
   idHotel: number = 0;
-  listaHoteles: Hotels[] = [];
+  nombreHotel: string = '';
+
 
   constructor(
     private cS: ComentarioshotelService,
@@ -32,8 +33,12 @@ export class ComentarioshotelCreaeditaComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      this.idHotel = +params['idHotel'];
+      this.idHotel = +params['idHotels'];
+      this.hS.listId(this.idHotel).subscribe((hotel) => {
+        this.nombreHotel = hotel.nombre; // Asignar el nombre del hotel a la propiedad nombreHotel
+      });
     });
+
 
     this.form = new FormGroup({
       idComentariosHotel: new FormControl(),
@@ -46,9 +51,7 @@ export class ComentarioshotelCreaeditaComponent implements OnInit {
     this.uS.list().subscribe((data) => {
       this.listaUsuarios = data;
     });
-    this.hS.list().subscribe((data) => {
-      this.listaHoteles = data; // Asignar la lista de hoteles a la propiedad listaHoteles
-    });
+
 
   }
 

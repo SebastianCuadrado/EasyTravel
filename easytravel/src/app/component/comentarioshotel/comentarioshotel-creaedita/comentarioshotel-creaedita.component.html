@@ -18,13 +18,9 @@
     </mat-form-field>
 
     <br>
-    <mat-form-field appearance="fill">
+    <mat-form-field class="example-full-width">
       <mat-label>Hotel</mat-label>
-      <mat-select formControlName="hotels" [(value)]="idHotel" required [disabled]="true">
-        <mat-option *ngFor="let h of listaHoteles" [value]="h.idHotels">
-          {{ h.nombre }}
-        </mat-option>
-      </mat-select>
+      <input matInput placeholder="Hotel" [value]="nombreHotel" disabled>
     </mat-form-field>
 
     <br>

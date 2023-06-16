@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormGroupDirective, FormControl } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { Hotels } from 'src/app/model/hotels';
-import * as moment from 'moment';
 import { HotelsService } from 'src/app/service/hotels.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { from } from 'rxjs';
+
 @Component({
   selector: 'app-hotels-creaedita',
   templateUrl: './hotels-creaedita.component.html',
@@ -17,6 +16,7 @@ export class HotelsCreaeditaComponent implements OnInit {
   hotels: Hotels = new Hotels();
   mensaje: string = '';
 
+
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
       this.id = data['idHotels'];
@@ -25,12 +25,14 @@ export class HotelsCreaeditaComponent implements OnInit {
     });
 
     this.form = new FormGroup({
-      id: new FormControl(),
+      idHotels: new FormControl(),
       nombre: new FormControl(),
       precio_noche: new FormControl(),
       ciudad: new FormControl(),
       valoracion_promedio: new FormControl(),
       estrellas: new FormControl(),
+      descripcion: new FormControl(),
+
     });
   }
 
@@ -47,26 +49,27 @@ export class HotelsCreaeditaComponent implements OnInit {
     this.hotels.ciudad = this.form.value['ciudad'];
     this.hotels.valoracion_promedio = this.form.value['valoracion_promedio'];
     this.hotels.estrellas = this.form.value['estrellas'];
+    this.hotels.descripcion = this.form.value['descripcion'];
+
 
     if (
       this.form.value['nombre'].length > 0 &&
       this.form.value['ciudad'].length > 0 &&
       this.form.value['estrellas'] < 6
     ) {
-      if(this.edicion){
-        this.hS.update(this.hotels).subscribe(()=>{
+      if (this.edicion) {
+        this.hS.update(this.hotels).subscribe(() => {
           this.hS.list().subscribe((data) => {
-            this.hS.setList(data);})
-
-        })}
-
-
-        else {
-        this.hS.insert(this.hotels).subscribe((data) => {
-        this.hS.list().subscribe((data) => {
-          this.hS.setList(data);
+            this.hS.setList(data);
+          });
         });
-      });}
+      } else {
+        this.hS.insert(this.hotels).subscribe((data) => {
+          this.hS.list().subscribe((data) => {
+            this.hS.setList(data);
+          });
+        });
+      }
 
       this.router.navigate(['hotels']);
     } else {
@@ -77,15 +80,25 @@ export class HotelsCreaeditaComponent implements OnInit {
   init() {
     if (this.edicion) {
       this.hS.listId(this.id).subscribe((data) => {
-        this.form = new FormGroup({
-          id: new FormControl(data.idHotels),
-          nombre: new FormControl(data.nombre),
-          precio_noche: new FormControl(data.precio_noche),
-          ciudad: new FormControl(data.ciudad),
-          valoracion_promedio: new FormControl(data.valoracion_promedio),
-          estrellas: new FormControl(data.estrellas),
+        this.form.setValue({
+          idHotels: data.idHotels,
+          nombre: data.nombre,
+          precio_noche: data.precio_noche,
+          ciudad: data.ciudad,
+          valoracion_promedio: data.valoracion_promedio,
+          estrellas: data.estrellas,
+          descripcion: data.descripcion,
+
         });
       });
     }
   }
+
+
+
+
+
+
+
+
 }

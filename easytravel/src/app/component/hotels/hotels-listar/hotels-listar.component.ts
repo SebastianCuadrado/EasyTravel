@@ -7,6 +7,8 @@ import { HotelsDialogoComponent } from './hotels-dialogo/hotels-dialogo.componen
 import {MatPaginator} from '@angular/material/paginator';
 import { ComentariosHotel } from 'src/app/model/comentarioshotel';
 import { ComentarioshotelService } from 'src/app/service/comentarioshotel.service';
+import { ServiciosService } from 'src/app/service/servicios.service'; // Importa el servicio de servicios
+import { Servicios } from 'src/app/model/servicios';
 
 @Component({
   selector: 'app-hotels-listar',
@@ -14,47 +16,38 @@ import { ComentarioshotelService } from 'src/app/service/comentarioshotel.servic
   styleUrls: ['./hotels-listar.component.css']
 })
 export class HotelsListarComponent implements OnInit {
-  idMayor: number = 0
-  lista: Hotels[] = []
- // dataSource:MatTableDataSource<Hotels>= new MatTableDataSource();
- dataSource: Hotels[] = [];
-  displayedColumns:string[]=['codigo','nombre','precio_noche','ciudad','valoracion_prom','estrellas','accion01','accion02']
-  count:number=0
+  idMayor: number = 0;
+  lista: Hotels[] = [];
+  dataSource: Hotels[] = [];
+  displayedColumns: string[] = ['codigo', 'nombre', 'precio_noche', 'ciudad', 'valoracion_prom', 'estrellas', 'descripcion', 'accion01', 'accion02'];
+  count: number = 0;
   comentarios: { [hotelId: number]: ComentariosHotel[] } = {};
-
-  constructor(private hS:HotelsService,private dialog:MatDialog,private cS:ComentarioshotelService)
-  {
-
-  }
-
-
+  servicios: { [hotelId: number]: Servicios[] } = {};
+  constructor(private hS: HotelsService,     private sS: ServiciosService ,// Inyecta el servicio de servicios
+  private dialog: MatDialog, private cS: ComentarioshotelService) {}
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
-
   ngOnInit(): void {
-      /*this.hS.list().subscribe(data=>{
-        this.dataSource=new MatTableDataSource(data);
-        this.dataSource.paginator = this.paginator;
-        this.lista=data;
-        this.count=this.lista.length;
-      })*/
-      this.hS.list().subscribe(data => {
-        this.dataSource = data;
-        this.lista = data;
-        this.count = this.lista.length;
+    this.hS.list().subscribe(data => {
+      this.dataSource = data;
+      this.lista = data;
+      this.count = this.lista.length;
+      this.lista.forEach(hotel => {
+        this.cargarServicios(hotel.idHotels);
       });
 
+    });
 
+    this.hS.getList().subscribe(data => {
+      this.dataSource = data;
+    });
 
-      //this.hS.getList().subscribe(data=>{this.dataSource=new MatTableDataSource(data);})
-      this.hS.getList().subscribe(data => {
-        this.dataSource = data;
-      });
-      this.hS.getConfirmDelete().subscribe(data => {
-        data == true ? this.eliminar(this.idMayor) : false;
-      })
+    this.hS.getConfirmDelete().subscribe(data => {
+      data == true ? this.eliminar(this.idMayor) : false;
+    });
   }
+
   showComments: { [key: number]: boolean } = {};
 
   toggleComments(id: number): void {
@@ -72,26 +65,47 @@ export class HotelsListarComponent implements OnInit {
       // Realiza aquí cualquier operación necesaria con la lista de comentarios del hotel
     });
   }
+  cargarServicios(id: number): void {
+    this.sS.findByHotelId(id).subscribe((data) => {
+      this.servicios[id] = data;
+    });
+  }
+
+  cadenaServicios(idHotel: number): string {
+    const serviciosHotel = this.servicios[idHotel];
+    if (serviciosHotel) {
+      return serviciosHotel.map(servicio => servicio.nombre).join(', ');
+    } else {
+      return '';
+    }
+  }
+
 
 
   confirm(id: number) {
     this.idMayor = id;
     this.dialog.open(HotelsDialogoComponent);
   }
+
   eliminar(id: number) {
     this.hS.delete(id).subscribe(() => {
       this.hS.list().subscribe(data => {
         this.hS.setList(data);
-      })
-    })
+      });
+    });
   }
+
+
+
   agregarComentario() {
     // Lógica para agregar un comentario al hotel seleccionado
     // Puedes mostrar un formulario o realizar alguna otra acción según tus requerimientos
   }
 
-  filtrar(z:any){
+  filtrar(z: any) {
+    this.dataSource.filter = z.target.value.trim();
+  }
 
-    this.dataSource.filter=z.target.value.trim();
-    }
+
 }
+
