@@ -121,7 +121,8 @@ const routes: Routes = [
       {
         path: 'new',
         component: PaqueteCreaeditaComponent
-      }
+      },
+      { path: 'edicion/:id', component: PaqueteCreaeditaComponent },
 
     ],
 

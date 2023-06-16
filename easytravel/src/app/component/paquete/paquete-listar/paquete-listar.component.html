@@ -42,14 +42,61 @@
         <td mat-cell *matCellDef="let element"> {{element.viaje.idViaje}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="detalle">
-        <th mat-header-cell *matHeaderCellDef> Detalle del Hotel </th>
-        <td mat-cell *matCellDef="let element"> {{element.detalle.idDetalle}} </td>
-      </ng-container>
-
       <ng-container matColumnDef="ahorro">
         <th mat-header-cell *matHeaderCellDef> Ahorro </th>
         <td mat-cell *matCellDef="let element"> {{element.ahorro}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="tipoHabitacion">
+        <th mat-header-cell *matHeaderCellDef> Tipo de Habitación </th>
+        <td mat-cell *matCellDef="let element"> {{element.tipoHabitacion}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="cantidadNoches">
+        <th mat-header-cell *matHeaderCellDef> No. de Noches </th>
+        <td mat-cell *matCellDef="let element"> {{element.cantidadNoches}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="hotel">
+        <th mat-header-cell *matHeaderCellDef> Hotel </th>
+        <td mat-cell *matCellDef="let element"> {{element.hotel.nombre}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="checkin">
+        <th mat-header-cell *matHeaderCellDef> checkin </th>
+        <td mat-cell *matCellDef="let element"> {{element.checkin|date:'dd/MM/yyyy'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="checkout">
+        <th mat-header-cell *matHeaderCellDef> checkout </th>
+        <td mat-cell *matCellDef="let element"> {{element.checkout|date:'dd/MM/yyyy'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="accionEditar">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button style="background-color: #2a9d8f;" [routerLink]="['edicion', element.idPaquete]">
+          <span class="material-icons">edit</span>
+          </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="accionEliminar">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button style="background-color: #f4a261;" (click)="confirm(element.idPaquete)">
+          <span class="material-icons">delete</span>
+        </button>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="accionReserva">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-raised-button style="background-color: #2a9d8f;" routerLink="/reservas/new">
+          <span class="material-icons">add</span>
+          </button>
+        </td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

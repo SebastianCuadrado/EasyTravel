@@ -3,4 +3,5 @@ export class Place{
   namePlace:string=""
   descriptionPlace:string=""
   country:string=""
+  image:string=""
 }

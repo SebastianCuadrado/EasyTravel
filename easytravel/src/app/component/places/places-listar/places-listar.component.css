@@ -1,8 +1,71 @@
 i {
-  font-size: 700%;
+  font-size: 400%;
   color: #2a9d8f;
  }
  body{
   padding:2%;
 
    }
+.imagen{
+  width: 350px;
+  height: 200px;
+}
+.mat-card {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #4c4a4a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-item {
+  flex: 0 0 calc(70% - 16px);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.buttons-container {
+  text-align: right;
+}
+
+.mat-card-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mat-card-subtitle {
+  font-size: 14px;
+  color: #6c757d;
+}
+
+.mat-card-content {
+  margin-top: 12px;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.mat-card-actions button {
+  margin-right: 8px;
+}

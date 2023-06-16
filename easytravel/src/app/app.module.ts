@@ -90,6 +90,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { PaqueteDialogoComponent } from './component/paquete/paquete-listar/paquete-dialogo/paquete-dialogo.component';
 
 
 
@@ -161,6 +162,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
       ComentarioshotelComponent,
       ComentarioshotelCreaeditaComponent,
+      PaqueteDialogoComponent,
 
 
 

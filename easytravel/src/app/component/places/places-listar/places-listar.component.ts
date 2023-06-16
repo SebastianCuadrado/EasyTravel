@@ -13,21 +13,33 @@ import {MatPaginator} from '@angular/material/paginator';
 })
 export class PlacesListarComponent implements OnInit {
   lista: Place[] = []
-  dataSource: MatTableDataSource<Place> = new MatTableDataSource();
+  //dataSource: MatTableDataSource<Place> = new MatTableDataSource();
+  dataSource: Place[] = [];
   idMayor: number = 0;
-  displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País','accionEditar' ,'accionEliminar']
+  displayedColumns: string[] = ['id', 'Nombre', 'Descripcion', 'País', 'Imagen', 'accionEditar','accionEliminar']
   constructor(private pS: PlacesService, private dialog: MatDialog) {}
+
   @ViewChild(MatPaginator)paginator!:MatPaginator
+
   ngOnInit(): void {
-    this.pS.list().subscribe(data => {
+    /*this.pS.list().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator=this.paginator
+    });*/
+
+    this.pS.list().subscribe(data => {
+      this.dataSource = data;
+      this.lista = data;
     });
 
-    this.pS.getList().subscribe(data => {
+    /*this.pS.getList().subscribe(data => {
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator=this.paginator
-    });
+    });*/
+
+    this.pS.getList().subscribe(data =>{
+      this.dataSource = data;
+    })
 
     this.pS.getConfirmDelete().subscribe(data => {
       data == true ? this.eliminar(this.idMayor) : false;
