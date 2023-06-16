@@ -83,7 +83,15 @@ import { InteresesDialogoComponent } from './component/intereses/intereses-lista
 import { InteresesListarComponent } from './component/intereses/intereses-listar/intereses-listar.component';
 import { ReservaListarComponent } from './component/reserva/reserva-listar/reserva-listar.component';
 import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
+
+import { ActividadComponent } from './component/actividad/actividad.component';
+import { ActividadListarComponent } from './component/actividad/actividad-listar/actividad-listar.component';
+import { ActividadCreaeditaComponent } from './component/actividad/actividad-creaedita/actividad-creaedita.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 
 
@@ -181,7 +189,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatDialogModule,
     MatPaginatorModule,
     MatSelectModule,
+
+    MatCardModule,
+    MatGridListModule
+
     MatFormFieldModule
+
 
   ],
   providers: [],
