@@ -36,6 +36,8 @@ export class UsuarioCreaeditaComponent implements OnInit{
       fechaNacimiento: new FormControl(),
       celular: new FormControl(),
       ubicacion: new FormControl(),
+      password: new FormControl(),
+      username: new FormControl()
 })
 }
 
@@ -49,11 +51,16 @@ aceptar(): void {
   this.usuarios.fechaNacimiento=this.form.value['fechaNacimiento'];
   this.usuarios.celular=this.form.value['celular'];
   this.usuarios.ubicacion=this.form.value['ubicacion'];
+  this.usuarios.password=this.form.value['password'];
+  this.usuarios.username=this.form.value['username'];
 
-  if((this.form.value['nombre'].length>0  &&
+  if(this.form.value['nombre'].length>0  &&
   this.form.value['apellidos'].length>0 &&
-  this.form.value['ubicacion'].length>0)&&(
-    this.form.value['email']>0 || this.form.value['celular']>0))
+  this.form.value['email'].length>0 &&
+  this.form.value['celular'].length>0 &&
+  this.form.value['ubicacion'].length>0 &&
+  this.form.value['password'].length>0 &&
+  this.form.value['username'].length>0)
   {
     if(this.edicion)
     {
@@ -87,7 +94,9 @@ aceptar(): void {
           email:new FormControl(data.email),
           fechaNacimiento:new FormControl(data.fechaNacimiento),
           celular:new FormControl(data.celular),
-          ubicacion:new FormControl(data.ubicacion)
+          ubicacion:new FormControl(data.ubicacion),
+          password:new FormControl(data.password),
+          username:new FormControl(data.username)
         })
 
       })

@@ -19,8 +19,8 @@ export class HotelsCreaeditaComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {
-      this.id = data['id'];
-      this.edicion = data['id'] != null;
+      this.id = data['idHotels'];
+      this.edicion = data['idHotels'] != null;
       this.init();
     });
 
@@ -41,7 +41,7 @@ export class HotelsCreaeditaComponent implements OnInit {
   ) {}
 
   aceptar(): void {
-    this.hotels.idHotels = this.form.value['id'];
+    this.hotels.idHotels = this.form.value['idHotels'];
     this.hotels.nombre = this.form.value['nombre'];
     this.hotels.precio_noche = this.form.value['precio_noche'];
     this.hotels.ciudad = this.form.value['ciudad'];
@@ -58,10 +58,10 @@ export class HotelsCreaeditaComponent implements OnInit {
           this.hS.list().subscribe((data) => {
             this.hS.setList(data);})
 
-        })
+        })}
 
 
-      } else {
+        else {
         this.hS.insert(this.hotels).subscribe((data) => {
         this.hS.list().subscribe((data) => {
           this.hS.setList(data);

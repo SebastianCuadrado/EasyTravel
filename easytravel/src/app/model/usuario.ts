@@ -6,4 +6,6 @@ export class Usuario{
   fechaNacimiento:Date=new Date(Date.now())
   celular:string=""
   ubicacion:string=""
+  password:string=""
+  username:string=""
 }
