@@ -27,6 +27,7 @@ export class PlacesCreaeditaComponent implements OnInit {
       namePlace: new FormControl(),
       descriptionPlace: new FormControl(),
       country: new FormControl(),
+      image: new FormControl()
     });
   }
 
@@ -38,9 +39,10 @@ export class PlacesCreaeditaComponent implements OnInit {
     this.places.namePlace=this.form.value['namePlace'];
     this.places.descriptionPlace=this.form.value['descriptionPlace'];
     this.places.country=this.form.value['country'];
+    this.places.image=this.form.value['image'];
 
 
-    if(this.form.value['namePlace'].length>0  && this.form.value['descriptionPlace'].length>0 && this.form.value['country'].length>0)
+    if(this.form.value['namePlace'].length>0  && this.form.value['descriptionPlace'].length>0 && this.form.value['country'].length>0 && this.form.value['image'].length>0)
     {
       if (this.edicion) {
         this.pS.update(this.places).subscribe((data) => {
@@ -67,7 +69,8 @@ export class PlacesCreaeditaComponent implements OnInit {
           id: new FormControl(data.id),
           namePlace: new FormControl(data.namePlace),
           descriptionPlace: new FormControl(data.descriptionPlace),
-          country: new FormControl(data.country)
+          country: new FormControl(data.country),
+          image: new FormControl(data.image)
         })
       })
     }
