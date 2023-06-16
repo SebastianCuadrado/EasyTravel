@@ -1,4 +1,4 @@
-import { DetalleHotel } from "./detallehotel";
+import { Hotels } from "./hotels";
 import { Place } from "./places";
 import { Travel } from "./travel";
 
@@ -7,6 +7,10 @@ export class Paquete {
   precio: number = 0.00;
   place: Place = new Place();
   viaje: Travel = new Travel();
-  detalle: DetalleHotel = new DetalleHotel();
   ahorro: number = 0.00;
+  tipoHabitacion:string=""
+  cantidadNoches:number=0
+  hotel:Hotels =new Hotels()
+  checkin:Date= new Date(Date.now())
+  checkout:Date= new Date(Date.now())
 }

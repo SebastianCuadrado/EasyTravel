@@ -84,6 +84,7 @@ import { InteresesListarComponent } from './component/intereses/intereses-listar
 import { ReservaListarComponent } from './component/reserva/reserva-listar/reserva-listar.component';
 import { ReservaCreaeditaComponent } from './component/reserva/reserva-creaedita/reserva-creaedita.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { PaqueteDialogoComponent } from './component/paquete/paquete-listar/paquete-dialogo/paquete-dialogo.component';
 
 
 
@@ -154,6 +155,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 
       ComentarioshotelComponent,
       ComentarioshotelCreaeditaComponent,
+      PaqueteDialogoComponent,
 
 
 

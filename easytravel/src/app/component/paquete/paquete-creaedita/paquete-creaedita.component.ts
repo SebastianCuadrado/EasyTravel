@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DetalleHotel } from 'src/app/model/detallehotel';
+import { Hotels } from 'src/app/model/hotels';
 import { Paquete } from 'src/app/model/paquete';
 import { Place } from 'src/app/model/places';
 import { Travel } from 'src/app/model/travel';
-import { DetallehotelService } from 'src/app/service/detallehotel.service';
+import { HotelsService } from 'src/app/service/hotels.service';
 import { PaqueteService } from 'src/app/service/paquete.service';
 import { PlacesService } from 'src/app/service/places.service';
 import { TravelService } from 'src/app/service/travel.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-paquete-creaedita',
@@ -21,12 +22,14 @@ export class PaqueteCreaeditaComponent implements OnInit {
   mensaje: string = "";
   lista_place: Place[] = [];
   lista_travel: Travel[] = [];
-  lista_detalle: DetalleHotel[] = [];
+  lista_hotel: Hotels[] = [];
   idPlaceSel: number = 0;
   idTravelSel: number = 0;
-  idDetalleSel: number = 0;
+  idHotelSel: number = 0;
+  maxFecha: Date = moment().add(-1, 'days').toDate();
 
-  constructor(private pS: PaqueteService, private router: Router, private route: ActivatedRoute, private plS: PlacesService, private tS: TravelService, private dhS: DetallehotelService) { }
+
+  constructor(private pS: PaqueteService, private router: Router, private route: ActivatedRoute, private plS: PlacesService, private tS: TravelService, private hS: HotelsService) { }
 
   ngOnInit(): void {
     this.plS.list().subscribe(data => {
@@ -37,8 +40,8 @@ export class PaqueteCreaeditaComponent implements OnInit {
       this.lista_travel = data;
     })
 
-    this.dhS.list().subscribe(data => {
-      this.lista_detalle = data;
+    this.hS.list().subscribe(data => {
+      this.lista_hotel = data;
     })
 
     this.form = new FormGroup({
@@ -46,8 +49,12 @@ export class PaqueteCreaeditaComponent implements OnInit {
       precio: new FormControl(),
       place: new FormControl(),
       viaje: new FormControl(),
-      detalle: new FormControl(),
       ahorro: new FormControl(),
+      tipoHabitacion: new FormControl(),
+      cantidadNoches: new FormControl(),
+      hotel: new FormControl(),
+      checkin: new FormControl(),
+      checkout: new FormControl()
     })
   }
 
@@ -56,20 +63,26 @@ export class PaqueteCreaeditaComponent implements OnInit {
     this.paquete.precio = this.form.value['precio'];
     this.paquete.place = this.form.value['place'];
     this.paquete.viaje = this.form.value['viaje'];
-    this.paquete.detalle = this.form.value['detalle'];
     this.paquete.ahorro = this.form.value['ahorro'];
-    console.log(this.idPlaceSel, this.idTravelSel, this.idDetalleSel);
-    if (this.idPlaceSel > 0 && this.idTravelSel > 0 && this.idDetalleSel > 0) {
+    this.paquete.tipoHabitacion = this.form.value['tipoHabitacion'];
+    this.paquete.cantidadNoches = this.form.value['cantidadNoches'];
+    this.paquete.hotel = this.form.value['hotel'];
+    this.paquete.checkin = this.form.value['checkin'];
+    this.paquete.checkout = this.form.value['checkout'];
+
+    console.log(this.idPlaceSel, this.idTravelSel, this.idHotelSel);
+
+    if (this.idPlaceSel > 0 && this.idTravelSel > 0 && this.idHotelSel > 0) {
       let p = new Place();
       p.id = this.idPlaceSel;
       let t = new Travel();
       t.idViaje = this.idTravelSel;
-      let d = new DetalleHotel();
-      d.idDetalle = this.idDetalleSel;
+      let h = new Hotels();
+      h.idHotels = this.idHotelSel;
 
       this.paquete.place = p;
       this.paquete.viaje = t;
-      this.paquete.detalle = d;
+      this.paquete.hotel = h;
 
       this.pS.insert(this.paquete).subscribe(() => {
         this.pS.list().subscribe((data) => {
@@ -80,4 +93,5 @@ export class PaqueteCreaeditaComponent implements OnInit {
       this.router.navigate(['paquetes']);
     }
   }
+
 }
