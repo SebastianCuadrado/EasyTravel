@@ -1,0 +1,23 @@
+import { Injectable } from '@angular/core';
+import { LoginService } from './login.service';
+import { ActivatedRouteSnapshot, Router, RouterStateSnapshot,CanActivate } from '@angular/router';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class GuardServiceService implements CanActivate{
+
+  constructor(private lService:LoginService, private router:Router) {
+
+  }
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+
+    //return this.lService.verificar();
+    const rpta=this.lService.verificar();
+    if(!rpta){
+      this.router.navigate(['/login']);
+      return false;
+    }
+    return rpta;
+  }
+}
