@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Subject } from 'rxjs';
 import { Reserva } from '../model/reserva';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 const base_url = environment.base;
 @Injectable({
   providedIn: 'root'
@@ -14,11 +14,17 @@ export class ReservaService {
   constructor(private http: HttpClient) { }
 
   list() {
-    return this.http.get<Reserva[]>(this.url);
+    let token = sessionStorage.getItem('token');
+    return this.http.get<Reserva[]>(this.url, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 
   insert(reserva: Reserva) {
-    return this.http.post(this.url, reserva);
+    let token = sessionStorage.getItem('token');
+    return this.http.post(this.url, reserva, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 
   setList(listaNueva: Reserva[]) {
