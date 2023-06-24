@@ -78,7 +78,7 @@ aceptar(): void {
       })
     }
 
-    this.router.navigate(['usuario']);
+    this.router.navigate(['login']);
   }
   else{this.mensaje="Ingresa los datos correctamente"}
 }

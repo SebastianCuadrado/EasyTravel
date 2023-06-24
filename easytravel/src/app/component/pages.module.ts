@@ -88,8 +88,10 @@ import { ActividadCreaeditaComponent } from './actividad/actividad-creaedita/act
 import { ComentarioshotelComponent } from './comentarioshotel/comentarioshotel.component';
 import { ComentarioshotelCreaeditaComponent } from './comentarioshotel/comentarioshotel-creaedita/comentarioshotel-creaedita.component';
 import { ReportesComponent } from './reportes/reportes.component';
+
 import { HotelesmasreservadosComponent } from './reportes/hotelesmasreservados/hotelesmasreservados.component';
 import { HotelesmasserviciosComponent } from './reportes/hotelesmasservicios/hotelesmasservicios.component';
+
 
 
 
@@ -157,8 +159,10 @@ ComentarioshotelCreaeditaComponent,
    ActividadListarComponent,
    ActividadCreaeditaComponent,
    ReportesComponent,
+
    HotelesmasreservadosComponent,
    HotelesmasserviciosComponent,
+
 
 
 

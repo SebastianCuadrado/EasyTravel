@@ -3,7 +3,7 @@ import { environment } from 'src/environments/environment';
 import { ComentariosHotel} from '../model/comentarioshotel';
 import { Subject } from 'rxjs';
 import { Observable } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 const base_url = environment.base;@Injectable({
   providedIn: 'root'
 })
@@ -16,11 +16,17 @@ export class ComentarioshotelService {
   }
 
   list() {
-    return this.http.get<ComentariosHotel[]>(this.url);
+    let token = sessionStorage.getItem('token');
+    return this.http.get<ComentariosHotel[]>(this.url, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 
   insert(comentario: ComentariosHotel) {
-    return this.http.post(this.url, comentario);
+    let token = sessionStorage.getItem('token');
+    return this.http.post(this.url, comentario, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 
   setList(listaNueva: ComentariosHotel[]) {
@@ -32,6 +38,9 @@ export class ComentarioshotelService {
   }
   findByHotelId(hotelId: number): Observable<ComentariosHotel[]> {
     const url = `${this.url}/hotels/${hotelId}`;
-    return this.http.get<ComentariosHotel[]>(url);
+    let token = sessionStorage.getItem('token');
+    return this.http.get<ComentariosHotel[]>(url, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 }
