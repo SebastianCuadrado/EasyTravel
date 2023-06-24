@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Subject } from 'rxjs';
 import { DetalleHotel } from '../model/detallehotel';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 const base_url = environment.base;
 @Injectable({
   providedIn: 'root',
@@ -14,11 +14,17 @@ export class DetallehotelService {
 
   constructor(private http: HttpClient) {}
   list() {
-    return this.http.get<DetalleHotel[]>(this.url);
+    let token = sessionStorage.getItem('token');
+    return this.http.get<DetalleHotel[]>(this.url, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 
   insert(hotels: DetalleHotel) {
-    return this.http.post(this.url, hotels);
+    let token = sessionStorage.getItem('token');
+    return this.http.post(this.url, hotels, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 
   setList(ListaNueva: DetalleHotel[]) {
@@ -30,10 +36,16 @@ export class DetallehotelService {
   }
 
   update(dh: DetalleHotel) {
-    return this.http.put(this.url + '/' + dh.idDetalle, dh);
+    let token = sessionStorage.getItem('token');
+    return this.http.put(this.url + '/' + dh.idDetalle, dh, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
   delete(idDetalle: number) {
-    return this.http.delete(`${this.url}/${idDetalle}`);
+    let token = sessionStorage.getItem('token');
+    return this.http.delete(`${this.url}/${idDetalle}`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
   getConfirmDelete() {
     return this.confirmarEliminacion.asObservable();
@@ -43,6 +55,9 @@ export class DetallehotelService {
   }
 
   listId(idDetalle: number) {
-    return this.http.get<DetalleHotel>(`${this.url}/${idDetalle}`);
+    let token = sessionStorage.getItem('token');
+    return this.http.get<DetalleHotel>(`${this.url}/${idDetalle}`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 }
