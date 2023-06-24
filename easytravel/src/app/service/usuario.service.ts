@@ -22,9 +22,11 @@ export class UsuarioService {
 
   insert(usuario: Usuario) {
     let token = sessionStorage.getItem('token');
+    console.log(sessionStorage.getItem('token'))
     return this.http.post(this.url, usuario, {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
     });
+
   }
 
   setList(ListaNueva: Usuario[]) {
