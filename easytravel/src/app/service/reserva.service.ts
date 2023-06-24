@@ -1,8 +1,13 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Subject } from 'rxjs';
+import { Observable,Subject } from 'rxjs';
 import { Reserva } from '../model/reserva';
+<<<<<<< Updated upstream
 import { HttpClient } from '@angular/common/http';
+=======
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { hotelReservas } from '../model/hotelReservas';
+>>>>>>> Stashed changes
 const base_url = environment.base;
 @Injectable({
   providedIn: 'root'
@@ -27,5 +32,9 @@ export class ReservaService {
 
   getList() {
     return this.listaCambio.asObservable();
+  }
+
+  getReservasCountByHotel():Observable<hotelReservas[]>{
+    return this.http.get<hotelReservas[]>(`${this.url}/hotels-count`);
   }
 }
