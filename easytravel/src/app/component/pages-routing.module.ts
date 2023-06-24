@@ -26,6 +26,9 @@ import { ActividadComponent } from './actividad/actividad.component';
 import { ActividadCreaeditaComponent } from './actividad/actividad-creaedita/actividad-creaedita.component';
 import { NotificacionComponent } from './notificacion/notificacion.component';
 import { NotificacionCreaEditaComponent } from './notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
+import { ReportesComponent } from './reportes/reportes.component';
+import { CantidadDeViajesPorMesComponent } from './reportes/cantidad-de-viajes-por-mes/cantidad-de-viajes-por-mes.component';
+import { CantidadDeViajesPorEmpresaTransporteComponent } from './reportes/cantidad-de-viajes-por-empresa-transporte/cantidad-de-viajes-por-empresa-transporte.component';
 
 
 
@@ -164,6 +167,20 @@ const routes: Routes = [
         path: 'edicion/:id', component:NotificacionCreaEditaComponent
       }
     ],canActivate:[GuardServiceService]
+  },
+  {
+    path: 'reportes',
+    component: ReportesComponent,
+    children: [
+      {
+        path: 'viaje-count-month',
+        component: CantidadDeViajesPorMesComponent
+      },
+      {
+        path: 'viaje-count-empresa-transporte',
+        component: CantidadDeViajesPorEmpresaTransporteComponent
+      }
+    ], canActivate:[GuardServiceService]
   }
 
 ];

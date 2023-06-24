@@ -88,6 +88,8 @@ import { ActividadCreaeditaComponent } from './actividad/actividad-creaedita/act
 import { ComentarioshotelComponent } from './comentarioshotel/comentarioshotel.component';
 import { ComentarioshotelCreaeditaComponent } from './comentarioshotel/comentarioshotel-creaedita/comentarioshotel-creaedita.component';
 import { ReportesComponent } from './reportes/reportes.component';
+import { CantidadDeViajesPorMesComponent } from './reportes/cantidad-de-viajes-por-mes/cantidad-de-viajes-por-mes.component';
+import { CantidadDeViajesPorEmpresaTransporteComponent } from './reportes/cantidad-de-viajes-por-empresa-transporte/cantidad-de-viajes-por-empresa-transporte.component';
 
 
 
@@ -155,6 +157,8 @@ ComentarioshotelCreaeditaComponent,
    ActividadListarComponent,
    ActividadCreaeditaComponent,
    ReportesComponent,
+   CantidadDeViajesPorMesComponent,
+   CantidadDeViajesPorEmpresaTransporteComponent,
 
 
 

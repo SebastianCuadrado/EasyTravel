@@ -3,6 +3,8 @@ import { environment } from 'src/environments/environment';
 import { Subject } from 'rxjs';
 import { Travel } from '../model/travel';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { viajeMesDTO } from '../model/viajeMesDTO';
+import { viajeEmpresaTransporteDTO } from '../model/viajeEmpresaTransporteDTO';
 const base_url = environment.base;
 
 @Injectable({
@@ -37,5 +39,19 @@ export class TravelService {
 
   getList() {
     return this.listaCambio.asObservable();
+  }
+
+  getViajeCountByMonth(month: number) {
+    let token = sessionStorage.getItem('token');
+    return this.http.get<viajeMesDTO[]>(`${this.url}/count-month/${month}`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    })
+  }
+
+  getEmpresaTransporteCountByViaje() {
+    let token = sessionStorage.getItem('token');
+    return this.http.get<viajeEmpresaTransporteDTO[]>(`${this.url}/count`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    });
   }
 }
