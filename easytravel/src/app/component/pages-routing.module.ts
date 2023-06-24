@@ -27,6 +27,9 @@ import { ActividadCreaeditaComponent } from './actividad/actividad-creaedita/act
 import { NotificacionComponent } from './notificacion/notificacion.component';
 import { NotificacionCreaEditaComponent } from './notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
 
+import { HotelesmasserviciosComponent } from './reportes/hotelesmasservicios/hotelesmasservicios.component';
+
+
 
 
 
@@ -98,6 +101,9 @@ const routes: Routes = [
 
       { path: 'new', component: ServiciosCreaeditaComponent },
       { path: 'edicion/:id', component: ServiciosCreaeditaComponent },
+
+      {path:'servicios-count',component:HotelesmasserviciosComponent}
+
     ],canActivate:[GuardServiceService]
 
   },

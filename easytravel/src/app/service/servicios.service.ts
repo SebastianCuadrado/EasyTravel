@@ -4,6 +4,7 @@ import { Servicios } from '../model/servicios';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { Observable } from 'rxjs';
+import { serviciosHotel } from '../model/serviciosHotel';
 
 const base_url = environment.base;
 @Injectable({
@@ -28,6 +29,9 @@ export class ServiciosService {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
     });
   }
+
+  
+
 
   setList(ListaNueva: Servicios[]) {
     this.listaCambio.next(ListaNueva);
@@ -56,6 +60,7 @@ export class ServiciosService {
     });
   }
 
+
   getConfirmDelete() {
     return this.confirmarEliminacion.asObservable();
   }
@@ -69,4 +74,14 @@ export class ServiciosService {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
     });
   }
+
+  getServicioCountByHotel():Observable<serviciosHotel[]>{
+    let token = sessionStorage.getItem('token');
+    return this.http.get<serviciosHotel[]>(`${this.url}/servicios-count`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    })
+
+  }
+
+
 }
