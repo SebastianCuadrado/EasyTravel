@@ -15,7 +15,7 @@ export class PaqueteListarComponent {
   lista: Paquete[] = [];
   idMayor: number = 0;
   dataSource: MatTableDataSource<Paquete> = new MatTableDataSource();
-  displayedColumns: string[] = ['idPaquete', 'precio', 'place', 'viaje', 'ahorro', 'tipoHabitacion', 'cantidadNoches', 'hotel', 'checkin', 'checkout', 'accionEditar', 'accionEliminar', 'accionReserva'];
+  displayedColumns: string[] = ['idPaquete', 'nombre','precio', 'place', 'viaje', 'ahorro', 'tipoHabitacion', 'cantidadNoches', 'hotel', 'checkin', 'checkout', 'accionEditar', 'accionEliminar', 'accionReserva'];
 
   constructor(private pS: PaqueteService, private dialog: MatDialog) {
 

@@ -21,7 +21,11 @@
           <input matInput placeholder="N°" formControlName="idPaquete">
         </mat-form-field>
         <br>
-
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput placeholder="Lima Aventura" formControlName="nombre">
+        </mat-form-field>
+        <br>
         <mat-form-field class="example-full-width">
           <mat-label>Precio</mat-label>
           <input matInput placeholder="1500.70" formControlName="precio">
@@ -47,9 +51,9 @@
         <br>
         <mat-form-field appearance="fill">
           <mat-label>Hotel</mat-label>
-          <mat-select formControlName="hotel" [(value)]="idHotelSel" required>
-            <mat-option *ngFor="let a of lista_hotel" [value]="a.idHotels">
-              {{a.nombre}}
+          <mat-select formControlName="hotels" [(value)]="idHotelSel" required>
+            <mat-option *ngFor="let h of lista_hotel" [value]="h.idHotels">
+              {{h.nombre}}
             </mat-option>
           </mat-select>
         </mat-form-field>
@@ -61,7 +65,18 @@
         <br>
         <mat-form-field class="example-full-width">
           <mat-label>Tipo de Habitación</mat-label>
-          <input matInput placeholder="presidencial" formControlName="tipoHabitacion">
+          <mat-select formControlName="tipoHabitacion">
+            <mat-option value="Habitación Individual">Habitación Individual</mat-option>
+            <mat-option value="Habitación Doble">Habitación Doble</mat-option>
+            <mat-option value="Habitación Doble con Cama Matrimonial">Habitación Doble con Cama Matrimonial</mat-option>
+            <mat-option value="Habitación Doble con Dos Camas">Habitación Doble con Dos Camas</mat-option>
+            <mat-option value="Habitación Triple">Habitación Triple</mat-option>
+            <mat-option value="Suite">Suite</mat-option>
+            <mat-option value="Habitación Familiar">Habitación Familiar</mat-option>
+            <mat-option value="Habitación Ejecutiva">Habitación Ejecutiva</mat-option>
+            <mat-option value="Habitación con Vista al Mar">Habitación con Vista al Mar</mat-option>
+            <mat-option value="Habitación con Acceso para Discapacitados">Habitación con Acceso para Discapacitados</mat-option>
+          </mat-select>
         </mat-form-field>
         <br>
         <mat-form-field class="example-full-width">

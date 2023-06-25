@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Libros</h1>
+  <h1>Registro de Actividades</h1>
   <form [formGroup]="form" (submit)="aceptar()">
 
   <mat-form-field class="example-full-width">
@@ -15,8 +15,17 @@
 
   <br>
   <mat-form-field class="example-full-width">
-    <mat-label>Categoria</mat-label>
-    <input matInput required placeholder="Acuática" formControlName="categoria">
+    <mat-label>Categoría</mat-label>
+    <mat-select formControlName="categoria" required>
+      <mat-option value="Acuática">Acuática</mat-option>
+      <mat-option value="Náutica">Náutica</mat-option>
+      <mat-option value="Subacuática">Subacuática</mat-option>
+      <mat-option value="Recreativas">Recreativas</mat-option>
+      <mat-option value="Deportiva">Deportiva</mat-option>
+      <mat-option value="Deportiva Extrema">Deportiva Extrema</mat-option>
+      <mat-option value="Aérea">Aérea</mat-option>
+      <mat-option value="Cultural">Cultural</mat-option>
+    </mat-select>
   </mat-form-field>
 
   <br>
@@ -27,23 +36,27 @@
 
   <br>
   <mat-form-field class="example-full-width">
-    <mat-label>Duracion</mat-label>
-    <input matInput type="number" required placeholder="2" formControlName="duracion">
+    <mat-label>Duración</mat-label>
+    <mat-select formControlName="duracion" required>
+      <mat-option value="15">15 min</mat-option>
+      <mat-option value="30">30 min</mat-option>
+      <mat-option value="60">1 hora</mat-option>
+      <mat-option value="120">2 horas</mat-option>
+    </mat-select>
   </mat-form-field>
-
   <br>
   <mat-form-field appearance="fill">
     <mat-label>Paquete</mat-label>
     <mat-select formControlName="paquete" [(value)]="idPaqueteSeleccionado" required>
-      <mat-option *ngFor="let a of lista" [value]="a.idPaquete">
-        {{a.precio}}
+      <mat-option *ngFor="let p of lista" [value]="p.idPaquete">
+        {{p.nombre}}
       </mat-option>
     </mat-select>
   </mat-form-field>
   <br>
     <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
 
-    <button mat-raised-button color="warn" routerLink="/travel">Cancelar</button>
+    <button mat-raised-button color="warn" routerLink="/pages/actividades">Cancelar</button>
   <p>{{mensaje}}</p>
   </form>
 </div>
