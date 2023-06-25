@@ -1,13 +1,17 @@
-<mat-form-field class="example-full-width">
-  <mat-label>Usuario</mat-label>
-  <input matInput  placeholder="Username" [(ngModel)]="username">
-</mat-form-field>
-<mat-form-field class="example-full-width">
-  <mat-label>Password</mat-label>
-  <input type="password" matInput  placeholder="Password" [(ngModel)]="password">
-</mat-form-field>
-<br>
-<button mat-raised-button color="warn" (click)="login()">Ingresar</button>
-<br>
-<button mat-raised-button color="warn" routerLink="/pages/usuario/new">Registrarse</button>
-
+<body style="background-image: url('./assets/image/fondo_login.jpg')">
+  <div class="login-container">
+  <div class="login-form">
+  <h1 class="login-title">Iniciar sesión</h1>
+  <mat-form-field class="login-input">
+    <input matInput placeholder="Usuario" [(ngModel)]="username">
+  </mat-form-field>
+  <mat-form-field class="login-input">
+    <input type="password" matInput placeholder="Contraseña" [(ngModel)]="password">
+  </mat-form-field>
+  <div class="login-buttons">
+    <button mat-raised-button class="login-button" (click)="login()">Ingresar</button>
+    <button mat-raised-button class="register-button" routerLink="/pages/usuario/new">Registrarse</button>
+  </div>
+</div>
+</div>
+</body>
