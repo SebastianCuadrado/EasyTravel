@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './component/login/login.component';
+import { MatTableModule } from '@angular/material/table';
 
 const routes: Routes = [
   {

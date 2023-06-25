@@ -26,6 +26,8 @@ import { ActividadComponent } from './actividad/actividad.component';
 import { ActividadCreaeditaComponent } from './actividad/actividad-creaedita/actividad-creaedita.component';
 import { NotificacionComponent } from './notificacion/notificacion.component';
 import { NotificacionCreaEditaComponent } from './notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
+import { Reporte01CarlosComponent } from './reportes/reporte01-carlos/reporte01-carlos.component';
+import { ReportesComponent } from './reportes/reportes.component';
 
 
 
@@ -163,6 +165,11 @@ const routes: Routes = [
       {
         path: 'edicion/:id', component:NotificacionCreaEditaComponent
       }
+    ],canActivate:[GuardServiceService]
+  },
+  {
+    path:'reportes', component: ReportesComponent, children:[
+      {path: 'intereses-count-user', component: Reporte01CarlosComponent}
     ],canActivate:[GuardServiceService]
   }
 

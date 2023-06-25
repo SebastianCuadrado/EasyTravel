@@ -88,6 +88,7 @@ import { ActividadCreaeditaComponent } from './actividad/actividad-creaedita/act
 import { ComentarioshotelComponent } from './comentarioshotel/comentarioshotel.component';
 import { ComentarioshotelCreaeditaComponent } from './comentarioshotel/comentarioshotel-creaedita/comentarioshotel-creaedita.component';
 import { ReportesComponent } from './reportes/reportes.component';
+import { Reporte01CarlosComponent } from './reporte01-carlos/reporte01-carlos.component';
 
 
 
@@ -155,6 +156,7 @@ ComentarioshotelCreaeditaComponent,
    ActividadListarComponent,
    ActividadCreaeditaComponent,
    ReportesComponent,
+   Reporte01CarlosComponent,
 
 
 

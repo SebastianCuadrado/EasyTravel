@@ -32,9 +32,9 @@
         <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="usuario">
+      <ng-container matColumnDef="usuarios">
         <th mat-header-cell *matHeaderCellDef> id de Usuario </th>
-        <td mat-cell *matCellDef="let element"> {{element.usuario}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.usuario.id}} </td>
       </ng-container>
 
       <ng-container matColumnDef="accion01">
