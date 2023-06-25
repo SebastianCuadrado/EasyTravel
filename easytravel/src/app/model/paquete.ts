@@ -10,7 +10,7 @@ export class Paquete {
   ahorro: number = 0.00;
   tipoHabitacion:string=""
   cantidadNoches:number=0
-  hotel:Hotels =new Hotels()
+  hotels:Hotels =new Hotels()
   checkin:Date= new Date(Date.now())
   checkout:Date= new Date(Date.now())
 }
