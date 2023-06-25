@@ -28,6 +28,9 @@ import { NotificacionComponent } from './notificacion/notificacion.component';
 import { NotificacionCreaEditaComponent } from './notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
 
 import { HotelesmasserviciosComponent } from './reportes/hotelesmasservicios/hotelesmasservicios.component';
+import { ReportesComponent } from './reportes/reportes.component';
+import { InteresesUsuariosComponent } from './reportes/intereses-usuarios/intereses-usuarios.component';
+import { NotificacionUsuariosComponent } from './reportes/notificacion-usuarios/notificacion-usuarios.component';
 
 
 
@@ -170,6 +173,16 @@ const routes: Routes = [
         path: 'edicion/:id', component:NotificacionCreaEditaComponent
       }
     ],canActivate:[GuardServiceService]
+  },
+  {
+    path:'reportes', component:ReportesComponent, children:[
+      {
+        path:'intereses-count-user', component: InteresesUsuariosComponent
+      },
+      {
+        path: 'notificacion-count-user', component: NotificacionUsuariosComponent
+      }
+    ]
   }
 
 ];
