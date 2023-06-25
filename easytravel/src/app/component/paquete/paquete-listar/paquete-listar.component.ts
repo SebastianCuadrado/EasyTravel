@@ -15,7 +15,7 @@ export class PaqueteListarComponent {
   lista: Paquete[] = [];
   idMayor: number = 0;
   dataSource: MatTableDataSource<Paquete> = new MatTableDataSource();
-  displayedColumns: string[] = ['idPaquete', 'precio', 'place', 'viaje', 'ahorro', 'tipoHabitacion', 'cantidadNoches', 'hotel', 'checkin', 'checkout', 'accionEditar', 'accionEliminar', 'accionReserva'];
+  displayedColumns: string[] = ['idPaquete', 'precio', 'place', 'viaje', 'ahorro', 'tipoHabitacion', 'cantidadNoches', 'hotel', 'checkin', 'checkout'];
 
   constructor(private pS: PaqueteService, private dialog: MatDialog) {
 
@@ -35,15 +35,5 @@ export class PaqueteListarComponent {
   confirm(id: number) {
     this.idMayor = id;
     this.dialog.open(PaqueteDialogoComponent);
-  }
-  eliminar(id: number) {
-    this.pS.delete(id).subscribe(() => {
-      this.pS.list().subscribe(data => {
-        this.pS.setList(data);
-      });
-    });
-  }
-  filter(e: any) {
-    this.dataSource.filter = e.target.value.trim();
   }
 }

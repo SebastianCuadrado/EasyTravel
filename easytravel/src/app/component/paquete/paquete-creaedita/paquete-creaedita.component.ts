@@ -66,11 +66,11 @@ export class PaqueteCreaeditaComponent implements OnInit {
     this.paquete.ahorro = this.form.value['ahorro'];
     this.paquete.tipoHabitacion = this.form.value['tipoHabitacion'];
     this.paquete.cantidadNoches = this.form.value['cantidadNoches'];
-    this.paquete.hotel = this.form.value['hotel'];
+    this.paquete.hotels = this.form.value['hotel'];
     this.paquete.checkin = this.form.value['checkin'];
     this.paquete.checkout = this.form.value['checkout'];
 
-    console.log(this.idPlaceSel, this.idTravelSel, this.idHotelSel);
+
 
     if (this.idPlaceSel > 0 && this.idTravelSel > 0 && this.idHotelSel > 0) {
       let p = new Place();
@@ -82,7 +82,7 @@ export class PaqueteCreaeditaComponent implements OnInit {
 
       this.paquete.place = p;
       this.paquete.viaje = t;
-      this.paquete.hotel = h;
+      this.paquete.hotels = h;
 
       this.pS.insert(this.paquete).subscribe(() => {
         this.pS.list().subscribe((data) => {
@@ -90,7 +90,7 @@ export class PaqueteCreaeditaComponent implements OnInit {
         })
       })
 
-      this.router.navigate(['paquetes']);
+      this.router.navigate(['pages/paquetes']);
     }
   }
 
