@@ -3,6 +3,7 @@ import { environment } from 'src/environments/environment';
 import { Subject } from 'rxjs';
 import { Paquete } from '../model/paquete';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { PaqueteHotelPlaceDTO } from '../model/PaqueteHotelPlaceDTO';
 const base_url = environment.base;
 
 @Injectable({
@@ -61,5 +62,12 @@ export class PaqueteService {
   }
   setConfirmDelete(estado:Boolean){
     this.confirmarEliminacion.next(estado);
+  }
+
+  getPaquetesByHotelsAndPlace(){
+    let token = sessionStorage.getItem('token');
+    return this.http.get<PaqueteHotelPlaceDTO[]>(`${this.url}/busqueda`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    })
   }
 }

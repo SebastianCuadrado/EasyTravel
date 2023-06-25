@@ -29,6 +29,8 @@ import { NotificacionCreaEditaComponent } from './notificacion/notificacion-crea
 import { ReportesComponent } from './reportes/reportes.component';
 import { CantidadDeViajesPorMesComponent } from './reportes/cantidad-de-viajes-por-mes/cantidad-de-viajes-por-mes.component';
 import { CantidadDeViajesPorEmpresaTransporteComponent } from './reportes/cantidad-de-viajes-por-empresa-transporte/cantidad-de-viajes-por-empresa-transporte.component';
+import { PaquetesOrdenadosPorPrecioComponent } from './reportes/paquetes-ordenados-por-precio/paquetes-ordenados-por-precio.component';
+import { CantidadDePaisesEnReservaComponent } from './reportes/cantidad-de-paises-en-reserva/cantidad-de-paises-en-reserva.component';
 
 
 
@@ -179,6 +181,14 @@ const routes: Routes = [
       {
         path: 'viaje-count-empresa-transporte',
         component: CantidadDeViajesPorEmpresaTransporteComponent
+      },
+      {
+        path: 'paquetes-order-price',
+        component: PaquetesOrdenadosPorPrecioComponent
+      },
+      {
+        path: 'quantity-paises-reserva',
+        component: CantidadDePaisesEnReservaComponent
       }
     ], canActivate:[GuardServiceService]
   }
