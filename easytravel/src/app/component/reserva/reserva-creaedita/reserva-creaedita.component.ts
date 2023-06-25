@@ -41,6 +41,16 @@ export class ReservaCreaeditaComponent implements OnInit{
       fechaReserva: new FormControl(),
       usuario: new FormControl(),
     })
+    this.route.params.subscribe(params => {
+      const nombrePaquete = params['nombrePaquete'];
+
+      this.form.patchValue({
+        paquete: nombrePaquete,
+      });
+
+      // Actualizar el nombre del paquete en el formulario (opcional)
+      this.form.get('paquete')?.setAsyncValidators(() => Promise.resolve(nombrePaquete));
+    });
   }
 
   aceptar(): void {
@@ -64,7 +74,7 @@ export class ReservaCreaeditaComponent implements OnInit{
         })
       })
 
-      this.router.navigate(['reservas']);
+      this.router.navigate(['/pages/paquetes']);
     }
   }
 }
