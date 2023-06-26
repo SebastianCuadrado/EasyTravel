@@ -64,7 +64,7 @@ export class ReservaCreaeditaComponent implements OnInit{
         })
       })
 
-      this.router.navigate(['reservas']);
+      this.router.navigate(['pages/reservas']);
     }
   }
 }
