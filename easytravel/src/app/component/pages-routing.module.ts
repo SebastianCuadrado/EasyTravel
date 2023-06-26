@@ -198,10 +198,10 @@ const routes: Routes = [
         component:HotelesmasreservadosComponent
       },
       {
-        path:'intereses-count-user', component: InteresesUsuariosComponent
+        path:'intereses-usuarios', component: InteresesUsuariosComponent
       },
       {
-        path: 'notificacion-count-user', component: NotificacionUsuariosComponent
+        path: 'notificacion-usuarios', component: NotificacionUsuariosComponent
       },
 
       {

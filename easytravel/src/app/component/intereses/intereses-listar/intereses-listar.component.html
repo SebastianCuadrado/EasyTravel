@@ -16,7 +16,7 @@
     </div>
 
     <div style="text-align: right;">
-      <button mat-raised-button style="background-color: #264653; color:#fff" routerLink="/intereses/new">Agregar</button>
+      <button mat-raised-button style="background-color: #264653; color:#fff" routerLink="/pages/intereses/new">Agregar</button>
     </div>
 
 
@@ -32,7 +32,7 @@
         <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
       </ng-container>
 
-      <ng-container matColumnDef="usuario">
+      <ng-container matColumnDef="usuarios">
         <th mat-header-cell *matHeaderCellDef> id de Usuario </th>
         <td mat-cell *matCellDef="let element"> {{element.usuario.id}} </td>
       </ng-container>

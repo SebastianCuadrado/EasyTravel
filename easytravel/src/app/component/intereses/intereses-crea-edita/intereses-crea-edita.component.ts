@@ -50,7 +50,7 @@ export class InteresesCreaEditaComponent {
         })
       })
 
-      this.router.navigate(['intereses']);
+      this.router.navigate(['/pages/intereses']);
     }
   }
 }
