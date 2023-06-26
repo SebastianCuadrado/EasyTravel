@@ -46,13 +46,14 @@ export class PaqueteCreaeditaComponent implements OnInit {
 
     this.form = new FormGroup({
       idPaquete: new FormControl(),
+      nombre:new FormControl(),
       precio: new FormControl(),
       place: new FormControl(),
       viaje: new FormControl(),
       ahorro: new FormControl(),
       tipoHabitacion: new FormControl(),
       cantidadNoches: new FormControl(),
-      hotel: new FormControl(),
+      hotels: new FormControl(),
       checkin: new FormControl(),
       checkout: new FormControl()
     })
@@ -60,13 +61,16 @@ export class PaqueteCreaeditaComponent implements OnInit {
 
   aceptar(): void {
     this.paquete.idPaquete = this.form.value['idPaquete'];
+    this.paquete.nombre=this.form.value['nombre'];
     this.paquete.precio = this.form.value['precio'];
     this.paquete.place = this.form.value['place'];
     this.paquete.viaje = this.form.value['viaje'];
     this.paquete.ahorro = this.form.value['ahorro'];
     this.paquete.tipoHabitacion = this.form.value['tipoHabitacion'];
     this.paquete.cantidadNoches = this.form.value['cantidadNoches'];
-    this.paquete.hotels = this.form.value['hotel'];
+
+    this.paquete.hotels.nombre = this.form.value['hotels.nombre'];
+
     this.paquete.checkin = this.form.value['checkin'];
     this.paquete.checkout = this.form.value['checkout'];
 
@@ -90,7 +94,9 @@ export class PaqueteCreaeditaComponent implements OnInit {
         })
       })
 
-      this.router.navigate(['pages/paquetes']);
+
+      this.router.navigate(['/pages/paquetes']);
+
     }
   }
 

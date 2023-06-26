@@ -35,7 +35,7 @@ export class InteresesCreaEditaComponent {
   aceptar(): void {
     this.interes.idInteres = this.form.value['idInteres'];
     this.interes.nombre = this.form.value['nombre'];
-    this.interes.usuario = this.form.value['usuario'];
+    this.interes.usuario = this.form.value['usuario.id'];
 
 
     if (this.idUsuario > 0) {

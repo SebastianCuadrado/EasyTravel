@@ -44,8 +44,8 @@ export class NotificacionCreaEditaComponent implements OnInit {
 
   aceptar(): void {
     this.notificacion.idNotificacion = this.form.value['idNotificacion'];
-    this.notificacion.paquete = this.form.value['paquete'];
-    this.notificacion.intereses = this.form.value['intereses'];
+    this.notificacion.paquete = this.form.value['paquete.idPaquete'];
+    this.notificacion.intereses = this.form.value['intereses.idInteres'];
     this.notificacion.mensaje = this.form.value['mensaje'];
 
 

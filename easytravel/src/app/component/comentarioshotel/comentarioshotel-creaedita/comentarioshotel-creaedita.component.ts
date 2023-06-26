@@ -67,7 +67,7 @@ export class ComentarioshotelCreaeditaComponent implements OnInit {
         this.cS.setList(data);
       });
     });
-    this.router.navigate(['hotels']);
+    this.router.navigate(['/pages/hotels']);
   }
 }
 

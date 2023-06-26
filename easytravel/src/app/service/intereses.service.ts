@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Subject } from 'rxjs';
+import { Observable ,Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Intereses } from '../model/intereses';
+import { UsuarioInteresesDTO } from '../model/UsuarioInteresesDTO';
 const base_url = environment.base;
 @Injectable({
   providedIn: 'root',
@@ -60,4 +61,10 @@ export class InteresesService {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
     });
   }
+
+  getInteresesCountByUser(): Observable<UsuarioInteresesDTO[]> {
+    return this.http.get<UsuarioInteresesDTO[]>(`${this.url}/intereses-count`);
+  }
+
 }
+

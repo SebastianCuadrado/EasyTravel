@@ -15,12 +15,12 @@ export class NotificacionListarComponent implements OnInit {
   idMayor: number = 0
   lista: Notificacion[] = []
   dataSource:MatTableDataSource<Notificacion>= new MatTableDataSource();
-  displayedColumns:string[]=['idNotificacion','intereses','paquete', 'mensaje',"accion01","accion02"]
+  displayedColumns:string[]=['idNotificacion','interesess','paquetes', 'mensaje',"accion01","accion02"]
   count:number=0
 
   constructor(private nS:NotificacionService,private dialog:MatDialog)
   {
-    
+
   }
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

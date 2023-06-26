@@ -16,7 +16,10 @@
     </div>
 
     <div style="text-align: right;">
-      <button mat-raised-button style="background-color: #264653; color:#fff" routerLink="/places/new">Agregar</button>
+
+
+      <button mat-raised-button style="background-color: #264653; color:#fff" routerLink="/pages/places/new" *ngIf="role==='ADMIN'">Agregar</button>
+
     </div>
 
     <br>
@@ -84,7 +87,8 @@
         </div>
 
         <mat-card-actions>
-          <div class="buttons-container">
+
+          <div class="buttons-container" *ngIf="role=='ADMIN'">
             <button mat-raised-button style="background-color: #2a9d8f;" [routerLink]="['edicion', element.id]">
               <span class="material-icons">edit</span>
             </button>
@@ -92,6 +96,7 @@
               <span class="material-icons">delete</span>
             </button>
           </div>
+
         </mat-card-actions>
       </mat-card>
 

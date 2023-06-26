@@ -15,7 +15,7 @@ export class InteresesListarComponent implements OnInit {
   idMayor: number = 0
   lista: Intereses[] = []
   dataSource:MatTableDataSource<Intereses>= new MatTableDataSource();
-  displayedColumns:string[]=['idInteres','nombre','usuario',"accion01","accion02"]
+  displayedColumns:string[]=['idInteres','nombre','usuarios',"accion01","accion02"]
   count:number=0
 
   constructor(private iS:InteresesService,private dialog:MatDialog)

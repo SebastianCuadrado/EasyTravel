@@ -37,23 +37,76 @@
       <br>
       <mat-form-field class="example-full-width">
         <mat-label>Ciudad</mat-label>
-        <input matInput placeholder="Rio de Janeiro" formControlName="ciudad">
+        <mat-select formControlName="ciudad" placeholder="Selecciona una ciudad">
+          <mat-optgroup label="Perú">
+          <mat-option value="Lima">Lima</mat-option>
+          <mat-option value="Cusco">Cusco</mat-option>
+          <mat-option value="Arequipa">Arequipa</mat-option>
+          <mat-option value="Trujillo">Trujillo</mat-option>
+          <mat-option value="Iquitos">Iquitos</mat-option>
+    <mat-option value="Puno">Puno</mat-option>
+    <mat-option value="Chiclayo">Chiclayo</mat-option>
+    <mat-option value="Piura">Piura</mat-option>
+    <mat-option value="Tacna">Tacna</mat-option>
+    <mat-option value="Huancayo">Huancayo</mat-option>
+    <mat-option value="Ayacucho">Ayacucho</mat-option>
+    <mat-option value="Chimbote">Chimbote</mat-option>
+    <mat-option value="Ica">Ica</mat-option>
+    <mat-option value="Cajamarca">Cajamarca</mat-option>
+    <mat-option value="Tarapoto">Tarapoto</mat-option>
+    <mat-option value="Huaraz">Huaraz</mat-option>
+    <mat-option value="Chachapoyas">Chachapoyas</mat-option>
+    <mat-option value="Máncora">Máncora</mat-option>
+  </mat-optgroup>
+          <!-- Otras ciudades de Perú -->
+
+           <!-- Ciudades de Latinoamérica -->
+    <mat-optgroup label="Latinoamérica">
+      <mat-option value="Buenos Aires">Buenos Aires, Argentina</mat-option>
+      <mat-option value="São Paulo">São Paulo, Brasil</mat-option>
+      <mat-option value="Río de Janeiro">Río de Janeiro, Brasil</mat-option>
+      <mat-option value="Ciudad de México">Ciudad de México, México</mat-option>
+      <mat-option value="Cancún">Cancún, México</mat-option>
+      <mat-option value="Cabo San Lucas">Cabo San Lucas, México</mat-option>
+      <mat-option value="Ciudad de Panamá">Ciudad de Panamá, Panamá</mat-option>
+      <!-- Agrega más ciudades de Latinoamérica aquí -->
+    </mat-optgroup>
+         <!-- Ciudades del mundo -->
+    <mat-optgroup label="Mundo">
+      <mat-option value="New York">Nueva York, Estados Unidos</mat-option>
+      <mat-option value="Los Angeles">Los Ángeles, Estados Unidos</mat-option>
+      <mat-option value="Paris">París, Francia</mat-option>
+      <mat-option value="Londres">Londres, Reino Unido</mat-option>
+      <mat-option value="Barcelona">Barcelona, España</mat-option>
+      <mat-option value="Roma">Roma, Italia</mat-option>
+      <mat-option value="Tokyo">Tokio, Japón</mat-option>
+      <!-- Agrega más ciudades del mundo aquí -->
+    </mat-optgroup>
+        </mat-select>
       </mat-form-field>
 <br>
-      <mat-form-field class="example-full-width">
-        <mat-label>Valoración</mat-label>
-        <input matInput placeholder="0-10" formControlName="valoracion_promedio">
-      </mat-form-field>
+<mat-form-field class="example-full-width">
+  <mat-label>Valoración</mat-label>
+  <mat-select formControlName="valoracion_promedio" placeholder="Selecciona una valoración">
+    <mat-option *ngFor="let valoracion of valoraciones" [value]="valoracion">{{ valoracion }}</mat-option>
+  </mat-select>
+</mat-form-field>
 <br>
-      <mat-form-field class="example-full-width">
-        <mat-label>Estrellas</mat-label>
-        <input matInput placeholder="0-5" formControlName="estrellas">
-      </mat-form-field>
+<mat-form-field class="example-full-width">
+  <mat-label>Estrellas</mat-label>
+  <mat-select formControlName="estrellas" placeholder="Selecciona la cantidad de estrellas">
+    <mat-option value="1">1 estrella</mat-option>
+    <mat-option value="2">2 estrellas</mat-option>
+    <mat-option value="3">3 estrellas</mat-option>
+    <mat-option value="4">4 estrellas</mat-option>
+    <mat-option value="5">5 estrellas</mat-option>
+  </mat-select>
+</mat-form-field>
 <br>
 
 <br>
 <button mat-raised-button style="background-color: #2a9d8f;" >Aceptar</button>
-<button mat-raised-button style="background-color: #e76f51;" routerLink="/hotels">Cancelar</button>
+<button mat-raised-button style="background-color: #e76f51;" routerLink="/pages/hotels">Cancelar</button>
 
 
       <p>{{mensaje}}</p>

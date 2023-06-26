@@ -1,100 +1,119 @@
 <nav class="navbar navbar-expand-lg p-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/landing">EasyTravel</a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <a class="navbar-brand" href="/pages/landing">EasyTravel</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <div class="btn-group">
-            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Destinos
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/landing/#row-destinos">Section</a></li>
-              <li><a class="dropdown-item" href="/places">Destinos Populares</a></li>
-              <li><a class="dropdown-item" href="/places/new">Registra un destino</a></li>
+              <li><a class="dropdown-item" href="/pages/places">Destinos Populares</a></li>
+
+              <li  *ngIf="role=='ADMIN'"><a class="dropdown-item" href="/pages/places/new">Registra un destino</a></li>
 
             </ul>
           </div>
         </li>
         <li class="nav-item">
           <div class="btn-group">
-            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Viajes
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/landing/#row-viajes">Section</a></li>
-              <li><a class="dropdown-item" href="/travel">Viajes</a></li>
-              <li><a class="dropdown-item" href="/actividades">Actividades</a></li>
-              <li><a class="dropdown-item" href="/empresa-transporte">Empresas Transporte</a></li>
-              <li><a class="dropdown-item" href="/empresa-transporte/new">Registra una empresa</a></li>
+              <li><a class="dropdown-item" href="/pages/travel">Viajes</a></li>
+              <li><a class="dropdown-item" href="/pages/actividades">Actividades</a></li>
+              <li><a class="dropdown-item" href="/pages/empresa-transporte">Empresas Transporte</a></li>
+
+              <li  *ngIf="role=='ADMIN'"><a class="dropdown-item" href="/pages/empresa-transporte/new">Registra una empresa</a></li>
 
             </ul>
           </div>
         </li>
         <li class="nav-item">
           <div class="btn-group">
-            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
               Hoteles
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/landing/#row-hotel">Section</a></li>
-              <li><a class="dropdown-item" href="/pages/hotels">Hoteles  más populares</a></li>
-              <li><a class="dropdown-item" href="/pages/hotels/new">Registra un hotel</a></li>
+              <li><a class="dropdown-item" href="/pages/hotels">Hoteles más populares</a></li>
+
+              <li *ngIf="role=='ADMIN'" ><a  class="dropdown-item" href="/pages/hotels/new">Registra un hotel</a></li>
+
               <li><a class="dropdown-item" href="/pages/servicios">Servicios</a></li>
             </ul>
           </div>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link active"
-            aria-current="page"
-            href="/landing/#row-opinion"
-            >Opiniones y Comentarios</a
-          >
-        </li>
-
-        <li class="nav-item">
           <div class="btn-group">
-            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              Registrate
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Paquetes
             </button>
             <ul class="dropdown-menu">
 
-              <li><a class="dropdown-item" href="/usuario/new">Registrarse</a></li>
-              <li><a class="dropdown-item" href="/usuario">Conoce a los usuarios</a></li>
+              <li><a class="dropdown-item" href="/pages/paquetes">Paquetes</a></li>
+
+              <li *ngIf="role=='ADMIN'" ><a class="dropdown-item" href="/pages/paquetes/new">Registra un paquete</a></li>
 
             </ul>
           </div>
         </li>
+        <li class="nav-item" *ngIf="role=='ADMIN'">
+          <div class="btn-group">
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Reportes
+            </button>
+            <ul class="dropdown-menu">
 
+              <li><a class="dropdown-item" href="/pages/reportes/hotelesmasservicios">Hoteles con más servicios</a></li>
+
+              <li><a class="dropdown-item" href="/pages/reportes/hotelesmasreservados">Hoteles con más reservas</a></li>
+
+            </ul>
+          </div>
+        </li>
+<!--
         <li class="nav-item">
           <div class="btn-group">
-            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="material-icons">supervised_user_circle</span></button>
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Registrate
+            </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/intereses">Lista de intereses</a></li>
-              <li><a class="dropdown-item" href="/intereses/new">Registra tu interes</a></li>
-              <li><a class="dropdown-item" href="/notificacion">Lista de notificaciones</a></li>
-              <li><a class="dropdown-item" href="/notificacion/new">Registra tu notificacion</a></li>
+              <li><a class="dropdown-item" href="/usuario/new">Registrarse</a></li>
+              <li><a class="dropdown-item" href="/usuario">Conoce a los usuarios</a></li>
+            </ul>
+          </div>
+        </li>-->
+        <li class="nav-item">
+          <div class="btn-group">
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span class="material-icons">supervised_user_circle</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="pages/intereses">Lista de intereses</a></li>
+              <li><a class="dropdown-item" href="pages/intereses/new">Registra tu interes</a></li>
+              <li><a class="dropdown-item" href="pages/notificacion">Lista de notificaciones</a></li>
+              <li><a class="dropdown-item" href="pages/notificacion/new">Registra tu notificacion</a></li>
+              <li><a class="dropdown-item" href="/login">Cerrar sesión</a></li>
             </ul>
           </div>
         </li>
-
       </ul>
     </div>
-
   </div>
 </nav>
-
-

@@ -32,6 +32,16 @@ import { CantidadDeViajesPorEmpresaTransporteComponent } from './reportes/cantid
 import { PaquetesOrdenadosPorPrecioComponent } from './reportes/paquetes-ordenados-por-precio/paquetes-ordenados-por-precio.component';
 import { CantidadDePaisesEnReservaComponent } from './reportes/cantidad-de-paises-en-reserva/cantidad-de-paises-en-reserva.component';
 
+import { HotelesmasserviciosComponent } from './reportes/hotelesmasservicios/hotelesmasservicios.component';
+import { ReportesComponent } from './reportes/reportes.component';
+
+import { HotelesmasreservadosComponent } from './reportes/hotelesmasreservados/hotelesmasreservados.component';
+
+import { InteresesUsuariosComponent } from './reportes/intereses-usuarios/intereses-usuarios.component';
+import { NotificacionUsuariosComponent } from './reportes/notificacion-usuarios/notificacion-usuarios.component';
+
+
+
 
 
 
@@ -103,6 +113,9 @@ const routes: Routes = [
 
       { path: 'new', component: ServiciosCreaeditaComponent },
       { path: 'edicion/:id', component: ServiciosCreaeditaComponent },
+
+      {path:'servicios-count',component:HotelesmasserviciosComponent}
+
     ],canActivate:[GuardServiceService]
 
   },
@@ -171,9 +184,26 @@ const routes: Routes = [
     ],canActivate:[GuardServiceService]
   },
   {
-    path: 'reportes',
-    component: ReportesComponent,
-    children: [
+
+
+    path:'reportes',
+    component:ReportesComponent,
+    children:[
+      {
+        path:'hotelesmasservicios',
+        component:HotelesmasserviciosComponent
+      },
+      {
+        path:'hotelesmasreservados',
+        component:HotelesmasreservadosComponent
+      },
+      {
+        path:'intereses-count-user', component: InteresesUsuariosComponent
+      },
+      {
+        path: 'notificacion-count-user', component: NotificacionUsuariosComponent
+      },
+ 
       {
         path: 'viaje-count-month',
         component: CantidadDeViajesPorMesComponent
@@ -191,6 +221,7 @@ const routes: Routes = [
         component: CantidadDePaisesEnReservaComponent
       }
     ], canActivate:[GuardServiceService]
+>
   }
 
 ];

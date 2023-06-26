@@ -83,7 +83,7 @@ aceptar(): void {
         });
       });}
 
-    this.router.navigate(['servicios']);
+    this.router.navigate(['/pages/servicios']);
 
 }}
 }

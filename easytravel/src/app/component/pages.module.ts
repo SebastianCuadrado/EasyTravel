@@ -93,6 +93,12 @@ import { CantidadDeViajesPorEmpresaTransporteComponent } from './reportes/cantid
 import { PaquetesOrdenadosPorPrecioComponent } from './reportes/paquetes-ordenados-por-precio/paquetes-ordenados-por-precio.component';
 import { CantidadDePaisesEnReservaComponent } from './reportes/cantidad-de-paises-en-reserva/cantidad-de-paises-en-reserva.component';
 
+import { HotelesmasreservadosComponent } from './reportes/hotelesmasreservados/hotelesmasreservados.component';
+import { HotelesmasserviciosComponent } from './reportes/hotelesmasservicios/hotelesmasservicios.component';
+import { InteresesUsuariosComponent } from './reportes/intereses-usuarios/intereses-usuarios.component';
+import { NotificacionUsuariosComponent } from './reportes/notificacion-usuarios/notificacion-usuarios.component';
+
+
 
 
 
@@ -163,6 +169,12 @@ ComentarioshotelCreaeditaComponent,
    CantidadDeViajesPorEmpresaTransporteComponent,
    PaquetesOrdenadosPorPrecioComponent,
    CantidadDePaisesEnReservaComponent,
+
+   HotelesmasreservadosComponent,
+   HotelesmasserviciosComponent,
+   InteresesUsuariosComponent,
+   NotificacionUsuariosComponent,
+
 
 
 

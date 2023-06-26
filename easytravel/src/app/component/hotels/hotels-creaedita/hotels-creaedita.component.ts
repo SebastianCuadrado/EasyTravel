@@ -15,6 +15,8 @@ export class HotelsCreaeditaComponent implements OnInit {
   form: FormGroup = new FormGroup({});
   hotels: Hotels = new Hotels();
   mensaje: string = '';
+  valoraciones: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 
 
   ngOnInit(): void {
@@ -39,7 +41,7 @@ export class HotelsCreaeditaComponent implements OnInit {
   constructor(
     private hS: HotelsService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
 
   aceptar(): void {
@@ -71,7 +73,7 @@ export class HotelsCreaeditaComponent implements OnInit {
         });
       }
 
-      this.router.navigate(['hotels']);
+      this.router.navigate(['/pages/hotels']);
     } else {
       this.mensaje = 'Ingresa los datos correctamente';
     }

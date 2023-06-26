@@ -53,7 +53,7 @@ export class ActividadCreaeditaComponent implements OnInit {
           this.aS.setList(data);
         })
       })
-      this.router.navigate(['actividades']);
+      this.router.navigate(['/pages/actividades']);
     }
   }
 }

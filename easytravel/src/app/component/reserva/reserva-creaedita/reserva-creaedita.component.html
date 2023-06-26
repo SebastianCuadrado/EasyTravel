@@ -26,7 +26,7 @@
           <mat-label>Paquete</mat-label>
           <mat-select formControlName="paquete" [value]="idPaqueteSel" required>
             <mat-option *ngFor="let a of lista_paquete" [value]="a.idPaquete">
-              {{a.idPaquete}}
+              {{a.nombre}}
             </mat-option>
           </mat-select>
         </mat-form-field>
