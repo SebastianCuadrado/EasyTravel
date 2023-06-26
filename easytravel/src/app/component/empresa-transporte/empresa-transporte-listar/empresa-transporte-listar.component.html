@@ -15,13 +15,16 @@
           <i class="fa-solid fa-bus"></i>
         </div>
         <div style="text-align: right">
+
           <button
+          *ngIf="role==='ADMIN'"
             mat-raised-button
             style="background-color: #264653; color: #fff"
             routerLink="/empresa-transporte/new"
           >
             Agregar
           </button>
+
         </div>
         <mat-form-field>
           <input matInput (keyup)="filtrar($event)" placeholder="Buscar" />
@@ -50,7 +53,9 @@
               <p>Contacto: (+51) {{ em.contacto }}</p>
             </mat-card-content>
             <mat-card-actions>
+
               <button
+              *ngIf="role==='ADMIN'"
                 mat-raised-button
                 style="background-color: #2a9d8f"
                 [routerLink]="['edicion', em.idEmpresa]"
@@ -58,12 +63,14 @@
                 <span class="material-icons">edit</span>
               </button>
               <button
+              *ngIf="role==='ADMIN'"
                 mat-raised-button
                 style="background-color: #f4a261"
                 (click)="confirm(em.idEmpresa)"
               >
                 <span class="material-icons">delete</span>
               </button>
+
             </mat-card-actions>
           </mat-card>
         </mat-grid-tile>

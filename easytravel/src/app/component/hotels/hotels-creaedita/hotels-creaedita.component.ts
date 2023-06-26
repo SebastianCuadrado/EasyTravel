@@ -41,7 +41,7 @@ export class HotelsCreaeditaComponent implements OnInit {
   constructor(
     private hS: HotelsService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
   ) {}
 
   aceptar(): void {

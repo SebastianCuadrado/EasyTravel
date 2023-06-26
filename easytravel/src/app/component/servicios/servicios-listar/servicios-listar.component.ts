@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Servicios } from 'src/app/model/servicios';
 import { ServiciosService } from 'src/app/service/servicios.service';
 import { ServiciosDialogoComponent } from './servicios-dialogo/servicios-dialogo.component';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-servicios-listar',
@@ -17,8 +18,9 @@ export class ServiciosListarComponent implements OnInit{
   dataSource:MatTableDataSource<Servicios>= new MatTableDataSource();
   displayedColumns:string[]=['codigo','nombre','descripcion','hotels',"accion01","accion02"]
   count:number=0
+  role:string=""
 
-  constructor(private sS:ServiciosService,private dialog:MatDialog)
+  constructor(private sS:ServiciosService,private dialog:MatDialog, private ls:LoginService)
   {
 
   }
@@ -27,6 +29,7 @@ export class ServiciosListarComponent implements OnInit{
 
 
   ngOnInit(): void {
+    this.role=this.ls.showRole();
       this.sS.list().subscribe(data=>{
         this.dataSource=new MatTableDataSource(data);
         this.dataSource.paginator = this.paginator;

@@ -5,6 +5,7 @@ import { PaqueteService } from 'src/app/service/paquete.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { PaqueteDialogoComponent } from './paquete-dialogo/paquete-dialogo.component';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-paquete-listar',
@@ -13,23 +14,28 @@ import { PaqueteDialogoComponent } from './paquete-dialogo/paquete-dialogo.compo
 })
 export class PaqueteListarComponent {
   lista: Paquete[] = [];
+  role:string=""
   idMayor: number = 0;
-  dataSource: MatTableDataSource<Paquete> = new MatTableDataSource();
+  dataSource: Paquete[]=[]
   displayedColumns: string[] = ['idPaquete', 'nombre','precio', 'place', 'viaje', 'ahorro', 'tipoHabitacion', 'cantidadNoches', 'hotel', 'checkin', 'checkout', 'accionEditar', 'accionEliminar', 'accionReserva'];
 
-  constructor(private pS: PaqueteService, private dialog: MatDialog) {
+  constructor(private pS: PaqueteService, private dialog: MatDialog,private ls:LoginService) {
 
   }
 
   @ViewChild(MatPaginator)paginator!:MatPaginator;
   ngOnInit(): void {
+    this.role=this.ls.showRole();
     this.pS.list().subscribe(data => {
-      this.dataSource = new MatTableDataSource(data);
-      this.dataSource.paginator=this.paginator;
+      //this.dataSource = new MatTableDataSource(data);
+      this.dataSource = data;
+      this.lista = data;
+      //this.dataSource.paginator=this.paginator;
     })
     this.pS.getList().subscribe(data => {
-      this.dataSource = new MatTableDataSource(data);
-      this.dataSource.paginator=this.paginator
+     // this.dataSource = new MatTableDataSource(data);
+     this.dataSource = data;
+     // this.dataSource.paginator=this.paginator
     })
   }
   confirm(id: number) {
