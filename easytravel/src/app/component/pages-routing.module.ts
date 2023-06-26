@@ -33,7 +33,7 @@ import { PaquetesOrdenadosPorPrecioComponent } from './reportes/paquetes-ordenad
 import { CantidadDePaisesEnReservaComponent } from './reportes/cantidad-de-paises-en-reserva/cantidad-de-paises-en-reserva.component';
 
 import { HotelesmasserviciosComponent } from './reportes/hotelesmasservicios/hotelesmasservicios.component';
-import { ReportesComponent } from './reportes/reportes.component';
+
 
 import { HotelesmasreservadosComponent } from './reportes/hotelesmasreservados/hotelesmasreservados.component';
 
@@ -203,7 +203,7 @@ const routes: Routes = [
       {
         path: 'notificacion-count-user', component: NotificacionUsuariosComponent
       },
- 
+
       {
         path: 'viaje-count-month',
         component: CantidadDeViajesPorMesComponent
@@ -220,8 +220,8 @@ const routes: Routes = [
         path: 'quantity-paises-reserva',
         component: CantidadDePaisesEnReservaComponent
       }
-    ], canActivate:[GuardServiceService]
->
+    ], canActivate:[GuardServiceService],
+
   }
 
 ];
