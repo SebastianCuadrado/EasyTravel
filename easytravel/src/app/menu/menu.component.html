@@ -16,7 +16,9 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/landing/#row-destinos">Section</a></li>
               <li><a class="dropdown-item" href="/pages/places">Destinos Populares</a></li>
-              <li><a class="dropdown-item" href="/pages/places/new">Registra un destino</a></li>
+
+              <li  *ngIf="role=='ADMIN'"><a class="dropdown-item" href="/pages/places/new">Registra un destino</a></li>
+
             </ul>
           </div>
         </li>
@@ -28,10 +30,12 @@
             </button>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/landing/#row-viajes">Section</a></li>
-              <li><a class="dropdown-item" href="/travel">Viajes</a></li>
+              <li><a class="dropdown-item" href="/pages/travel">Viajes</a></li>
               <li><a class="dropdown-item" href="/pages/actividades">Actividades</a></li>
               <li><a class="dropdown-item" href="/pages/empresa-transporte">Empresas Transporte</a></li>
-              <li><a class="dropdown-item" href="/pages/empresa-transporte/new">Registra una empresa</a></li>
+
+              <li  *ngIf="role=='ADMIN'"><a class="dropdown-item" href="/pages/empresa-transporte/new">Registra una empresa</a></li>
+
             </ul>
           </div>
         </li>
@@ -44,7 +48,9 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="/landing/#row-hotel">Section</a></li>
               <li><a class="dropdown-item" href="/pages/hotels">Hoteles más populares</a></li>
-              <li><a class="dropdown-item" href="/pages/hotels/new">Registra un hotel</a></li>
+
+              <li *ngIf="role=='ADMIN'" ><a  class="dropdown-item" href="/pages/hotels/new">Registra un hotel</a></li>
+
               <li><a class="dropdown-item" href="/pages/servicios">Servicios</a></li>
             </ul>
           </div>
@@ -58,7 +64,24 @@
             <ul class="dropdown-menu">
 
               <li><a class="dropdown-item" href="/pages/paquetes">Paquetes</a></li>
-              <li><a class="dropdown-item" href="/pages/paquetes/new">Registra un paquete</a></li>
+
+              <li *ngIf="role=='ADMIN'" ><a class="dropdown-item" href="/pages/paquetes/new">Registra un paquete</a></li>
+
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item" *ngIf="role=='ADMIN'">
+          <div class="btn-group">
+            <button type="button" class="btn btn-nav dropdown-toggle" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Reportes
+            </button>
+            <ul class="dropdown-menu">
+
+              <li><a class="dropdown-item" href="/pages/reportes/hotelesmasservicios">Hoteles con más servicios</a></li>
+
+              <li><a class="dropdown-item" href="/pages/reportes/hotelesmasreservados">Hoteles con más reservas</a></li>
+
             </ul>
           </div>
         </li>

@@ -14,13 +14,16 @@
         <i class="fa-solid fa-hotel"></i>
       </div>
       <div style="text-align: right">
+
         <button
           mat-raised-button
           style="background-color: #264653; color:#fff"
           routerLink="/pages/hotels/new"
+          *ngIf="role==='ADMIN'"
         >
           Agregar
         </button>
+
       </div>
       <mat-card>
         <mat-card-header>
@@ -43,14 +46,15 @@
             </div>
             <div class="header-right">
               <div class="buttons-container">
-                <button mat-icon-button color="primary" [routerLink]="['edicion', element.idHotels]">
+                <button mat-icon-button color="primary" [routerLink]="['edicion', element.idHotels]"*ngIf="role==='ADMIN'">
                   <mat-icon>edit</mat-icon>
                 </button>
-                <button mat-icon-button color="warn" (click)="confirm(element.idHotels)">
+                <button mat-icon-button color="warn" (click)="confirm(element.idHotels)"*ngIf="role==='ADMIN'">
                   <mat-icon>delete</mat-icon>
                 </button>
 
               </div>
+
             </div>
           </mat-card-header>
           <div class="card-content-container">
