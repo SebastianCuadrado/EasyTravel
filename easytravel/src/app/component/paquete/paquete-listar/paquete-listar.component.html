@@ -118,7 +118,9 @@
       <h1>Paquetes</h1>
       <i class="fa-solid fa-cubes"></i>
     </div>
-
+    <div style="text-align: right;">
+      <button *ngIf="role=='ADMIN'" mat-raised-button style="background-color: #264653; color:#fff" routerLink="/pages/paquetes/new">Agregar</button>
+    </div>
     <div class="card-container">
       <div class="card" *ngFor="let element of dataSource">
         <div class="card-header">{{ element.nombre }}</div>
@@ -163,18 +165,20 @@
           <span>{{ element.checkout | date:'dd/MM/yyyy' }}</span>
         </div>
         <div class="card-actions">
-          <button class="action-button edit" [routerLink]="['edicion', element.idPaquete]">
+
+          <button *ngIf="role==='ADMIN'"class="action-button edit" [routerLink]="['edicion', element.idPaquete]">
             <span class="material-icons">edit</span>
 
           </button>
-          <button class="action-button delete" (click)="confirm(element.idPaquete)">
+          <button *ngIf="role==='ADMIN'"class="action-button delete" (click)="confirm(element.idPaquete)">
             <span class="material-icons">delete</span>
 
           </button>
-          <button class="action-button add"  [routerLink]="['/pages/reservas/new', element.nombre]">
+          <button *ngIf="role==='ADMIN'" class="action-button add"  [routerLink]="['/pages/reservas/new', element.nombre]">
             <span class="material-icons">add</span>
             Reservar
           </button>
+
         </div>
       </div>
     </div>
