@@ -91,6 +91,8 @@ import { ReportesComponent } from './reportes/reportes.component';
 
 import { HotelesmasreservadosComponent } from './reportes/hotelesmasreservados/hotelesmasreservados.component';
 import { HotelesmasserviciosComponent } from './reportes/hotelesmasservicios/hotelesmasservicios.component';
+import { InteresesUsuariosComponent } from './reportes/intereses-usuarios/intereses-usuarios.component';
+import { NotificacionUsuariosComponent } from './reportes/notificacion-usuarios/notificacion-usuarios.component';
 
 
 
@@ -162,6 +164,8 @@ ComentarioshotelCreaeditaComponent,
 
    HotelesmasreservadosComponent,
    HotelesmasserviciosComponent,
+   InteresesUsuariosComponent,
+   NotificacionUsuariosComponent,
 
 
 

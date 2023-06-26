@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
-import { Subject } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Notificacion } from '../model/notificacion';
+import { UsuarioNotificacionDTO } from '../model/UsuarioNotificacionDTO';
 
 const base_url = environment.base;
 @Injectable({
@@ -60,5 +61,9 @@ export class NotificacionService {
     return this.http.get<Notificacion>(`${this.url}/${idNotificacion}`, {
       headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
     });
+  }
+
+  getNotificacionCountByUser(): Observable<UsuarioNotificacionDTO[]> {
+    return this.http.get<UsuarioNotificacionDTO[]>(`${this.url}/notificacion-count`);
   }
 }
