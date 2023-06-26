@@ -88,6 +88,10 @@ import { ActividadCreaeditaComponent } from './actividad/actividad-creaedita/act
 import { ComentarioshotelComponent } from './comentarioshotel/comentarioshotel.component';
 import { ComentarioshotelCreaeditaComponent } from './comentarioshotel/comentarioshotel-creaedita/comentarioshotel-creaedita.component';
 import { ReportesComponent } from './reportes/reportes.component';
+import { CantidadDeViajesPorMesComponent } from './reportes/cantidad-de-viajes-por-mes/cantidad-de-viajes-por-mes.component';
+import { CantidadDeViajesPorEmpresaTransporteComponent } from './reportes/cantidad-de-viajes-por-empresa-transporte/cantidad-de-viajes-por-empresa-transporte.component';
+import { PaquetesOrdenadosPorPrecioComponent } from './reportes/paquetes-ordenados-por-precio/paquetes-ordenados-por-precio.component';
+import { CantidadDePaisesEnReservaComponent } from './reportes/cantidad-de-paises-en-reserva/cantidad-de-paises-en-reserva.component';
 
 import { HotelesmasreservadosComponent } from './reportes/hotelesmasreservados/hotelesmasreservados.component';
 import { HotelesmasserviciosComponent } from './reportes/hotelesmasservicios/hotelesmasservicios.component';
@@ -161,6 +165,10 @@ ComentarioshotelCreaeditaComponent,
    ActividadListarComponent,
    ActividadCreaeditaComponent,
    ReportesComponent,
+   CantidadDeViajesPorMesComponent,
+   CantidadDeViajesPorEmpresaTransporteComponent,
+   PaquetesOrdenadosPorPrecioComponent,
+   CantidadDePaisesEnReservaComponent,
 
    HotelesmasreservadosComponent,
    HotelesmasserviciosComponent,

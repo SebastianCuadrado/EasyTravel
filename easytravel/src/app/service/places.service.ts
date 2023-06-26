@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Place } from '../model/places';
 import { Subject } from 'rxjs';
+import { PlacePaqueteReservaDTO } from '../model/PlacePaqueteReservaDTO';
 const base_url = environment.base;
 
 @Injectable({
@@ -57,5 +58,12 @@ export class PlacesService {
   }
   setConfirmDelete(estado:Boolean){
     this.confirmarEliminacion.next(estado);
+  }
+
+  getQuantityofPlaces() {
+    let token = sessionStorage.getItem('token');
+    return this.http.get<PlacePaqueteReservaDTO[]>(`${this.url}/busqueda`, {
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`).set('Content-Type', 'application/json')
+    })
   }
 }

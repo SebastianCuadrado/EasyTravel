@@ -74,7 +74,9 @@ export class ReservaCreaeditaComponent implements OnInit{
         })
       })
 
+
       this.router.navigate(['/pages/paquetes']);
+
     }
   }
 }

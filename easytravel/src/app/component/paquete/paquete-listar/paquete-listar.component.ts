@@ -16,8 +16,10 @@ export class PaqueteListarComponent {
   lista: Paquete[] = [];
   role:string=""
   idMayor: number = 0;
+
   dataSource: Paquete[]=[]
-  displayedColumns: string[] = ['idPaquete', 'nombre','precio', 'place', 'viaje', 'ahorro', 'tipoHabitacion', 'cantidadNoches', 'hotel', 'checkin', 'checkout', 'accionEditar', 'accionEliminar', 'accionReserva'];
+ 
+  displayedColumns: string[] = ['idPaquete', 'nombre', 'precio', 'place', 'viaje', 'ahorro', 'tipoHabitacion', 'cantidadNoches', 'hotel', 'checkin', 'checkout', 'accionReserva'];
 
   constructor(private pS: PaqueteService, private dialog: MatDialog,private ls:LoginService) {
 
@@ -41,15 +43,5 @@ export class PaqueteListarComponent {
   confirm(id: number) {
     this.idMayor = id;
     this.dialog.open(PaqueteDialogoComponent);
-  }
-  eliminar(id: number) {
-    this.pS.delete(id).subscribe(() => {
-      this.pS.list().subscribe(data => {
-        this.pS.setList(data);
-      });
-    });
-  }
-  filter(e: any) {
-    this.dataSource.filter = e.target.value.trim();
   }
 }

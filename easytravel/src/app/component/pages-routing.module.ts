@@ -26,6 +26,11 @@ import { ActividadComponent } from './actividad/actividad.component';
 import { ActividadCreaeditaComponent } from './actividad/actividad-creaedita/actividad-creaedita.component';
 import { NotificacionComponent } from './notificacion/notificacion.component';
 import { NotificacionCreaEditaComponent } from './notificacion/notificacion-crea-edita/notificacion-crea-edita.component';
+import { ReportesComponent } from './reportes/reportes.component';
+import { CantidadDeViajesPorMesComponent } from './reportes/cantidad-de-viajes-por-mes/cantidad-de-viajes-por-mes.component';
+import { CantidadDeViajesPorEmpresaTransporteComponent } from './reportes/cantidad-de-viajes-por-empresa-transporte/cantidad-de-viajes-por-empresa-transporte.component';
+import { PaquetesOrdenadosPorPrecioComponent } from './reportes/paquetes-ordenados-por-precio/paquetes-ordenados-por-precio.component';
+import { CantidadDePaisesEnReservaComponent } from './reportes/cantidad-de-paises-en-reserva/cantidad-de-paises-en-reserva.component';
 
 import { HotelesmasserviciosComponent } from './reportes/hotelesmasservicios/hotelesmasservicios.component';
 import { ReportesComponent } from './reportes/reportes.component';
@@ -180,6 +185,7 @@ const routes: Routes = [
   },
   {
 
+
     path:'reportes',
     component:ReportesComponent,
     children:[
@@ -196,9 +202,26 @@ const routes: Routes = [
       },
       {
         path: 'notificacion-count-user', component: NotificacionUsuariosComponent
+      },
+ 
+      {
+        path: 'viaje-count-month',
+        component: CantidadDeViajesPorMesComponent
+      },
+      {
+        path: 'viaje-count-empresa-transporte',
+        component: CantidadDeViajesPorEmpresaTransporteComponent
+      },
+      {
+        path: 'paquetes-order-price',
+        component: PaquetesOrdenadosPorPrecioComponent
+      },
+      {
+        path: 'quantity-paises-reserva',
+        component: CantidadDePaisesEnReservaComponent
       }
-    ]
-
+    ], canActivate:[GuardServiceService]
+>
   }
 
 ];
