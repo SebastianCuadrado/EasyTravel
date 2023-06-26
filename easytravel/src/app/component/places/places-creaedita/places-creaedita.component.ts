@@ -57,7 +57,7 @@ export class PlacesCreaeditaComponent implements OnInit {
           })
         })
       }
-      this.router.navigate(['places']);
+      this.router.navigate(['/pages/places']);
     }
     else{this.mensaje="Ingresa los datos correctamente"}
 
